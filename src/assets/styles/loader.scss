@@ -1,0 +1,33 @@
+@use "./core.scss" as *;
+.loader-wrapper {
+  height: 100%;
+  @include flex-center;
+  .loader {
+    display: inline-block;
+    font-size: 36px;
+    font-weight: bold;
+    color: rgba(var(--neutral-700), 1);
+    position: relative;
+    &::before {
+      content: "";
+      position: absolute;
+      left: 23px;
+      bottom: 12px;
+      width: 22px;
+      height: 22px;
+      border-radius: 50%;
+      border: 5px solid rgba(var(--neutral-400), 1);
+      border-bottom-color: rgba(var(--primary), 1);
+      box-sizing: border-box;
+      animation: rotation 0.6s linear infinite;
+    }
+  }
+}
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

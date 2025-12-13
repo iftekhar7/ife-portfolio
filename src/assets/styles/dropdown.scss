@@ -1,0 +1,50 @@
+@use "./core.scss" as *;
+
+.dropdown-wrapper {
+  position: relative;
+  display: inline-block;
+  .dropdown {
+    position: absolute;
+    margin-top: spacing(1);
+    right: 0;
+    z-index: 999999;
+    @include card;
+    min-width: 200px;
+    border: 1px solid rgba(var(--neutral-200), 1);
+    border-radius: border-radius(md) !important;
+    &-menu {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+
+      &-item {
+        padding: spacing(2) spacing(4);
+        color: rgba(var(--neutral-600), 1);
+        font-size: font-size(sm);
+
+        &:first-child {
+          border-top-left-radius: border-radius(md);
+          border-top-right-radius: border-radius(md);
+        }
+        &:last-child {
+          border-bottom-left-radius: border-radius(md);
+          border-bottom-right-radius: border-radius(md);
+        }
+
+        &:hover {
+          cursor: pointer;
+          color: rgba(var(--primary), 1);
+          background-color: rgba(var(--primary), 0.1);
+        }
+        i {
+          margin-right: spacing(2);
+        }
+
+        &-disabled {
+          opacity: 0.7;
+          cursor: not-allowed;
+        }
+      }
+    }
+  }
+}

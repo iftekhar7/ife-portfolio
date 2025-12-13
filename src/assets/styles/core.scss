@@ -1,0 +1,1350 @@
+// =============================================================================
+// Iot83 TECHNOLOGIES - SCSS CONFIGURATION
+// =============================================================================
+
+@use "sass:map";
+@use "sass:meta";
+@import url(https://ka-p.fontawesome.com/releases/v6.5.2/css/pro.min.css?token=7777e3ae0a);
+@import url(https://ka-p.fontawesome.com/releases/v6.5.2/css/pro-v4-shims.min.css?token=7777e3ae0a);
+@import url(https://ka-p.fontawesome.com/releases/v6.5.2/css/pro-v5-font-face.min.css?token=7777e3ae0a);
+@import url(https://ka-p.fontawesome.com/releases/v6.5.2/css/pro-v4-font-face.min.css?token=7777e3ae0a);
+
+// =============================================================================
+// DESIGN TOKENS & VARIABLES
+// =============================================================================
+
+// Color Palette
+$colors: (
+  // Primary Brand Colors
+  "primary": #2563eb,
+  "primary-light": #3b82f6,
+  "primary-dark": #1d4ed8,
+  "primary-darker": #1e40af,
+  "primary-gradient": linear-gradient(90deg, #6a11cb 0%, #2575fc 100%),
+  // Primary Background Variations
+  "primary-50": #eff6ff,
+  "primary-100": #dbeafe,
+  "primary-200": #bfdbfe,
+  "primary-300": #93c5fd,
+  "primary-400": #60a5fa,
+
+  // Neutral Colors
+  "secondary": #9ca3af,
+  "dark": #111827,
+  "neutral-900": #111827,
+  "neutral-800": #1f2937,
+  "neutral-700": #374151,
+  "neutral-600": #4b5563,
+  "neutral-500": #6b7280,
+  "neutral-400": #9ca3af,
+  "neutral-300": #d1d5db,
+  "neutral-200": #e5e7eb,
+  "neutral-100": #f3f4f6,
+  "neutral-50": #ffffff,
+
+  // Semantic Colors
+  "success": #10b981,
+  "success-light": #34d399,
+  "success-dark": #059669,
+  "warning": #f59e0b,
+  "warning-light": #fbbf24,
+  "warning-dark": #d97706,
+  "error": #ef4444,
+  "error-light": #f87171,
+  "error-dark": #dc2626,
+  "info": #06b6d4,
+  "info-light": #22d3ee,
+  "info-dark": #0891b2,
+
+  // Background Colors
+  "background": #ffffff,
+  "background-secondary": #f9fafb,
+  "background-tertiary": #f3f4f6,
+  "surface": #ffffff,
+  "surface-raised": #ffffff,
+  "overlay": rgba(17, 24, 39, 0.4)
+);
+
+// Typography
+$font-family-base: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+  Ubuntu, Cantarell, sans-serif;
+$font-family-mono: "SF Mono", Monaco, Inconsolata, "Roboto Mono", "Courier New",
+  monospace;
+
+$font-weights: (
+  "light": 300,
+  "regular": 400,
+  "medium": 500,
+  "semibold": 600,
+  "bold": 700,
+);
+
+$font-sizes: (
+  "sxs": 0.6rem,
+  // 10px
+  "xs": 0.75rem,
+  // 12px
+  "sm": 0.875rem,
+  // 14px
+  "base": 1rem,
+  // 16px
+  "lg": 1.125rem,
+  // 18px
+  "xl": 1.25rem,
+  // 20px
+  "2xl": 1.5rem,
+  // 24px
+  "3xl": 1.875rem,
+  // 30px
+  "4xl": 2.25rem,
+  // 36px
+  "5xl": 3rem,
+  // 48px
+  "6xl": 3.75rem,
+  // 60px
+);
+
+$line-heights: (
+  "tight": 1.25,
+  "snug": 1.375,
+  "normal": 1.5,
+  "relaxed": 1.625,
+  "loose": 2,
+);
+
+// Spacing
+$spacing: (
+  "0": 0,
+  "1": 0.25rem,
+  // 4px
+  "2": 0.5rem,
+  // 8px
+  "3": 0.75rem,
+  // 12px
+  "4": 1rem,
+  // 16px
+  "5": 1.25rem,
+  // 20px
+  "6": 1.5rem,
+  // 24px
+  "8": 2rem,
+  // 32px
+  "10": 2.5rem,
+  // 40px
+  "12": 3rem,
+  // 48px
+  "16": 4rem,
+  // 64px
+  "20": 5rem,
+  // 80px
+  "24": 6rem,
+  // 96px
+  "32": 8rem,
+  // 128px
+);
+
+// Border Radius
+$border-radius: (
+  "none": 0,
+  "sm": 0.125rem,
+  // 2px
+  "base": 0.25rem,
+  // 4px
+  "md": 0.375rem,
+  // 6px
+  "lg": 0.5rem,
+  // 8px
+  "xl": 0.75rem,
+  // 12px
+  "2xl": 1rem,
+  // 16px
+  "3xl": 1.5rem,
+  // 24px
+  "full": 9999px,
+);
+
+// Shadows
+$shadows: (
+  "sm": 0 1px 2px 0 rgba(0, 0, 0, 0.05),
+  "base": (
+    0 1px 3px 0 rgba(0, 0, 0, 0.1),
+    0 1px 2px 0 rgba(0, 0, 0, 0.06),
+  ),
+  "md": (
+    0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -1px rgba(0, 0, 0, 0.06),
+  ),
+  "lg": (
+    0 10px 15px -3px rgba(0, 0, 0, 0.1),
+    0 4px 6px -2px rgba(0, 0, 0, 0.05),
+  ),
+  "xl": (
+    0 20px 25px -5px rgba(0, 0, 0, 0.1),
+    0 10px 10px -5px rgba(0, 0, 0, 0.04),
+  ),
+  "2xl": 0 25px 50px -12px rgba(0, 0, 0, 0.25),
+  "inner": inset 0 2px 4px 0 rgba(0, 0, 0, 0.06),
+  "none": none,
+);
+
+// Transitions
+$transitions: (
+  "fast": 150ms ease-in-out,
+  "base": 250ms ease-in-out,
+  "slow": 350ms ease-in-out,
+);
+
+// Breakpoints
+$breakpoints: (
+  "sm": 640px,
+  "md": 768px,
+  "lg": 1024px,
+  "xl": 1280px,
+  "2xl": 1536px,
+);
+
+// Z-index
+$z-indexes: (
+  "dropdown": 1000,
+  "sticky": 1020,
+  "fixed": 1030,
+  "modal-backdrop": 1040,
+  "modal": 1050,
+  "popover": 1060,
+  "tooltip": 1070,
+);
+
+// Flex-basis map
+$flex-basis: (
+  "7_5": 7.5%,
+  "8": 8%,
+  "8_5": 8.5%,
+  "10": 10%,
+  "12": 12%,
+  "12_5": 12.5%,
+  "14": 14%,
+  "15": 15%,
+  "16": 16%,
+  "17": 17%,
+  "18": 18%,
+  "20": 20%,
+  "25": 25%,
+  "27": 27%,
+  "28": 28%,
+  "30": 30%,
+  "33_3": 33.3%,
+  "50": 50%,
+  "60": 60%,
+  "70": 70%,
+  "80": 80%,
+  "100": 100%,
+);
+
+// =============================================================================
+// HELPER FUNCTIONS
+// =============================================================================
+
+@function color($name) {
+  @return map.get($colors, $name);
+}
+
+@function spacing($size) {
+  @if meta.type-of($size) ==number {
+    @return map.get($spacing, "#{$size}");
+  } @else {
+    @return map.get($spacing, $size);
+  }
+}
+
+@function font-size($size) {
+  @if meta.type-of($size) ==string {
+    @return map.get($font-sizes, $size);
+  } @else {
+    @return map.get($font-sizes, "#{$size}");
+  }
+}
+
+@each $name, $size in $font-sizes {
+  .font-#{$name} {
+    font-size: $size !important;
+  }
+}
+
+@function font-weight($weight) {
+  @return map.get($font-weights, $weight);
+}
+
+@each $name, $weight in $font-weights {
+  .font-#{$name} {
+    font-weight: $weight !important;
+  }
+}
+
+@function line-height($height) {
+  @return map.get($line-heights, $height);
+}
+
+@function border-radius($size) {
+  @return map.get($border-radius, $size);
+}
+
+@function shadow($size) {
+  @return map.get($shadows, $size);
+}
+
+@function transition($speed) {
+  @return map.get($transitions, $speed);
+}
+
+@function z-index($level) {
+  @return map.get($z-indexes, $level);
+}
+
+// =============================================================================
+// MIXINS
+// =============================================================================
+
+// Responsive breakpoints
+@mixin responsive($breakpoint) {
+  @if map.has-key($breakpoints, $breakpoint) {
+    @media (min-width: #{map.get($breakpoints, $breakpoint)}) {
+      @content;
+    }
+  }
+}
+
+// Breakpoint mixin
+@mixin respond-to($breakpoint) {
+  @media (max-width: map.get($breakpoints, $breakpoint)) {
+    @content;
+  }
+}
+
+// Flexbox utilities
+@each $key, $value in $flex-basis {
+  .flex-#{$key} {
+    flex-basis: $value;
+    max-width: $value;
+  }
+}
+
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin flex-start {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+@mixin flex-end {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+@mixin flex-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@mixin flex-column {
+  display: flex;
+  flex-direction: column;
+} 
+@mixin flex-row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+// Button styles
+@mixin button-base {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: spacing(2) spacing(4);
+  border: none;
+  border-radius: border-radius(lg);
+  font-family: var(--font-family);
+  font-size: font-size(sm);
+  font-weight: font-weight(regular);
+  line-height: line-height(tight);
+  text-decoration: none;
+  cursor: pointer;
+  transition: all transition(base);
+  white-space: nowrap;
+
+  &:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(var(--primary), 0.1);
+  }
+
+  &:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+  }
+}
+
+@mixin button-primary {
+  @include button-base;
+  background-color: rgba(var(--primary), 1);
+  color: rgba(var(--neutral-50), 1);
+  transition: all 0.3s ease; 
+
+  &:hover:not(:disabled) {
+    background-color: rgba(var(--primary), 1);
+    transform: translateY(-1px);
+    box-shadow: shadow(md);
+  }
+
+  &:active {
+    transform: translateY(0);
+  }
+}
+
+@mixin button-small {
+  padding: spacing(2) spacing(4);
+  font-size: font-size(sm);
+}
+
+@mixin button-secondary {
+  @include button-base;
+  background: rgba(var(--neutral-200), 1);
+  color: rgba(var(--neutral-700), 1);
+  border: 1px solid rgba(var(--neutral-300), 1);
+
+  &:hover:not(:disabled) {
+    background: rgba(var(--neutral-300), 1);
+    border-color: rgba(var(--neutral-500), 1);
+  }
+}
+
+@mixin button-ghost {
+  @include button-base;
+  background: transparent;
+  color: rgba(var(--neutral-700), 1);
+
+  &:hover:not(:disabled) {
+    background: rgba(var(--neutral-100), 1);
+  }
+}
+
+@mixin button-primary-outlined {
+  @include button-base;
+  //   background: transparent;
+  color: rgba(var(--primary), 1);
+  border: 1px solid rgba(var(--primary), 0.5) !important;
+  background: rgba(var(--primary), 0.03);
+  &:hover {
+    background: rgba(var(--primary), 0.06);
+    transform: translateY(-1px);
+    box-shadow: shadow(md);
+  }
+}
+
+@mixin button-success {
+  @include button-base;
+  background: rgba(var(--success), 1);
+  color: rgba(var(--neutral-50), 1);
+}
+
+@mixin button-success-outlined {
+  @include button-base;
+  background: transparent;
+  color: rgba(var(--success), 1);
+  border: 2px solid rgba(var(--success), 1);
+}
+
+@mixin button-warning {
+  @include button-base;
+  background: rgba(var(--warning), 1);
+  color: rgba(var(--neutral-50), 1);
+}
+
+@mixin button-warning-outlined {
+  @include button-base;
+  background: transparent;
+  color: rgba(var(--warning), 1);
+  border: 2px solid rgba(var(--warning), 1);
+}
+
+@mixin button-danger {
+  @include button-base;
+  background: rgba(var(--error), 1);
+  color: rgba(var(--neutral-50), 1);
+}
+
+@mixin button-danger-outlined {
+  @include button-base;
+  background: transparent;
+  color: rgba(var(--error), 1);
+  border: 2px solid rgba(var(--error), 1);
+}
+
+@mixin button-text {
+  padding: spacing(2) spacing(4);
+  font-size: font-size(sm);
+  background-color: transparent;
+  border: none;
+  align-items: center;
+  display: inline-block;
+
+  &:focus {
+    box-shadow: none;
+  }
+}
+
+// Form elements
+@mixin form-input {
+  width: 100%;
+  padding: spacing(3) spacing(4);
+  border: 1px solid color(neutral-400);
+  border-radius: border-radius(md);
+  font-size: font-size(base);
+  line-height: line-height(normal);
+  transition: border-color transition(base), box-shadow transition(base);
+
+  &:focus {
+    outline: none;
+    border-color: color(primary);
+    box-shadow: 0 0 0 3px rgba(color(primary), 0.1);
+  }
+
+  &::placeholder {
+    color: color(neutral-600);
+  }
+
+  &:disabled {
+    background-color: color(neutral-100);
+    cursor: not-allowed;
+    opacity: 0.6;
+  }
+}
+
+// Card styles
+@mixin card {
+  background-color: rgba(var(--surface), 1);
+  border-radius: border-radius(xl);
+  box-shadow: shadow(base);
+  transition: all transition(base);
+}
+
+@mixin card-hover {
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: shadow(lg);
+  }
+}
+
+@function typography($weight, $size, $color) {
+  $result: (
+    weight: map.get($font-weight, $weight),
+    size: map.get($font-size, $size),
+    color: var(--color-#{$color}),
+  );
+  @return $result;
+}
+
+// Typography
+@mixin heading { 
+  font-weight: font-weight(semibold);
+  font-size: font-size(lg);
+  color: rgba(var(--neutral-900), 1);
+  margin: 0 0 spacing(3);
+}
+
+@mixin sub-heading { 
+  font-weight: font-weight(medium);
+  font-size: font-size(base);
+  color: rgba(var(--neutral-700), 1);
+  margin: 0 0 spacing(3);
+}
+
+@mixin text { 
+  font-weight: font-weight(light);
+  font-size: font-size(base);
+  color: rgba(var(--neutral-600), 1);
+  margin: 0;
+}
+
+@mixin text-sm {
+  font-weight: font-weight(regular);
+  font-size: font-size(sm);
+  color: rgba(var(--neutral-600), 1);
+  margin: 0;
+}
+
+@mixin text-xs {
+  font-weight: font-weight(regular);
+  font-size: font-size(xs);
+  color: rgba(var(--neutral-600), 1);
+  margin: 0;
+}
+@mixin heading-1 {
+  font-size: font-size(5xl);
+  font-weight: font-weight(light);
+  line-height: line-height(tight);
+  color: color(neutral-900);
+
+  @include responsive(md) {
+    font-size: font-size(6xl);
+  }
+}
+
+@mixin heading-2 {
+  font-size: font-size(4xl);
+  font-weight: font-weight(regular);
+  line-height: line-height(tight);
+  color: color(neutral-900);
+
+  @include responsive(md) {
+    font-size: font-size(5xl);
+  }
+}
+
+@mixin heading-3 {
+  font-size: font-size(3xl);
+  font-weight: font-weight(medium);
+  line-height: line-height(snug);
+  color: color(neutral-900);
+
+  @include responsive(md) {
+    font-size: font-size(4xl);
+  }
+}
+
+@mixin heading-4 {
+  font-size: font-size(2xl);
+  font-weight: font-weight(medium);
+  line-height: line-height(snug);
+  color: color(neutral-900);
+
+  @include responsive(md) {
+    font-size: font-size(3xl);
+  }
+}
+
+@mixin heading-5 {
+  font-size: font-size(xl);
+  font-weight: font-weight(medium);
+  line-height: line-height(snug);
+  color: color(neutral-900);
+
+  @include responsive(md) {
+    font-size: font-size(xl);
+  }
+}
+
+@mixin heading-6 {
+  font-size: font-size(sm);
+  font-weight: font-weight(medium);
+  line-height: line-height(snug);
+  color: rgba(var(--neutral-600), 1);
+
+  @include responsive(md) {
+    font-size: font-size(sm);
+  }
+}
+
+@mixin body-large {
+  font-size: font-size(lg);
+  line-height: line-height(relaxed);
+  color: color(neutral-700);
+}
+
+@mixin body-base {
+  font-size: font-size(base);
+  line-height: line-height(normal);
+  color: color(neutral-600);
+}
+
+@mixin body-small {
+  font-size: font-size(sm);
+  line-height: line-height(normal);
+  color: rgba(var(--neutral-500), 1);
+  font-weight: 400;
+}
+
+// Gradients
+@mixin gradient-primary {
+  background: linear-gradient(135deg, color(primary), color(primary-light));
+}
+
+@mixin gradient-text {
+  background: linear-gradient(135deg, color(neutral-900), color(primary));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+// Loading states
+@mixin skeleton {
+  background: linear-gradient(
+    90deg,
+    color(neutral-200) 25%,
+    color(neutral-100) 50%,
+    color(neutral-200) 75%
+  );
+  background-size: 200% 100%;
+  animation: loading 1.5s infinite;
+}
+
+@keyframes loading {
+  0% {
+    background-position: 200% 0;
+  }
+
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+// Utilities
+@mixin sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+@mixin truncate {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+@mixin line-clamp($lines) {
+  display: -webkit-box;
+  -webkit-line-clamp: $lines;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+// =============================================================================
+// GLOBAL STYLES
+// =============================================================================
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: $font-family-base;
+  font-size: font-size(base);
+  line-height: line-height(normal);
+  color: color(neutral-700);
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+// =============================================================================
+// COMPONENT CLASSES
+// =============================================================================
+
+// Buttons
+.btn {
+  @include button-base;
+  &:disabled {
+    cursor: not-allowed !important;
+  }
+
+  &-primary {
+    @include button-primary;
+  }
+
+  &-primary-outlined {
+    @include button-primary-outlined;
+  }
+
+  &-secondary {
+    @include button-secondary;
+  }
+
+  &-ghost {
+    @include button-ghost;
+  }
+
+  &-success {
+    @include button-success;
+    font-weight: font-weight(bold);
+  }
+
+  &-success-outlined {
+    @include button-success-outlined;
+    font-weight: font-weight(bold);
+  }
+
+  &-danger {
+    @include button-danger;
+    font-weight: font-weight(bold);
+  }
+
+  &-danger-outlined {
+    @include button-danger-outlined;
+    font-weight: font-weight(bold);
+  }
+
+  &-warning {
+    @include button-warning;
+    font-weight: font-weight(bold);
+  }
+
+  &-warning-outlined {
+    @include button-warning-outlined;
+    font-weight: font-weight(bold);
+  }
+
+  &-small {
+    padding: spacing(2) spacing(4);
+    font-size: font-size(sm);
+  }
+
+  &-large {
+    padding: spacing(4) spacing(8);
+    font-size: font-size(lg);
+  }
+
+  &-text {
+    @include button-text;
+  }
+
+  &-danger-text {
+    @include button-text;
+    color: rgba(var(--error), 1);
+    width: 32px;
+    height: 32px;
+    &:hover {
+      background: rgba(var(--error), 0.1);
+      color: rgb(var(--error-dark));
+      transform: translateY(-1px);
+    }
+  }
+
+  &-primary-text {
+    @include button-text;
+    color: rgba(var(--primary), 0.85);
+    &:hover {
+      color: rgba(var(--primaryDark), 1);
+    }
+  }
+  &-success-text {
+    @include button-text;
+    color: rgba(var(--success), 0.85);
+    &:hover {
+      color: rgba(var(--successDark), 1);
+    }
+  }
+  &-secondary-text {
+    @include button-text;
+    color: rgba(var(--neutral-700), 1);
+    &:hover {
+      color: rgba(var(--neutral-800), 1);
+      background-color: rgba(var(--neutral-200), 1)
+    }
+  }
+}
+
+// Cards
+.card {
+  @include card;
+  padding: spacing(5);
+
+  &--hover {
+    @include card-hover;
+  }
+
+  &--compact {
+    padding: spacing(4);
+  }
+}
+
+// Forms
+.form-group {
+  margin-bottom: spacing(4);
+}
+
+.form-label {
+  display: block;
+  margin-bottom: spacing(2);
+  font-weight: font-weight(medium);
+  color: color(neutral-700);
+}
+
+.form-input {
+  @include form-input;
+}
+
+.form-textarea {
+  @include form-input;
+  resize: vertical;
+  min-height: 120px;
+}
+
+.form-select {
+  @include form-input;
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%236b7280' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M6 8l4 4 4-4'/%3e%3c/svg%3e");
+  background-position: right spacing(3) center;
+  background-repeat: no-repeat;
+  background-size: 1.5em 1.5em;
+  padding-right: spacing(10);
+}
+.text-hover-underlined{ 
+  text-decoration: none;
+  &:hover, :active{
+   text-decoration: underline;
+  } 
+}
+ 
+// Typography
+
+.text-h1 {
+  @include heading-1;
+}
+
+.text-h2 {
+  @include heading-2;
+}
+
+.text-h3 {
+  @include heading-3;
+}
+
+.text-h4 {
+  @include heading-4;
+}
+
+.text-h5 {
+  @include heading-5;
+}
+
+.text-h6 {
+  @include heading-6;
+}
+
+.text-body-lg {
+  @include body-large;
+}
+
+.text-body {
+  @include body-base;
+}
+
+.text-body-sm {
+  @include body-small;
+}
+.text-danger{
+  color: rgba(var(--error), 1);
+}
+// Typography
+.text-heading {
+  @include heading;
+}
+
+.text-sub-heading {
+  @include sub-heading;
+}
+
+.text {
+  @include text;
+}
+
+.text-sm {
+  @include text-sm;
+}
+
+.text-xs {
+  @include text-xs;
+}
+
+.text-italic {
+  font-style: italic;
+}
+
+.text-heading1 {
+  @include heading-1;
+}
+
+.text-heading2 {
+  @include heading-2;
+}
+
+.text-heading3 {
+  @include heading-3;
+}
+
+.text-heading4 {
+  @include heading-4;
+}
+
+.text-primary {
+  color: var(--color-primary) !important;
+}
+
+.text-primary-light {
+  color: var(--color-primary-light);
+}
+
+.text-primary-dark {
+  color: var(--color-primary-dark);
+}
+
+.text-secondary {
+  color: var(--color-neutral-800);
+}
+
+.text-secondary-light {
+  color: var(--color-neutral-600);
+}
+
+.text-secondary-dark {
+  color: var(--color-neutral-900);
+}
+
+.text-success {
+  color: var(--color-success);
+}
+
+.text-success-light {
+  color: var(--color-success-light);
+}
+
+.text-success-dark {
+  color: var(--color-success-dark);
+}
+
+.text-warning {
+  color: var(--color-warning);
+}
+
+.text-warning-light {
+  color: var(--color-warning-light);
+}
+
+.text-warning-dark {
+  color: var(--color-warning-dark);
+}
+
+.text-danger {
+  color: var(--color-danger);
+}
+
+.text-danger-light {
+  color: var(--color-danger-light);
+}
+
+.text-danger-dark {
+  color: var(--color-danger-dark);
+}
+
+.text-info {
+  color: var(--color-info);
+}
+
+.text-info-light {
+  color: var(--color-info-light);
+}
+
+.text-info-dark {
+  color: var(--color-info-dark);
+}
+
+.text-white {
+  color: var(--color-neutral-50) !important;
+}
+
+//background color
+.bg-primary {
+  background-color: var(--color-primary);
+}
+
+.bg-warning {
+  background-color: var(--color-warning);
+}
+
+.bg-success {
+  background-color: var(--color-success);
+}
+
+.bg-success-dark {
+  background-color: var(--color-success-dark);
+}
+
+// Font weight
+.fw-light {
+  font-weight: font-weight(light) !important;
+}
+
+.fw-regular {
+  font-weight: font-weight(regular) !important;
+}
+
+.fw-medium {
+  font-weight: font-weight(medium) !important;
+}
+
+.fw-semibold {
+  font-weight: font-weight(semibold) !important;
+}
+
+.fw-bold {
+  font-weight: font-weight(bold) !important;
+}
+
+
+// colors
+@each $name, $value in $colors {
+  .text-#{$name} {
+    color: #{$value} !important;
+  }
+
+  .bg-#{$name} {
+    background-color: #{$value} !important;
+  }
+
+  // Border color (all sides)
+  .border-#{$name} {
+    border-color: #{$value} !important;
+  }
+
+  // Border top/right/bottom/left colors
+  .border-t-#{$name} {
+    border-top-color: #{$value} !important;
+  }
+  .border-r-#{$name} {
+    border-right-color: #{$value} !important;
+  }
+  .border-b-#{$name} {
+    border-bottom-color: #{$value} !important;
+  }
+  .border-l-#{$name} {
+    border-left-color: #{$value} !important;
+  }
+}
+
+// Utilities
+.sr-only {
+  @include sr-only;
+}
+
+.truncate {
+  @include truncate;
+}
+
+.skeleton {
+  @include skeleton;
+}
+
+.gradient-text {
+  @include gradient-text;
+}
+
+.list-style-none {
+  list-style: none;
+}
+
+
+.flex, .display-flex {
+  display: flex;
+  flex-wrap: wrap
+}
+
+.flex-center {
+  @include flex-center;
+}
+
+.flex-start {
+  @include flex-start;
+}
+
+.flex-end {
+  @include flex-end;
+}
+
+.flex-between {
+  @include flex-between;
+}
+
+.flex-column {
+  @include flex-column;
+}
+
+.flex-row {
+  @include flex-row;
+}
+
+
+.h-100 {
+  height: 100%;
+}
+.w-100 {
+  width: 100%;
+}
+
+.text-center {
+  text-align: center;
+}
+.overflow-hidden{
+  overflow: hidden !important;
+}
+.overflow-visible{
+  overflow: visible !important;
+}
+
+
+// Spacing utilities
+@each $name, $value in $spacing {
+  .m-#{$name} {
+    margin: $value;
+  }
+
+  .mt-#{$name} {
+    margin-top: $value !important;
+  }
+
+  .mr-#{$name} {
+    margin-right: $value !important;
+  }
+
+  .mb-#{$name} {
+    margin-bottom: $value !important;
+  }
+
+  .ml-#{$name} {
+    margin-left: $value !important;
+  }
+
+  .mx-#{$name} {
+    margin-left: $value !important;
+    margin-right: $value !important;
+  }
+
+  .my-#{$name} {
+    margin-top: $value !important;
+    margin-bottom: $value !important;
+  }
+
+  .p-#{$name} {
+    padding: $value !important;
+  }
+
+  .pt-#{$name} {
+    padding-top: $value !important;
+  }
+
+  .pr-#{$name} {
+    padding-right: $value !important;
+  }
+
+  .pb-#{$name} {
+    padding-bottom: $value !important;
+  }
+
+  .pl-#{$name} {
+    padding-left: $value !important;
+  }
+
+  .px-#{$name} {
+    padding-left: $value !important;
+    padding-right: $value !important;
+  }
+
+  .py-#{$name} {
+    padding-top: $value !important;
+    padding-bottom: $value !important;
+  }
+}
+
+// =============================================================================
+// DYNAMIC GRID MIXIN
+// =============================================================================
+
+@mixin grid($columns: 2, $gap: "4", $min-width: 250px, $fluid: false) {
+  display: grid;
+  gap: spacing($gap);
+
+  @if $fluid {
+    grid-template-columns: repeat(auto-fill, minmax($min-width, 1fr));
+  } @else {
+    grid-template-columns: repeat($columns, minmax($min-width, 1fr));
+  }
+}
+
+// Responsive Grid Variant
+@mixin responsive-grid(
+  $default: 1,
+  $sm: null,
+  $md: null,
+  $lg: null,
+  $xl: null,
+  $gap: "4",
+  $min-width: 250px,
+  $fluid: false
+) {
+  @include grid($default, $gap, $min-width, $fluid);
+
+  @if $sm {
+    @include responsive(sm) {
+      grid-template-columns: repeat($sm, minmax($min-width, 1fr));
+    }
+  }
+
+  @if $md {
+    @include responsive(md) {
+      grid-template-columns: repeat($md, minmax($min-width, 1fr));
+    }
+  }
+
+  @if $lg {
+    @include responsive(lg) {
+      grid-template-columns: repeat($lg, minmax($min-width, 1fr));
+    }
+  }
+
+  @if $xl {
+    @include responsive(xl) {
+      grid-template-columns: repeat($xl, minmax($min-width, 1fr));
+    }
+  }
+}
+
+.grid-basic {
+  @include grid(3, "6", 300px);
+}
+
+.grid-fluid {
+  @include grid($gap: "4", $min-width: 200px, $fluid: true);
+}
+
+.grid-responsive {
+  @include responsive-grid(
+    $default: 1,
+    $sm: 2,
+    $md: 3,
+    $lg: 4,
+    $gap: "6",
+    $min-width: 200px
+  );
+}
+
+// border
+.border-none{
+  border: none !important;
+}
