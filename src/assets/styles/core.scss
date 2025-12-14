@@ -429,7 +429,7 @@ $flex-basis: (
 
 @mixin button-ghost {
   @include button-base;
-  background: transparent;
+  // background: transparent;
   color: rgba(var(--neutral-700), 1);
 
   &:hover:not(:disabled) {
@@ -470,7 +470,7 @@ $flex-basis: (
   @include button-base;
   background: transparent;
   color: rgba(var(--success), 1);
-  border: 2px solid rgba(var(--success), 1);
+  border: 1px solid rgba(var(--success), 1);
 }
 
 @mixin button-warning {
