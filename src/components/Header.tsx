@@ -53,15 +53,12 @@ const Header = () => {
                   currentMode === "dark" ? "fas fa-brightness" : "fas fa-moon"
                 }`}
               ></i>
-            </button>
-            <Dropdown placement="right">
-              <li
-                className="dropdown-menu-item"
-                onClick={() => navigate("/add-or-edit-setting")}
-              >
-                <i className="fa-regular fa-gear" />
-                Settings
-              </li>
+            </button> 
+            <Dropdown
+              placement="right"
+              className="btn-secondary-text"
+              icon={"fas fa-gear"}
+            > 
               <li className="dropdown-menu-item">
                 <i className="fa-regular fa-user" />
                 My Account
