@@ -5,13 +5,13 @@ import Loader from '../components/Loader';
 const Product = React.lazy(() => import('../pages/Product')); 
 const MyLibrary = React.lazy(() => import('../pages/MyLibrary'));
 const AddOrEditSetting = React.lazy(() => import('../pages/AddOrEditSetting'));
-const AIInsights = React.lazy(() => import('../pages/AIInsights')); 
+const Home = React.lazy(() => import('../pages/Homes')); 
 
 export const RouteList = [
     {
         id: 'home',
         path: '*',
-        element: () => <Navigate to="/my-library" replace />,
+        element: () => <Navigate to="/home" replace />,
     },
     {
         id: 'my-library',
@@ -41,11 +41,11 @@ export const RouteList = [
         ),
     },
      {
-        id: 'ai-insights',  
-        path: '/ai-insights',
+        id: 'home',  
+        path: '/home',
         element: () => (
             <Suspense fallback={<Loader />}>
-                <AIInsights />
+                <Home />
             </Suspense>
         ),
     },

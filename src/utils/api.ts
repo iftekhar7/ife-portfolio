@@ -1,46 +1,36 @@
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 import { setMessageContent } from "./Slices/common";
-// import { getAccessToken } from "./MsLoginUtils/useAccessToken"; 
-const baseUrl = window?.APP_CONFIG?.API_BASE_URL; 
 
-const baseQueryWithAuth = async (args: any, api:any, extraOptions:any) => {
-  let token;
+const baseUrl =
+  import.meta.env.VITE_API_BASE_URL || `${window.location.origin}/api/v1/`;
 
-  try {
-    // token = await getAccessToken();
-  } catch (err) {
-    console.warn("Error getting access token:", err);
-  }
+const rawBaseQuery = fetchBaseQuery({
+  baseUrl,
+  prepareHeaders: (headers) => {
+    const token = localStorage.getItem("accessToken");
+    if (token) headers.set("Authorization", `Bearer ${token}`);
+    return headers;
+  },
+});
 
-  const rawBaseQuery = fetchBaseQuery({ baseUrl });
+const baseQueryWithAuth = async (args: any, api: any, extraOptions: any) => {
+  const result: any = await rawBaseQuery(args, api, extraOptions);
+  const status = result?.meta?.response?.status || result?.error?.status;
 
-  if (typeof args === "string") {
-    args = { url: args };
-  }
-
-  args.headers = {
-    ...args.headers,
-    ...(token ? { Authorization: `Bearer ${token}` } : {}),
-  };
-
-  const result = await rawBaseQuery(args, api, extraOptions);
-
-  switch (result?.meta?.response?.status || result?.error?.status) {
+  switch (status) {
     case 401:
-      // logoutUser();
+      // You can redirect to login here
       break;
-
     case 400:
-    case 500:
     case 404:
+    case 500:
       api.dispatch(
         setMessageContent({
           isOpen: true,
-          message: Array.isArray(result?.error?.data?.errors)
-            ? result.error.data.errors[0]
-            : result?.error?.data?.errors ||
-              result?.error?.data?.message ||
-              "Something went wrong",
+          message:
+            result?.error?.data?.errors ||
+            result?.error?.data?.message ||
+            "Something went wrong",
           type: "error",
         })
       );
@@ -49,30 +39,28 @@ const baseQueryWithAuth = async (args: any, api:any, extraOptions:any) => {
       api.dispatch(
         setMessageContent({
           isOpen: true,
-          message:
-            "Access forbidden. You are not authorized to perform this action.",
+          message: "Access forbidden.",
           type: "error",
         })
       );
       break;
-
     case "FETCH_ERROR":
       api.dispatch(
         setMessageContent({
           isOpen: true,
-          message:
-            "Network or CORS error. Please check your connection or API settings.",
+          message: "Network or CORS error.",
           type: "error",
         })
       );
       break;
   }
+
   return result;
 };
 
 export const api = createApi({
   reducerPath: "api",
   baseQuery: baseQueryWithAuth,
-  tagTypes: [""],
+  tagTypes: [ 'getAllCustomers'],
   endpoints: () => ({}),
 });

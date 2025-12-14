@@ -1,0 +1,68 @@
+@use "./core.scss" as *;
+
+.badge {
+  border-radius: 30px;
+  padding: 2px 12px;
+  //   background-color: #ebeef9;
+  font-weight: font-weight("medium");
+  font-size: font-size("xs");
+  margin-right: 12px;
+  display: inline-block;
+
+  i {
+    margin-right: spacing(1);
+  }
+
+  &-primary {
+    background-color: rgba(var(--primaryLight));
+    color: rgba(var(--primary));
+  }
+
+  &-purple {
+    background-color: rgba(var(--purpleLight));
+    color: rgba(var(--purple));
+  }
+
+  &-success {
+    background-color: rgba(var(--successLight), 0.18);
+    color: rgba(var(--successDark));
+  }
+
+  &-warning {
+    background-color: rgba(var(--warning), 0.18);
+    color: rgba(var(--warningDark), 1);
+  }
+
+  &-danger {
+    background-color: rgba(var(--error), 0.18);
+    color: rgba(var(--error));
+  }
+}
+
+.availability-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  margin-bottom: 1.5rem;
+  border-radius: 30px;
+  background-image: linear-gradient(
+    135deg,
+    rgba(var(--neutral-900), 1),
+    rgba(var(--primary), 1)
+  );
+  border: 1px solid rgba(var(--success), 0.2);
+  font-size: 0.875rem;
+
+  .status-dot {
+    width: 0.5rem;
+    height: 0.5rem;
+    background-color: #10b981;
+    border-radius: 9999px;
+    animation: pulse 2s infinite;
+  }
+
+  .status-text {
+    color: rgba(var(--neutral-500), 1);
+  }
+}

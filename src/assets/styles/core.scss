@@ -62,7 +62,10 @@ $colors: (
   "background-tertiary": #f3f4f6,
   "surface": #ffffff,
   "surface-raised": #ffffff,
-  "overlay": rgba(17, 24, 39, 0.4)
+  "overlay": rgba(17, 24, 39, 0.4) // extra colors
+  // "violet": #8b5cf6,
+  // "fuchsia": #d946ef,
+  // "cyan": #06b6d4,
 );
 
 // Typography
@@ -355,7 +358,7 @@ $flex-basis: (
 @mixin flex-column {
   display: flex;
   flex-direction: column;
-} 
+}
 @mixin flex-row {
   display: flex;
   flex-direction: row;
@@ -394,7 +397,7 @@ $flex-basis: (
   @include button-base;
   background-color: rgba(var(--primary), 1);
   color: rgba(var(--neutral-50), 1);
-  transition: all 0.3s ease; 
+  transition: all 0.3s ease;
 
   &:hover:not(:disabled) {
     background-color: rgba(var(--primary), 1);
@@ -435,8 +438,7 @@ $flex-basis: (
 }
 
 @mixin button-primary-outlined {
-  @include button-base;
-  //   background: transparent;
+  @include button-base; 
   color: rgba(var(--primary), 1);
   border: 1px solid rgba(var(--primary), 0.5) !important;
   background: rgba(var(--primary), 0.03);
@@ -444,6 +446,17 @@ $flex-basis: (
     background: rgba(var(--primary), 0.06);
     transform: translateY(-1px);
     box-shadow: shadow(md);
+  }
+}
+
+@mixin button-ghost-outlined {
+  @include button-base; 
+  color: rgba(var(--neutral-700), 1);
+  border: 1px solid rgba(var(--neutral-300), 1) !important ;
+  background: rgba(var(--neutral-100), 1) !important;
+  &:hover {
+    background: rgba(var(--neutral-700), 0.04) !important;
+    transform: translateY(-1px); 
   }
 }
 
@@ -551,21 +564,21 @@ $flex-basis: (
 }
 
 // Typography
-@mixin heading { 
+@mixin heading {
   font-weight: font-weight(semibold);
   font-size: font-size(lg);
   color: rgba(var(--neutral-900), 1);
   margin: 0 0 spacing(3);
 }
 
-@mixin sub-heading { 
+@mixin sub-heading {
   font-weight: font-weight(medium);
   font-size: font-size(base);
-  color: rgba(var(--neutral-700), 1);
+  color: rgba(var(--neutral-600), 1);
   margin: 0 0 spacing(3);
 }
 
-@mixin text { 
+@mixin text {
   font-weight: font-weight(light);
   font-size: font-size(base);
   color: rgba(var(--neutral-600), 1);
@@ -682,6 +695,7 @@ $flex-basis: (
   background-clip: text;
 }
 
+ 
 // Loading states
 @mixin skeleton {
   background: linear-gradient(
@@ -781,6 +795,9 @@ body {
   &-ghost {
     @include button-ghost;
   }
+   &-ghost-outlined{
+    @include button-ghost-outlined;
+  }
 
   &-success {
     @include button-success;
@@ -857,7 +874,7 @@ body {
     color: rgba(var(--neutral-700), 1);
     &:hover {
       color: rgba(var(--neutral-800), 1);
-      background-color: rgba(var(--neutral-200), 1)
+      background-color: rgba(var(--neutral-200), 1);
     }
   }
 }
@@ -906,13 +923,14 @@ body {
   background-size: 1.5em 1.5em;
   padding-right: spacing(10);
 }
-.text-hover-underlined{ 
+.text-hover-underlined {
   text-decoration: none;
-  &:hover, :active{
-   text-decoration: underline;
-  } 
+  &:hover,
+  :active {
+    text-decoration: underline;
+  }
 }
- 
+
 // Typography
 
 .text-h1 {
@@ -950,7 +968,7 @@ body {
 .text-body-sm {
   @include body-small;
 }
-.text-danger{
+.text-danger {
   color: rgba(var(--error), 1);
 }
 // Typography
@@ -1108,7 +1126,6 @@ body {
   font-weight: font-weight(bold) !important;
 }
 
-
 // colors
 @each $name, $value in $colors {
   .text-#{$name} {
@@ -1160,10 +1177,10 @@ body {
   list-style: none;
 }
 
-
-.flex, .display-flex {
+.flex,
+.display-flex {
   display: flex;
-  flex-wrap: wrap
+  flex-wrap: wrap;
 }
 
 .flex-center {
@@ -1190,7 +1207,6 @@ body {
   @include flex-row;
 }
 
-
 .h-100 {
   height: 100%;
 }
@@ -1201,13 +1217,12 @@ body {
 .text-center {
   text-align: center;
 }
-.overflow-hidden{
+.overflow-hidden {
   overflow: hidden !important;
 }
-.overflow-visible{
+.overflow-visible {
   overflow: visible !important;
 }
-
 
 // Spacing utilities
 @each $name, $value in $spacing {
@@ -1345,6 +1360,6 @@ body {
 }
 
 // border
-.border-none{
+.border-none {
   border: none !important;
 }

@@ -1,4 +1,4 @@
-import { api } from "../Utils/api";
+import { api } from "../utils/api";
 
 const customers = api.injectEndpoints({
     endpoints: (builder) => ({
