@@ -1,9 +1,9 @@
 import React, { createContext, useContext, useState } from "react";
 
 export const DEFAULT_THEME = {
-  primary: "37, 112, 192",
+  primary: "27, 76, 150",
   primaryLight: "233, 242, 255",
-  primaryDark: "28, 90, 154",
+  primaryDark: "22, 61, 120",
   primaryDarker: "21, 74, 130",
 
   neutral: {

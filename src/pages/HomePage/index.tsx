@@ -9,7 +9,7 @@ import {
 import { useLocalStorage } from "../../hooks/useLocalStorage";
 import { Route, Routes, useLocation } from "react-router-dom";
 import { RouteList } from "../../Route/route";
-import Sidenav from "../../components/Sidenav";
+// import Sidenav from "../../components/Sidenav";
 import Loader from "../../components/Loader";
 
 const Login = React.lazy(() => import("../../pages/Login")); 
@@ -53,7 +53,7 @@ function HomePage() {
       ) : (
         <div className="content-wrapper">
           <Header />
-          <Sidenav />
+          {/* <Sidenav /> */}
           <div className="content-body">
             <Routes>
               {RouteList?.map((route) => {
