@@ -1,20 +1,23 @@
 import React, { useState, useEffect, useRef } from "react";
-import { useTheme } from "./ThemeProvider";
 
 export function Dropdown(props: {
   placement: "left" | "right";
   children: React.ReactNode;
+  className?: string;
+  title?: string;
+  icon?: string;
 }) {
-  const [isOpen, setIsOpen] = useState(false);
   const [isAnimating, setIsAnimating] = useState(false);
-  const dropdownRef = useRef(null); 
-
-  const { theme } = useTheme();
+  const dropdownRef = useRef<HTMLDivElement | null>(null);
+  const [isOpen, setIsOpen] = useState(false);
 
   // Close dropdown on outside click and escape key
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
-      if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+      if (
+        dropdownRef.current &&
+        !dropdownRef.current.contains(event.target as Node)
+      ) {
         closeDropdown();
       }
     };
@@ -34,11 +37,6 @@ export function Dropdown(props: {
     };
   }, []);
 
-  // Handle dropdown selection
-  const handleOptionSelect = (value) => {
-    closeDropdown();
-  };
-
   const closeDropdown = () => {
     setIsAnimating(true);
     setTimeout(() => {
@@ -47,22 +45,13 @@ export function Dropdown(props: {
     }, 150);
   };
 
-  const toggleDropdown = () => setIsOpen((prev) => !prev);
+  const toggleDropdown = () => setIsOpen((prev: boolean) => !prev);
 
   return (
     <div className="dropdown-wrapper" ref={dropdownRef}>
-      <div className="user-menu">
-        <button className="header-action user-btn" title="User menu">
-          <div
-            className="user-avatar-small"
-            // ref={avatarRef}
-            role="button"
-            onClick={toggleDropdown}
-          >
-            mi
-          </div>
-        </button>
-      </div>
+      <button onClick={toggleDropdown} className={`btn ${props?.className}`}>
+        <i className={props?.icon}></i>
+      </button>
 
       {isOpen && (
         <div

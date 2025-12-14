@@ -869,12 +869,12 @@ body {
       color: rgba(var(--successDark), 1);
     }
   }
-  &-secondary-text {
+   &-secondary-text {
     @include button-text;
-    color: rgba(var(--neutral-700), 1);
+    color: rgba(var(--neutral-600), 1);
     &:hover {
       color: rgba(var(--neutral-800), 1);
-      background-color: rgba(var(--neutral-200), 1);
+      // background-color: rgba(var(--neutral-200), 1)
     }
   }
 }

@@ -1,9 +1,7 @@
 @use "../core.scss" as *;
 .login-page {
   background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  display: flex;
-  justify-content: center;
-  align-items: center;
+ @include flex-center;
   min-height: 100vh;
   padding: 20px;
 
@@ -83,13 +81,12 @@
       text-align: center;
       margin-top: 15px;
 
-      a {
-        color: #667eea;
-        text-decoration: none;
-        font-size: 14px;
+      a { 
+        text-decoration: none; 
 
         &:hover {
           text-decoration: underline;
+          color: rgba(var(--primary), 1);
         }
       }
     }

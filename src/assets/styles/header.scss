@@ -14,8 +14,7 @@
     height: 100%;
     .header-left {
       .nav-brand {
-        display: flex;
-        align-items: center;
+        @include flex-start;
         gap: 0.75rem;
 
         .logo {
@@ -23,8 +22,7 @@
           height: 2.5rem;
           border-radius: 0.5rem;
           background-color: rgba(var(--primary), 1);
-          color: rgba(var(--neutral-100), 1);
-          // @include gradient-bg(to bottom right, $violet, $fuchsia);
+          color: rgba(var(--neutral-100), 1); 
           @include flex-center;
           font-weight: bold;
         }
@@ -46,7 +44,7 @@
 
     .header-right {
       @include flex-start;
-      gap: spacing("3");
+      gap: spacing(2);
 
       .header-action {
         background: none;
@@ -60,40 +58,14 @@
         @include flex-center;
 
         &:hover {
-          color: color("neutral-900");
-          // background-color: color("background-tertiary");
+          color: color("neutral-900"); 
         }
 
         &:focus {
           outline: none;
         }
-      }
-
-      .user-menu {
-        position: relative;
-
-        .user-btn {
-          padding: spacing("1");
-        }
-
-        .user-avatar-small {
-          img {
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-          }
-          width: 28px;
-          height: 28px;
-          background-color: color("primary");
-          border-radius: border-radius("full");
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          font-weight: font-weight("bold");
-          font-size: font-size("xs");
-          color: color("neutral-50");
-        }
-      }
+      } 
+       
     }
   }
   @include responsive(sm) {
