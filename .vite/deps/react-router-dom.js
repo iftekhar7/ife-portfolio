@@ -127,16 +127,14 @@ import {
   withComponentProps,
   withErrorBoundaryProps,
   withHydrateFallbackProps
-} from "./chunk-YERJVWL6.js";
+} from "./chunk-WD4NASXR.js";
 import {
   require_react_dom
-} from "./chunk-RLBEVQI4.js";
+} from "./chunk-BYNWFHQF.js";
 import {
+  __toESM,
   require_react
-} from "./chunk-IGXLOIK6.js";
-import {
-  __toESM
-} from "./chunk-5WRI5ZAA.js";
+} from "./chunk-3PPUDOJL.js";
 
 // node_modules/react-router/dist/development/dom-export.mjs
 var React = __toESM(require_react(), 1);

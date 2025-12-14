@@ -1,10 +1,8 @@
 import {
-  require_react
-} from "./chunk-IGXLOIK6.js";
-import {
   __commonJS,
-  __toESM
-} from "./chunk-5WRI5ZAA.js";
+  __toESM,
+  require_react
+} from "./chunk-3PPUDOJL.js";
 
 // node_modules/cookie/dist/index.js
 var require_dist = __commonJS({
@@ -13152,4 +13150,4 @@ export {
   deserializeErrors2 as deserializeErrors,
   getHydrationData
 };
-//# sourceMappingURL=chunk-YERJVWL6.js.map
+//# sourceMappingURL=chunk-WD4NASXR.js.map

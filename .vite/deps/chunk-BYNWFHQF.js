@@ -1,9 +1,7 @@
 import {
+  __commonJS,
   require_react
-} from "./chunk-IGXLOIK6.js";
-import {
-  __commonJS
-} from "./chunk-5WRI5ZAA.js";
+} from "./chunk-3PPUDOJL.js";
 
 // node_modules/react-dom/cjs/react-dom.development.js
 var require_react_dom_development = __commonJS({
@@ -265,4 +263,4 @@ var require_react_dom = __commonJS({
 export {
   require_react_dom
 };
-//# sourceMappingURL=chunk-RLBEVQI4.js.map
+//# sourceMappingURL=chunk-BYNWFHQF.js.map
