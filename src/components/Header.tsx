@@ -1,21 +1,15 @@
-import React, { useRef, useState } from "react";
+ 
 import { useLocalStorage } from "../hooks/useLocalStorage";
 import { useTheme } from "./ThemeProvider";
-import { Dropdown } from "./Dropdown";
-import Modal from "./Modal";
-import Tabs from "./Tabs";
+import { Dropdown } from "./Dropdown"; 
 import { useNavigate } from "react-router";
 
 const Header = () => {
   const navigate = useNavigate();
   const [currentMode, setCurrentMode] = useLocalStorage("theme", "light");
-  const [isOpenModal, setIsOpenModal] = useState<{ isOpen: boolean }>({
-    isOpen: false,
-  });
+  
   const { theme } = useTheme();
-  const cancelModalHandler = () => {
-    setIsOpenModal({ isOpen: false });
-  };
+ 
   return (
     <>
       <header className="header">

@@ -1,4 +1,4 @@
-import React from "react";
+ 
 import { socialIconData } from "./data";
 import Projects from "./Projects";
 
