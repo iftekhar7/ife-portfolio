@@ -12,10 +12,7 @@ export const profileSlice = createSlice({
     reducers: {
         setUserProfile: (state, action) => {
             state.userProfile = action.payload;
-        },
-        setUserProfileImage: (state, action) => {
-            state.userProfileImage = action.payload;
-        },
+        }, 
         clearUserProfile: (state) => {
             state.userProfile = null;
         },
@@ -25,5 +22,5 @@ export const profileSlice = createSlice({
     },
 });
 
-export const { setUserProfile, clearUserProfile, storeMsToken,setUserProfileImage } = profileSlice.actions;
+export const { setUserProfile, clearUserProfile, storeMsToken } = profileSlice.actions;
 export default profileSlice.reducer;

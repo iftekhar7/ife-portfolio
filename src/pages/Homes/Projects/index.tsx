@@ -1,25 +1,9 @@
-import React, { useState } from "react";
+import React from "react";
 import { Tooltip } from "react-tooltip";
 import "react-tooltip/dist/react-tooltip.css";
 import { cardData } from "../data";
 
-function Projects() {
-  const [imageViewModal, setImageViewModal] = useState({
-    isImageViewModal: false,
-    imageViewModalState: "",
-  });
-  const closeModalHandler = () => {
-    setImageViewModal({
-      isImageViewModal: false,
-      imageViewModalState: "",
-    });
-  };
-  const clickModalHandler = (name: string) => {
-    setImageViewModal({
-      isImageViewModal: true,
-      imageViewModalState: name,
-    });
-  };
+function Projects() {  
 
   return (
     <React.Fragment>
@@ -34,7 +18,7 @@ function Projects() {
                     className="expand-icon"
                     data-tooltip-id={`${item?.projectName}`}
                     data-tooltip-content="Expand and View more"
-                    onClick={() => clickModalHandler(item?.projectName)}
+                    // onClick={() => clickModalHandler(item?.projectName)}
                   >
                     <i className="fas fa-expand-wide"></i>
                   </div>

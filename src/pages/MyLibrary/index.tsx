@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import  { useState } from "react";
 import dayjs from "dayjs";
 import { files } from "./data";
 
@@ -16,8 +16,7 @@ import {
   arrayMove,
 } from "@dnd-kit/sortable";
 
-import SortableItem from "./SortableItem";
-import TreeView from "../../components/TreeView";
+import SortableItem from "./SortableItem"; 
 
 /* ---------------------------------------------
    TABLE ROW COMPONENT
