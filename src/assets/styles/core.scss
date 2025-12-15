@@ -453,7 +453,7 @@ $flex-basis: (
   @include button-base; 
   color: rgba(var(--neutral-700), 1);
   border: 1px solid rgba(var(--neutral-300), 1) !important ;
-  background: rgba(var(--neutral-100), 1) !important;
+  background: rgba(var(--neutral-200), 1) !important;
   &:hover {
     background: rgba(var(--neutral-700), 0.04) !important;
     transform: translateY(-1px); 
@@ -483,7 +483,7 @@ $flex-basis: (
   @include button-base;
   background: transparent;
   color: rgba(var(--warning), 1);
-  border: 2px solid rgba(var(--warning), 1);
+  border: 1px solid rgba(var(--warning), 1);
 }
 
 @mixin button-danger {
@@ -1341,7 +1341,7 @@ body {
 }
 
 .grid-basic {
-  @include grid(3, "6", 300px);
+  @include grid(3, "3", 300px);
 }
 
 .grid-fluid {

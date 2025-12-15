@@ -1,5 +1,6 @@
 import React from "react";
 import { socialIconData } from "./data";
+import Projects from "./Projects";
 
 function Home() {
   const handleDownload = () => {
@@ -9,6 +10,10 @@ function Home() {
     link.download = "Mohammad_Iftekhar_Frontend_Developer";
     link.click();
   };
+
+  const  handleLinkNavigate = (url: string) => {
+    window.open(url, "_blank");
+  };  
 
   return (
     <>
@@ -64,25 +69,11 @@ function Home() {
               </div>
 
               <div className="social-links">
-                {socialIconData.map((icon) => (
-                  <a
-                    key={icon.id}
-                    href={icon.sourceLink}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <i className={icon.icon} />
-                  </a>
-                ))}
-                <button className="btn btn-primary-outlined">
-                  <i className="fab fa-linkedin-in"></i>
-                </button>
-                 <button className="btn btn-ghost-outlined">
-                   <i className="fab fa-github"></i>
-                </button>
-                 <button className="btn btn-success-outlined">
-                   <i className="fas fa-envelope"></i>
-                </button> 
+                {socialIconData.map((item) => (
+                  <button  key={item.id} onClick={() => handleLinkNavigate(item.sourceLink)} className={`btn btn-${item.className}`}>
+                    <i className={item.icon}></i>
+                  </button> 
+                ))} 
               </div>
             </div>
 
@@ -104,13 +95,19 @@ function Home() {
           <p className="section-subtitle">
             Building exceptional web experiences
           </p>
-          <p className='text-sub-heading'>I'm <b className="gradient-text">Mohammad Iftekhar - 24 years old</b> Front End Developer and Designer in Gurugram with experience in HTML, CSS, SCSS, React js, Redux Toolkit, and JavaScript,
-                    and expertise in frameworks like Bootstrap, and MUI. I'm a quick learner and collaborate closely with clients
-                    to create efficient, scalable, and user-friendly solutions that solve real-world problems. Let's work together to bring
-                    your ideas to life! Achievement.</p>
+          <p className="text-sub-heading">
+            I'm{" "}
+            <b className="gradient-text">Mohammad Iftekhar - 24 years old</b>{" "}
+            Front End Developer and Designer in Gurugram with experience in
+            HTML, CSS, SCSS, React js, Redux Toolkit, and JavaScript, and
+            expertise in frameworks like Bootstrap, and MUI. I'm a quick learner
+            and collaborate closely with clients to create efficient, scalable,
+            and user-friendly solutions that solve real-world problems. Let's
+            work together to bring your ideas to life! Achievement.
+          </p>
         </div>
       </section>
-       <section className="about-section section">
+      <section className="about-section section">
         <div className="section-header">
           <h2 className="section-title">Professional Journey</h2>
           <p className="section-subtitle">
@@ -118,13 +115,16 @@ function Home() {
           </p>
         </div>
       </section>
-       <section className="about-section section">
+      <section className="about-section section">
         <div className="section-header">
           <div className="section-header">
-          <h2 className="section-title">Featured Projects</h2>
-          <p className="section-subtitle">Showcasing technical excellence and innovation</p>
+            <h2 className="section-title">Featured Projects</h2>
+            <p className="section-subtitle">
+              Showcasing technical excellence and innovation
+            </p>
+          </div>
         </div>
-        </div>
+        <Projects />
       </section>
     </>
   );
