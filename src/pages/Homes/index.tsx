@@ -1,8 +1,27 @@
- 
-import { socialIconData } from "./data";
+import React, { useEffect, useState } from "react";
+import { cardData, socialIconData } from "./data";
 import Projects from "./Projects";
+import SearchInput from "../../components/SearchInput";
 
 function Home() {
+  const [searchTerm, setSearchTerm] = React.useState("");
+
+  function useDebounce(value: any, delay = 400) {
+    const [debounced, setDebounced] = useState(value);
+
+    useEffect(() => {
+      const timer = setTimeout(() => setDebounced(value), delay);
+      return () => clearTimeout(timer);
+    }, [value, delay]);
+
+    return debounced;
+  }
+  const debouncedSearch = useDebounce(searchTerm, 400);
+
+  const filteredData = cardData.filter((item) =>
+    item.projectName.toLowerCase().includes(debouncedSearch.toLowerCase())
+  );
+
   const handleDownload = () => {
     const pdfUrl = "/Mohammad_Iftekhar_Frontend_Developer.pdf";
     const link = document.createElement("a");
@@ -11,9 +30,9 @@ function Home() {
     link.click();
   };
 
-  const  handleLinkNavigate = (url: string) => {
+  const handleLinkNavigate = (url: string) => {
     window.open(url, "_blank");
-  };  
+  };
 
   return (
     <>
@@ -32,14 +51,18 @@ function Home() {
                 <span>Engineer</span>
               </h1>
 
-              <p className="text-sub-heading">
-                I am a Frontend Software Engineer with 3.5 years of experience
-                building modern, responsive, and user-friendly web applications
-                using React.js, JavaScript, TypeScript, Redux Toolkit, HTML, and
-                CSS. I enjoy turning UI/UX ideas into clean, scalable, and
-                high-performance interfaces.
-              </p>
               <p className="text-sub-heading mb-6">
+                Frontend Developer with 3.5 years of experience building
+                responsive and scalable web applications using HTML5, CSS3,
+                JavaScript, TypeScript, and React.js. Familiar with UI and
+                styling libraries such as Material UI, Tailwind CSS, and SASS.
+                Proficient in Redux and RTK Query for efficient state and API
+                management. Experienced in using modern development tools like
+                Vite and Vitest to streamline coding, testing, and performance
+                tuning. Strong collaborator with a passion for clean code,
+                accessibility, and delivering intuitive user experiences.
+              </p>
+              {/* <p className="text-sub-heading mb-6">
                 Over the years, I have worked on dashboards, data visualization
                 platforms, IoT applications, and component-driven frontend
                 architectures. I have hands-on experience with amCharts,
@@ -47,17 +70,18 @@ function Home() {
                 design-system-based components. I regularly collaborate with
                 product, design, and backend teams to deliver features
                 end-to-end.
-              </p>
-              <div className="skill-tags">
-                <span className="skill-tag react">React Expert</span>
-                <span className="skill-tag typescript">TypeScript</span>
-                <span className="skill-tag uiux">UI/UX Design</span>
+              </p> */}
+              <div className="flex-start mb-6">
+                {["React Expert", "TypeScript", "UI/UX Design"].map((skill) => (
+                  <span className="pill pill-primary mr-3 " key={skill}>
+                    {skill}
+                  </span>
+                ))}
               </div>
 
               <div className="cta-buttons">
                 <button className="btn btn-primary mr-3 ">
-                  View Projects
-                  {/* <ArrowRight className="btn-icon" size={18} /> */}
+                  View Projects <i className="far fa-arrow-right ml-2" />
                 </button>
                 <button
                   className="btn btn-ghost-outlined"
@@ -70,10 +94,14 @@ function Home() {
 
               <div className="social-links">
                 {socialIconData.map((item) => (
-                  <button  key={item.id} onClick={() => handleLinkNavigate(item.sourceLink)} className={`btn btn-${item.className}`}>
+                  <button
+                    key={item.id}
+                    onClick={() => handleLinkNavigate(item.sourceLink)}
+                    className={`btn btn-${item.className}`}
+                  >
                     <i className={item.icon}></i>
-                  </button> 
-                ))} 
+                  </button>
+                ))}
               </div>
             </div>
 
@@ -91,8 +119,8 @@ function Home() {
       </section>
       <section className="about-section section">
         <div className="section-header">
-          <h2 className="section-title">About Me</h2>
-          <p className="section-subtitle">
+          <h2 className="text-heading4">About Me</h2>
+          <p className="text-sub-heading mb-4">
             Building exceptional web experiences
           </p>
           <p className="text-sub-heading">
@@ -109,22 +137,29 @@ function Home() {
       </section>
       <section className="about-section section">
         <div className="section-header">
-          <h2 className="section-title">Professional Journey</h2>
-          <p className="section-subtitle">
+          <h2 className="text-heading4">Professional Journey</h2>
+          <p className="text-sub-heading mb-4">
             Building exceptional web experiences
           </p>
         </div>
       </section>
       <section className="about-section section">
-        <div className="section-header">
-          <div className="section-header">
-            <h2 className="section-title">Featured Projects</h2>
-            <p className="section-subtitle">
+        <div className="section-header flex-between mb-4">
+          <div>
+            <h2 className="text-heading4">Featured Projects</h2>
+            <p className="text-sub-heading ">
               Showcasing technical excellence and innovation
             </p>
           </div>
+          <SearchInput
+            placeholder="Search Projects..."
+            value={searchTerm}
+            onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
+              setSearchTerm(e.target.value)
+            }
+          />
         </div>
-        <Projects />
+        <Projects data={filteredData} />
       </section>
     </>
   );
