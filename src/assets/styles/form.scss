@@ -1,0 +1,54 @@
+@use "./core.scss" as *;
+
+// form styles
+
+.form-group {
+  margin-bottom: spacing(4); 
+}
+.form-label {
+  display: block;
+  margin-bottom: spacing(2);
+  font-weight: font-weight("medium");
+  color: rgba(var(--neutral-700), 1);
+}
+.form-control {
+  width: 100%;
+  padding: spacing(2);
+  border: 1px solid rgba(var(--neutral-300), 1);
+  border-radius: border-radius("md");
+  font-size: font-size(base);
+  transition: border-color transition("base");
+  background-color: rgba(var(--background), 1);
+  color: rgba(var(--neutral-700), 1);
+
+  &:focus {
+    outline: none;
+    border-color: rgba(var(--primary), 1);
+    box-shadow: 0 0 0 2px rgba(var(--primaryLight), 0.3);
+  }
+
+  &::placeholder {
+    color: rgba(var(--neutral-500), 1);
+  }
+
+  &.error {
+    border-color: rgba(var(--error), 1);
+  }
+}
+
+.search-bar{
+    position: relative;
+    width: 100%;
+    max-width: 400px; 
+    .form-control{
+        padding-left: spacing(8);
+    }
+    i{
+        position: absolute;
+        top: 50%;
+        left: spacing(3);
+        transform: translateY(-50%);
+        color: rgba(var(--neutral-500), 1);
+        font-size: font-size(base);
+    }
+}

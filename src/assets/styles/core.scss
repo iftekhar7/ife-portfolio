@@ -542,15 +542,20 @@ $flex-basis: (
 // Card styles
 @mixin card {
   background-color: rgba(var(--surface), 1);
-  border-radius: border-radius(xl);
+  border-radius: border-radius(lg);
   box-shadow: shadow(base);
   transition: all transition(base);
 }
 
 @mixin card-hover {
+  cursor: pointer;
   &:hover {
     transform: translateY(-2px);
     box-shadow: shadow(lg);
+    background-color: rgba(var(--surface-raised), 1);
+    h3{
+      color: rgba(var(--primary), .7) !important;
+    }
   }
 }
 
@@ -602,7 +607,7 @@ $flex-basis: (
   font-size: font-size(5xl);
   font-weight: font-weight(light);
   line-height: line-height(tight);
-  color: color(neutral-900);
+  color: rgba(var(--neutral-900), 1);
 
   @include responsive(md) {
     font-size: font-size(6xl);
@@ -613,7 +618,7 @@ $flex-basis: (
   font-size: font-size(4xl);
   font-weight: font-weight(regular);
   line-height: line-height(tight);
-  color: color(neutral-900);
+  color: rgba(var(--neutral-900), 1);
 
   @include responsive(md) {
     font-size: font-size(5xl);
@@ -624,7 +629,7 @@ $flex-basis: (
   font-size: font-size(3xl);
   font-weight: font-weight(medium);
   line-height: line-height(snug);
-  color: color(neutral-900);
+  color: rgba(var(--neutral-900), 1);
 
   @include responsive(md) {
     font-size: font-size(4xl);
@@ -633,12 +638,12 @@ $flex-basis: (
 
 @mixin heading-4 {
   font-size: font-size(2xl);
-  font-weight: font-weight(medium);
+  font-weight: font-weight(bold);
   line-height: line-height(snug);
-  color: color(neutral-900);
+  color: rgba(var(--neutral-700), 1);
 
   @include responsive(md) {
-    font-size: font-size(3xl);
+    font-size: font-size(2xl);
   }
 }
 
@@ -646,7 +651,7 @@ $flex-basis: (
   font-size: font-size(xl);
   font-weight: font-weight(medium);
   line-height: line-height(snug);
-  color: color(neutral-900);
+  color: rgba(var(--neutral-900), 1);
 
   @include responsive(md) {
     font-size: font-size(xl);
@@ -1205,6 +1210,9 @@ body {
 
 .flex-row {
   @include flex-row;
+}
+.flex-wrap {
+  flex-wrap: wrap;
 }
 
 .h-100 {

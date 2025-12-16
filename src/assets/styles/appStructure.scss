@@ -131,41 +131,7 @@
   }
 } 
 
-.form-group {
-  margin-bottom: spacing(4);
 
-  .form-label {
-    display: block;
-    margin-bottom: spacing(2);
-    font-weight: font-weight("medium");
-    color: rgba(var(--neutral-700), 1);
-  }
-
-  .form-control {
-    width: 100%;
-    padding: spacing(2);
-    border: 1px solid rgba(var(--neutral-300), 1);
-    border-radius: border-radius("md");
-    font-size: font-size(base);
-    transition: border-color transition("base");
-    background-color: rgba(var(--background), 1);
-    color: rgba(var(--neutral-700), 1);
-
-    &:focus {
-      outline: none;
-      border-color: rgba(var(--primary), 1);
-      box-shadow: 0 0 0 2px rgba(var(--primaryLight), 0.3);
-    }
-
-    &::placeholder {
-      color: rgba(var(--neutral-500), 1);
-    }
-
-    &.error {
-      border-color: rgba(var(--error), 1);
-    }
-  }
-}
 
 // loader
 
@@ -299,4 +265,52 @@
     font-size: font-size(base);
     transition: transform transition(base);
   }
+}
+
+// pill styles
+.pill {
+  border-radius: border-radius(base);
+  padding: spacing(1) spacing(3);
+  background-color: #ebeef9;
+  font-weight: font-weight("medium");
+  font-size: font-size("xs");
+  margin-right: 12px;
+  @include flex-center;
+
+  i {
+    margin-right: spacing(1);
+  }
+
+  &-primary {
+    background-color: rgba(var(--primaryLight));
+    color: rgba(var(--primary));
+    border: 1px solid rgba(var(--primary));
+  }
+  &-secondary {
+     padding: 2px spacing(3);
+    background-color: rgba(var(--neutral-200), 0.8);
+    color: rgba(var(--neutral-700), 1);
+    border: 1px solid rgba(var(--neutral-300), 1);
+  }
+
+  &-purple {
+    background-color: rgba(var(--purpleLight));
+    color: rgba(var(--purple));
+  }
+
+  &-success {
+    background-color: rgba(var(--successLight), 0.18);
+    color: rgba(var(--successDark));
+  }
+
+  &-warning {
+    background-color: rgba(var(--warning), 0.18);
+    color: rgba(var(--warningDark), 1);
+  }
+
+  &-danger {
+    background-color: rgba(var(--error), 0.18);
+    color: rgba(var(--error));
+  }
+  
 }
