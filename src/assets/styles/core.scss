@@ -1141,6 +1141,9 @@ body {
     background-color: #{$value} !important;
   }
 
+.border-top{
+   border-top: 1px solid rgba(var(--neutral-300), 1) !important ;
+}
   // Border color (all sides)
   .border-#{$name} {
     border-color: #{$value} !important;

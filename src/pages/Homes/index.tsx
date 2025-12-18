@@ -3,9 +3,12 @@ import { cardData, socialIconData } from "./data";
 import Projects from "./Projects";
 import SearchInput from "../../components/SearchInput";
 import { cloudinary } from "../../utils/commonutils";
+import Contact from "./Contact";
+import Table from "../../components/Table";
 
 function Home() {
   const [searchTerm, setSearchTerm] = React.useState("");
+  const [viewTab, setViewTab] = useState("card");
 
   function useDebounce(value: any, delay = 400) {
     const [debounced, setDebounced] = useState(value);
@@ -152,15 +155,49 @@ function Home() {
               Showcasing technical excellence and innovation
             </p>
           </div>
-          <SearchInput
-            placeholder="Search Projects..."
-            value={searchTerm}
-            onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
-              setSearchTerm(e.target.value)
-            }
-          />
+          <div className="flex-start">
+            <SearchInput
+              placeholder="Search Projects..."
+              value={searchTerm}
+              onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
+                setSearchTerm(e.target.value)
+              }
+            />
+            <div className="button-groups ml-3">
+              <button
+                onClick={() => setViewTab("table")}
+                className={`btn btn-${
+                  viewTab === "table" ? "primary" : "secondary"
+                }`}
+              >
+                <i className="fa-sharp fa-regular fa-bars"></i>
+              </button>
+
+              <button
+                onClick={() => setViewTab("card")}
+                className={`btn btn-${
+                  viewTab === "card" ? "primary" : "secondary"
+                }`}
+              >
+                <i className="fa-jelly-fill fa-regular fa-grid"></i>
+              </button>
+            </div>
+          </div>
         </div>
-        <Projects data={filteredData} />
+        {viewTab === "card" ? (
+          <Projects data={filteredData} />
+        ) : (
+          <Table data={filteredData} />
+        )}
+      </section>
+      <section className="about-section section">
+        <div className="section-header mb-4">
+          <h2 className="text-heading4">Contact</h2>
+          <p className="text-sub-heading ">
+            Showcasing technical excellence and innovation
+          </p>
+        </div>
+        <Contact />
       </section>
     </>
   );

@@ -42,6 +42,7 @@ export const cardData = [
     id: 6,
     projectName: "Shorting Hat",
     companyName: "@iot83",
+     description: "Interactive dashboard with real-time data visualization and sorting capabilities",
     image: "/sorting-hat/shorting-hat-login.png",
     languages: [
       "React",
@@ -62,6 +63,7 @@ export const cardData = [
     id: 1,
     projectName: "Seimens",
     companyName: "@iot83",
+    description: "Enterprise-level dashboard for industrial automation and monitoring",
     image: "/siemens/seimens1.png",
     languages: [
       "React",
@@ -82,6 +84,7 @@ export const cardData = [
     id: 2,
     projectName: "Flex MLOps",
     companyName: "@iot83",
+     description: "Machine Learning Operations platform with flexible deployment options",
     image: "/flexv6login.png",
     languages: [
       "React",
@@ -102,6 +105,7 @@ export const cardData = [
     id: 3,
     projectName: "Application Enablement platform",
     companyName: "@iot83",
+     description: "Comprehensive platform for rapid application development and deployment",
     image: "/Application.png",
     languages: [
       "React",
@@ -122,6 +126,7 @@ export const cardData = [
     id: 4,
     projectName: "OEDC",
     companyName: "@iot83",
+    description: "Data studio application with MQTT integration and real-time analytics",
     image: "/oedc/oedc-login.png",
     languages: [
       "React",
@@ -142,6 +147,7 @@ export const cardData = [
     id: 5,
     projectName: "SGRM",
     companyName: "@iot83",
+      description: "Stakeholder and governance risk management system",
     image: "/oedc/oedc-login.png",
     languages: [
       "React",
@@ -164,6 +170,7 @@ export const cardData = [
     projectName: "Eaton DLM",
     companyName: "@iot83",
     image: "/eaton-dlm/dlm-login.png",
+       description: "Stakeholder and governance risk management system",
     languages: [
       "React",
       "TypeScript",
@@ -185,6 +192,7 @@ export const cardData = [
     id: 8,
     projectName: "Sales Portfolio",
     companyName: "@iot83",
+       description: "Stakeholder and governance risk management system",
     image: "/sales-portfolio/sales-portfolio-login.png",
     languages: ["#React", "#JavaScript", "#HTML5", "#MUI", "#Scss", "#AmCharts"], 
     designStatus: "Dashboard",
@@ -194,6 +202,7 @@ export const cardData = [
     projectName: "ARM-DLM-WEB",
     companyName: "@iot83",
     image: "/arm-dlm/dlm-login.png",
+       description: "Stakeholder and governance risk management system",
     languages: [
       "#React",
       "#TypeScript",
