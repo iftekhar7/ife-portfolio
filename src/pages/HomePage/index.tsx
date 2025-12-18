@@ -11,6 +11,7 @@ import { Route, Routes, useLocation } from "react-router-dom";
 import { RouteList } from "../../Route/route";
 // import Sidenav from "../../components/Sidenav";
 import Loader from "../../components/Loader";
+import Footer from "../../components/Footer";
 
 const Login = React.lazy(() => import("../../pages/Login")); 
 
@@ -67,6 +68,7 @@ function HomePage() {
               })}
             </Routes>
           </div>
+           <Footer />
         </div>
       )}
     </>

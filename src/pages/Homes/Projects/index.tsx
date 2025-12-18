@@ -11,14 +11,12 @@ function Projects({ data }: any) {
                 <div className="img-wrapper" style={{height:'200px'}}>
                   <img src={item?.image} alt="project_image" /> 
                 </div>
-                <div className="mt-4">
-                  <h3 className="text-secondary text-left f-18">
-                    {item?.projectName ? item?.projectName : "N/A"}{" "}
-                    <span className="text-content-dark">
-                      -{item?.companyName ? item?.companyName : "N/A"}
-                    </span>
+              
+                  <h3 className="text-heading mb-0">
+                    {item?.projectName ?? "N/A"}{" "} 
                   </h3>
-                </div>
+                  <h6 className="text-sub-heading"> {item?.companyName?? "--"} </h6>
+              <p className="text-sm">{item?.description??'--'}</p>
                 <div className="flex-start flex-wrap mt-3 mb-3">
                   {item?.languages?.length > 0
                     ? item?.languages.map((lang: string, index: number) => (
@@ -28,7 +26,7 @@ function Projects({ data }: any) {
                 </div>
                 <div className="card-footer">
                   <p className="text-content f-14">
-                    {item?.designStatus ? item?.designStatus : "N/A"}
+                    {item?.designStatus ?? "N/A"}
                   </p>
                 </div>
               </div>
