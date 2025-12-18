@@ -108,15 +108,11 @@ function Home() {
 
             <div className="hero-visual">
               <div className="profile-image-wrapper">
-     <img src={cloudinary("profile_camsez")} />
-
-
-
-
-
-
-
-               
+                <img
+                  src={cloudinary("profile_camsez")}
+                  alt="Mohammad Iftekhar – Frontend Developer"
+                  loading="lazy"
+                />
               </div>
             </div>
           </div>
