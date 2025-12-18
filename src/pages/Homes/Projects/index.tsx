@@ -1,6 +1,4 @@
-import React from "react";
-import { Tooltip } from "react-tooltip";
-import "react-tooltip/dist/react-tooltip.css";
+import React from "react"; 
 
 function Projects({ data }: any) {
   return (
