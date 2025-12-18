@@ -15,3 +15,7 @@ export const getInitials = (name:string, email:string) => {
   }
 };
  
+// utils/cloudinary.js
+export const cloudinary = (id: string, t = "w_600,f_auto,q_auto") =>
+  `https://res.cloudinary.com/dhvkeskni/image/upload/${t}/${id}`;
+
