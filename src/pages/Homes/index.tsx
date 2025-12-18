@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { cardData, socialIconData } from "./data";
 import Projects from "./Projects";
 import SearchInput from "../../components/SearchInput";
+import { cloudinary } from "../../utils/commonutils";
 
 function Home() {
   const [searchTerm, setSearchTerm] = React.useState("");
@@ -108,9 +109,9 @@ function Home() {
             <div className="hero-visual">
               <div className="profile-image-wrapper">
                 <img
-                  src="/profile.png"
-                  alt="Mohammad Iftekhar"
-                  className="profile-image"
+                  src={cloudinary("profile_camsez")}
+                  alt="Mohammad Iftekhar – Frontend Developer"
+                  loading="lazy"
                 />
               </div>
             </div>
