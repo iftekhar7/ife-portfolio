@@ -101,7 +101,7 @@ function Home() {
                   <button
                     key={item.id}
                     onClick={() => handleLinkNavigate(item.sourceLink)}
-                    className={`btn btn-${item.className}`}
+                    className={`btn btn-sm btn-${item.className}`}
                   >
                     <i className={item.icon}></i>
                   </button>
