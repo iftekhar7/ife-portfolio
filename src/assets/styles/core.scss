@@ -441,7 +441,7 @@ $flex-basis: (
   @include button-base; 
   color: rgba(var(--primary), 1);
   border: 1px solid rgba(var(--primary), 0.5) !important;
-  background: rgba(var(--primary), 0.03);
+  background: rgba(var(--primary), 0.04);
   &:hover {
     background: rgba(var(--primary), 0.06);
     transform: translateY(-1px);
@@ -468,9 +468,13 @@ $flex-basis: (
 
 @mixin button-success-outlined {
   @include button-base;
-  background: transparent;
+  background: rgba(var(--success), 0.06);
   color: rgba(var(--success), 1);
   border: 1px solid rgba(var(--success), 1);
+  &:hover {
+    background: rgba(var(--success), 0.04) !important;
+    transform: translateY(-1px); 
+  }
 }
 
 @mixin button-warning {
@@ -481,9 +485,13 @@ $flex-basis: (
 
 @mixin button-warning-outlined {
   @include button-base;
-  background: transparent;
+  background: rgba(var(--warning), 0.06);
   color: rgba(var(--warning), 1);
   border: 1px solid rgba(var(--warning), 1);
+  &:hover {
+    background: rgba(var(--warning), 0.04) !important;
+    transform: translateY(-1px); 
+  }
 }
 
 @mixin button-danger {
@@ -494,9 +502,13 @@ $flex-basis: (
 
 @mixin button-danger-outlined {
   @include button-base;
-  background: transparent;
+  background: rgba(var(--error), 0.06);
   color: rgba(var(--error), 1);
   border: 2px solid rgba(var(--error), 1);
+  &:hover {
+    background: rgba(var(--error), 0.04) !important;
+    transform: translateY(-1px); 
+  }
 }
 
 @mixin button-text {
@@ -881,6 +893,12 @@ body {
       color: rgba(var(--neutral-800), 1);
       // background-color: rgba(var(--neutral-200), 1)
     }
+  }
+  &-sm{ 
+    padding: spacing(2);
+    height: spacing(8);
+    width: spacing(8); 
+    border: none !important
   }
 }
 

@@ -85,12 +85,7 @@
 .social-links {
  @include flex-start;
   gap: spacing(3);
-  margin-top: spacing(6);
-  .btn {
-    padding: spacing(2);
-    height: spacing(8);
-    width: spacing(8);
-  } 
+  margin-top: spacing(6); 
 }
 
 // map
