@@ -9,14 +9,15 @@
   display: block;
   margin-bottom: spacing(2);
   font-weight: font-weight("medium");
+  font-size: font-size(sm);
   color: rgba(var(--neutral-700), 1);
 }
 .form-control {
   width: 100%;
   padding: spacing(2);
-  border: 1px solid rgba(var(--neutral-300), 1);
+  border: 1px solid rgba(var(--neutral-200), 1);
   border-radius: border-radius("md");
-  font-size: font-size(base);
+  // font-size: font-size(base);
   transition: border-color transition("base");
   background-color: rgba(var(--background), 1);
   color: rgba(var(--neutral-700), 1);
@@ -39,7 +40,7 @@
 .search-bar{
     position: relative;
     width: 100%;
-    max-width: 400px; 
+    width: 350px; 
     .form-control{
         padding-left: spacing(8);
     }
@@ -49,6 +50,6 @@
         left: spacing(3);
         transform: translateY(-50%);
         color: rgba(var(--neutral-500), 1);
-        font-size: font-size(base);
+        font-size: font-size(sm);
     }
 }

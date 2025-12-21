@@ -168,3 +168,53 @@
   border-radius: 50%;
 }
  
+
+.profile-list {
+  @include flex-start;
+
+  .profile-view-avatar {
+    width: 36px;
+    height: 36px;
+    min-width: 36px;
+    border-radius: 30px;
+    @include flex-center;
+    position: relative;
+    margin-right: 12px;
+    background-color: rgba(var(--primary), 0.2);
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      position: relative;
+      border-radius: border-radius(md);
+    }
+    i{
+      font-size: 14px;
+    }
+
+    .avatar-initials {
+      color: rgba(var(--neutral-600), 1);
+      font-size: font-size(sm);
+      font-weight: 600;
+      text-transform: uppercase;
+      position: relative;
+    }
+  }
+
+  .profile-info {
+    h6 {
+      font-size: font-size(sm);
+      font-weight: font-weight(medium);
+      line-height: line-height(snug);
+      color: rgba(var(--neutral-700), 1);
+    }
+
+    p {
+      font-size: font-size(sm);
+      font-weight: 400;
+      line-height: line-height(snug);
+      color: rgba(var(--neutral-600), 1);
+    }
+  }
+}
