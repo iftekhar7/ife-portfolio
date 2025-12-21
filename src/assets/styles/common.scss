@@ -77,3 +77,199 @@
     border-radius: border-radius(lg) border-radius(lg) 0 0;
   }
 }
+
+// experience
+// Timeline Section SCSS
+.timeline-section {
+  margin-top: 4rem;
+
+  .section-title {
+    font-size: 1.875rem;
+    font-weight: bold;
+    margin-bottom: 3rem;
+  }
+
+  .timeline-container {
+    position: relative;
+
+    // Timeline Line
+    .timeline-line {
+      position: absolute;
+      left: 1.5rem;
+      top: 0;
+      bottom: 0;
+      width: 2px;
+
+      
+      background: linear-gradient(to bottom, 
+        #f472b6 0%, 
+        #60a5fa 50%, 
+        #a78bfa 100%
+      );
+
+      
+    }
+
+    .timeline-items {
+      display: flex;
+      flex-direction: column;
+      gap: 3rem;
+    }
+  }
+}
+
+// Timeline Item
+.timeline-item {
+  position: relative;
+  padding-left: 4rem;
+
+  // Timeline Dot
+  .timeline-dot {
+    position: absolute;
+    left: 16px;
+    top: 0;
+    width: 1rem;
+    height: 1rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+                0 4px 6px -2px rgba(0, 0, 0, 0.05);
+
+    .dot-inner {
+      width: 1.5rem;
+      height: 1.5rem;
+      border-radius: 50%;
+    }
+  }
+
+  // Color Variations for Dots
+  .pink-gradient {
+    background: linear-gradient(135deg, #ec4899, #f43f5e);
+  }
+
+  .blue-gradient {
+    background: linear-gradient(135deg, #3b82f6, #06b6d4);
+  }
+
+  .purple-gradient {
+    background: linear-gradient(135deg, #8b5cf6, #4f46e5);
+  }
+
+  // Content Card
+  .timeline-card {
+    border-radius: 1rem;
+    padding: 1.5rem;
+    border: 1px solid;
+    transition: all 0.3s ease;
+
+    &:hover {
+      transform: scale(1.02);
+    }
+ 
+
+    // Light Mode
+    &.light {
+      background-color: #ffffff;
+      border-color: #e5e7eb;
+
+      &:hover {
+        box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
+                    0 10px 10px -5px rgba(0, 0, 0, 0.04);
+      }
+    }
+  }
+
+  // Year Badge
+  .year-badge {
+    display: inline-block;
+    padding: 0.25rem 0.75rem;
+    border-radius: 9999px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    margin-bottom: 0.75rem;
+
+     
+
+ 
+      background-color: #f3f4f6;
+      color: #374151; 
+  }
+
+  // Role Title
+  .role-title {
+    font-size: 1.25rem;
+    font-weight: bold;
+    margin-bottom: 0.25rem;
+  }
+
+  // Company Name
+  .company-name {
+    font-size: 0.875rem;
+    font-weight: 500;
+    margin-bottom: 0.75rem;
+ 
+      color: #2563eb; 
+  }
+
+  // Description
+  .description {
+    font-size: 0.875rem;
+    line-height: 1.625;
+ 
+      color: #4b5563; 
+  }
+}
+
+// Responsive Adjustments
+@media (max-width: 768px) {
+  .timeline-section {
+    margin-top: 3rem;
+
+    .section-title {
+      font-size: 1.5rem;
+      margin-bottom: 2rem;
+    }
+
+    .timeline-container {
+      .timeline-line {
+        left: 1.25rem;
+      }
+    }
+  }
+
+  .timeline-item {
+    padding-left: 3.5rem;
+
+    .timeline-dot {
+      width: 2.75rem;
+      height: 2.75rem;
+
+      .dot-inner {
+        width: 1.25rem;
+        height: 1.25rem;
+      }
+    }
+
+    .timeline-card {
+      padding: 1.25rem;
+    }
+  }
+}
+
+@media (max-width: 640px) {
+  .timeline-item {
+    padding-left: 3rem;
+
+    .timeline-dot {
+      width: 2.5rem;
+      height: 2.5rem;
+
+      .dot-inner {
+        width: 1rem;
+        height: 1rem;
+      }
+    }
+  }
+}
