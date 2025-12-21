@@ -5,6 +5,7 @@ import SearchInput from "../../components/SearchInput";
 import { cloudinary } from "../../utils/commonutils";
 import Contact from "./Contact";
 import Table from "../../components/Table";
+import Work from "./Work";
 
 function Home() {
   const [searchTerm, setSearchTerm] = React.useState("");
@@ -151,6 +152,7 @@ function Home() {
             Building exceptional web experiences
           </p>
         </div>
+        <Work />
       </section>
       <section className="about-section section">
         <div className="section-header flex-between mb-4">
