@@ -97,15 +97,20 @@ function Home() {
               </div>
 
               <div className="social-links">
-                {socialIconData.map((item) => (
-                  <button
-                    key={item.id}
-                    onClick={() => handleLinkNavigate(item.sourceLink)}
-                    className={`btn btn-sm btn-${item.className}`}
-                  >
-                    <i className={item.icon}></i>
-                  </button>
-                ))}
+                {socialIconData
+                  .filter(
+                    (item) =>
+                      item.name !== "Facebook" && item.name !== "Twitter"
+                  )
+                  .map((item) => (
+                    <button
+                      key={item.id}
+                      onClick={() => handleLinkNavigate(item.sourceLink)}
+                      className={`btn btn-sm btn-${item.className}`}
+                    >
+                      <i className={item.icon}></i>
+                    </button>
+                  ))}
               </div>
             </div>
 

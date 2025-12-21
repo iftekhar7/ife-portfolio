@@ -8,11 +8,11 @@ function Table(props: any) {
     < > 
       <div className="list-wrapper">
         <div className="list-header">
-          <h6 className="flex-25">Project Name</h6>
-          <h6 className="flex-20">Company Name</h6> 
+          <h6 className="flex-40">Project Name</h6>
+          <h6 className="flex-15">Company Name</h6> 
            <h6 className="flex-25">Languages</h6>
-          <h6 className="flex-15">Start Date</h6>
-          <h6 className="flex-15">End Date</h6>  
+          <h6 className="flex-10">Start Date</h6>
+          <h6 className="flex-10">End Date</h6>  
         </div>
         <ul className="list-view">
           {data.map((item: any) => (
