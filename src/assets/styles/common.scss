@@ -83,11 +83,7 @@
 .timeline-section {
   margin-top: 4rem;
 
-  .section-title {
-    font-size: 1.875rem;
-    font-weight: bold;
-    margin-bottom: 3rem;
-  }
+   
 
   .timeline-container {
     position: relative;
@@ -160,25 +156,15 @@
   // Content Card
   .timeline-card {
     border-radius: 1rem;
-    padding: 1.5rem;
-    border: 1px solid;
+    padding: 1.5rem; 
     transition: all 0.3s ease;
 
     &:hover {
       transform: scale(1.02);
-    }
- 
-
-    // Light Mode
-    &.light {
-      background-color: #ffffff;
-      border-color: #e5e7eb;
-
-      &:hover {
-        box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
+       box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
                     0 10px 10px -5px rgba(0, 0, 0, 0.04);
-      }
     }
+  
   }
 
   // Year Badge
