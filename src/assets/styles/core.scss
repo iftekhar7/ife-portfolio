@@ -1381,9 +1381,9 @@ body {
 .grid-responsive {
   @include responsive-grid(
     $default: 1,
-    $sm: 2,
-    $md: 3,
-    $lg: 4,
+    $sm: 1,
+    $md: 1,
+    $lg: 2,
     $gap: "6",
     $min-width: 200px
   );

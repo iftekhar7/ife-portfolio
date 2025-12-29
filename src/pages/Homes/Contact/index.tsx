@@ -81,12 +81,12 @@ function Contact() {
       <>
         <div className="card responsive-card">
           <div className="card-header">
-            <h6 className="header-title">Get In Touch With Us</h6>
+            <h5 className="text-heading mb-0">Get In Touch With Us</h5>
           </div>
           <div className="card-body pb-0 ">
-            <div className="grid-basic">
+            <div className="grid-responsive">
               <div className="pr-4">
-                <h6 className="text-sub-heading mb-1">We Are Here For You</h6>
+                <h6 className="text-sub-heading text-secondary-dark  mb-1">We Are Here For You</h6>
                 <p className="text-sm mb-6">
                   For more info on how we can deliver your project, and anything
                   else feel free to get in touch with us.
@@ -97,7 +97,7 @@ function Contact() {
                       <i className="far fa-location-dot" />
                     </button>
                     <div className="ml-3">
-                      <h4 className="text-sub-heading mb-0">Address:</h4>
+                      <h4 className="text-sub-heading text-secondary-dark mb-0">Address:</h4>
                       <p className={`text-sm`}>
                         Jharsa Village, Sector 39, Gurugram, Haryana 122003
                       </p>
@@ -108,7 +108,7 @@ function Contact() {
                       <i className="far fa-phone"></i>
                     </button>
                     <div className="ml-3">
-                      <h4 className="text-sub-heading mb-0">Phone:</h4>
+                      <h4 className="text-sub-heading text-secondary-dark mb-0">Phone:</h4>
                       <p className={`text-sm `}>+91 762-688-3755</p>
                     </div>
                   </div>
@@ -117,7 +117,7 @@ function Contact() {
                       <i className="far fa-envelope"></i>
                     </button>
                     <div className="ml-3">
-                      <h4 className="text-sub-heading mb-0">Email:</h4>
+                      <h4 className="text-sub-heading text-secondary-dark mb-0">Email:</h4>
                       <p className="text-sm text-primary">
                         mohammadiftekhar120@mail.com
                       </p>
@@ -166,29 +166,40 @@ function Contact() {
                       )}
                     </div>
                   </div>
-                    <div className="flex-50 pl-2">
-                      <div className="form-group">
-                        <label className="form-label">Your Email</label>
-                        <input
-                          type="text"
-                          className="form-control"
-                          placeholder="Enter your Email Address"
-                          name="from_email"
-                          value={email}
-                          onChange={(e: ChangeEvent<HTMLInputElement>) =>
-                            setEmail(e.target.value)
-                          }
-                        />
-                        {errors.email && (
-                          <span className="error">
-                            <i className="fas fa-exclamation-circle"></i>{" "}
-                            {errors.email}
-                          </span>
-                        )}
-                      </div>
+                  <div className="flex-50 pl-2">
+                    <div className="form-group">
+                      <label className="form-label">Your Email</label>
+                      <input
+                        type="text"
+                        className="form-control"
+                        placeholder="Enter your Email Address"
+                        name="from_email"
+                        value={email}
+                        onChange={(e: ChangeEvent<HTMLInputElement>) =>
+                          setEmail(e.target.value)
+                        }
+                      />
+                      {errors.email && (
+                        <span className="error">
+                          <i className="fas fa-exclamation-circle"></i>{" "}
+                          {errors.email}
+                        </span>
+                      )}
                     </div>
+                  </div>
                 </div>
-
+                <div className="form-group">
+                  <label className="form-label">Subject</label>
+                  <input 
+                    className="form-control"
+                    placeholder="Enter Subject"
+                    name="subject"
+                    value={message}
+                    onChange={(e: any) =>
+                      setMessage(e.target.value)
+                    }
+                  />
+                </div>
                 <div className="form-group">
                   <label className="form-label">Your Message</label>
                   <textarea

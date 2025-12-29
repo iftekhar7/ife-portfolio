@@ -79,7 +79,7 @@ export const cardData = [
     endDate: "May 2025",
   },
   {
-    id: 1,
+    id: 2,
     projectName: "MAH (Multi Asset Handler) - Version 6 ",
     companyName: "@iot83",
     description:
@@ -100,7 +100,7 @@ export const cardData = [
     endDate: "May 2025",
   },
   {
-    id: 4,
+    id: 3,
     projectName: "OEDC (Data Studio Application) ",
     companyName: "@iot83",
     startDate: "Nov 2023",
@@ -121,7 +121,7 @@ export const cardData = [
     designStatus: "Dashboard",
   },
   {
-    id: 5,
+    id: 4,
     projectName: "SGRM (Smart Generator Remote Monitoring) ",
     companyName: "@iot83",
     description:
@@ -141,7 +141,7 @@ export const cardData = [
     designStatus: "Dashboard",
   },
   {
-    id: 1,
+    id: 5,
     projectName: "IAP – Integrated Automation Platform (SIEMENS)",
     companyName: "@iot83",
     description:
@@ -163,7 +163,7 @@ export const cardData = [
     endDate: "Dec 2023",
   },
   {
-    id: 7,
+    id: 6,
     projectName: "Eaton",
     companyName: "@iot83",
     url: "https://res.cloudinary.com/dhvkeskni/image/upload/v1766331792/dlm-login_no6oyc.png",
@@ -174,7 +174,7 @@ export const cardData = [
   },
 
   {
-    id: 6,
+    id: 7,
     projectName: "Shorting Hat (True Feature)",
     companyName: "@iot83",
     description:
@@ -194,7 +194,7 @@ export const cardData = [
   },
 
   {
-    id: 2,
+    id: 8,
     projectName: "Flex MLOps",
     companyName: "@iot83",
     description:
@@ -217,7 +217,7 @@ export const cardData = [
     designStatus: "Dashboard",
   },
   {
-    id: 3,
+    id: 9,
     projectName: "Application Enablement platform - Version -5",
     companyName: "@iot83",
     description:
@@ -237,7 +237,7 @@ export const cardData = [
   },
 
   {
-    id: 8,
+    id: 10,
     projectName: "Sales Portfolio",
     companyName: "@iot83",
     description: "Stakeholder and governance risk management system",
@@ -254,7 +254,7 @@ export const cardData = [
     designStatus: "Dashboard",
   },
   {
-    id: 9,
+    id: 11,
     projectName: "ARM-DLM-WEB",
     companyName: "@iot83",
     image: "/arm-dlm/dlm-login.png",

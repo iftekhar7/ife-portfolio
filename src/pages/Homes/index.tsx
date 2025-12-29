@@ -57,7 +57,7 @@ function Home() {
               </h1>
 
               <p className="text-sub-heading mb-6">
-                Frontend Developer with 3.5 years of experience building
+                Frontend Developer with 3.6 years of experience building
                 responsive and scalable web applications using HTML5, CSS3,
                 JavaScript, TypeScript, and React.js. Familiar with UI and
                 styling libraries such as Material UI, Tailwind CSS, and SASS.
@@ -67,15 +67,7 @@ function Home() {
                 tuning. Strong collaborator with a passion for clean code,
                 accessibility, and delivering intuitive user experiences.
               </p>
-              {/* <p className="text-sub-heading mb-6">
-                Over the years, I have worked on dashboards, data visualization
-                platforms, IoT applications, and component-driven frontend
-                architectures. I have hands-on experience with amCharts,
-                HighCharts, WebSocket/MQTT data, and building reusable
-                design-system-based components. I regularly collaborate with
-                product, design, and backend teams to deliver features
-                end-to-end.
-              </p> */}
+               
               <div className="flex-start mb-6">
                 {["React Expert", "TypeScript", "UI/UX Design"].map((skill) => (
                   <span className="pill pill-primary mr-3 " key={skill}>
@@ -130,26 +122,41 @@ function Home() {
       <section className="about-section section">
         <div className="section-header">
           <h2 className="text-heading4">About Me</h2>
-          <p className="text-sub-heading mb-4">
+          <p className="text-sm mb-4">
             Building exceptional web experiences
           </p>
           <p className="text-sub-heading">
-            I'm{" "}
-            <b className="gradient-text">Mohammad Iftekhar - 24 years old</b>{" "}
-            Front End Developer and Designer in Gurugram with experience in
-            HTML, CSS, SCSS, React js, Redux Toolkit, and JavaScript, and
-            expertise in frameworks like Bootstrap, and MUI. I'm a quick learner
-            and collaborate closely with clients to create efficient, scalable,
-            and user-friendly solutions that solve real-world problems. Let's
-            work together to bring your ideas to life! Achievement.
+            I’m <b className="gradient-text">Mohammad Iftekhar</b>, a Frontend
+            Software Engineer with 3.6 years of experience building modern,
+            responsive, and user-friendly web applications using React.js,
+            TypeScript, Redux Toolkit, HTML, and CSS. I enjoy transforming UI/UX
+            ideas into clean, scalable, and high-performance interfaces.
           </p>
+          <p className="text-sub-heading">
+            Over the years, I’ve worked on dashboards, data-visualization
+            platforms, IoT applications, and component-driven frontend
+            architectures. I have hands-on experience with amCharts, HighCharts, apacheEcharts,
+            WebSocket/MQTT data, and building reusable, design-system-based
+            components. I regularly collaborate with product, design, and
+            backend teams to deliver features end-to-end.
+          </p>
+          {/* <p>Technically, I enjoy:</p>
+          <ul className="pl-12">
+            <li>Building responsive UIs with React.js, TypeScript, and modern CSS frameworks</li>
+            <li>Converting Figma designs into pixel-perfect, reusable components</li>
+            <li>Creating interactive dashboards using data-visualization libraries</li>
+            <li>Optimizing frontend performance and improving load times</li>
+            <li>Writing clean, maintainable code with Jest and React Testing Library</li>
+            <li>Working in Agile environments using Git, Jira, and code-review workflows</li>
+          </ul> */}
         </div>
       </section>
       <section className="about-section section">
         <div className="section-header">
           <h2 className="text-heading4">Professional Journey</h2>
-          <p className="text-sub-heading mb-4">
-            Building exceptional web experiences
+          <p className="text-sm mb-4">
+            A snapshot of my professional growth, highlighting the roles and
+            experiences that shaped my journey as a frontend developer.
           </p>
         </div>
         <Work />
@@ -158,8 +165,10 @@ function Home() {
         <div className="section-header flex-between mb-4">
           <div>
             <h2 className="text-heading4">Featured Projects</h2>
-            <p className="text-sub-heading ">
-              Showcasing technical excellence and innovation
+            <p className="text-sm ">
+              A selection of projects that reflect my experience, technical
+              skills, and passion for building scalable, user-focused web
+              applications.
             </p>
           </div>
           <div className="flex-start">
@@ -200,8 +209,11 @@ function Home() {
       <section className="about-section section">
         <div className="section-header mb-4">
           <h2 className="text-heading4">Contact</h2>
-          <p className="text-sub-heading ">
-            Showcasing technical excellence and innovation
+          <p className="text-sm ">
+            I’m always open to new opportunities, collaborations, and
+            interesting projects. If you have an idea, need a frontend
+            developer, or simply want to connect, feel free to reach out—I’d
+            love to hear from you.
           </p>
         </div>
         <Contact />
