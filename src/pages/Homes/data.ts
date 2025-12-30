@@ -10,7 +10,7 @@ export const socialIconData = [
   },
   {
     id: 2,
-    icon: "fab fa-twitter",
+    icon: "fa-brands fa-x-twitter",
     name: "Twitter",
     isTrue: true,
     className: "primary-outlined",

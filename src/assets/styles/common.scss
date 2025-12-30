@@ -55,7 +55,7 @@
 // map
 .map-wrapper {
   width: 100%;
-  height: 100%;
+  height: 250px;
   border-radius: 8px;
   overflow: hidden;
   .map-iframe {
@@ -81,10 +81,7 @@
 // experience
 // Timeline Section SCSS
 .timeline-section {
-  margin-top: 4rem;
-
-   
-
+  margin-top: 4rem; 
   .timeline-container {
     position: relative;
 

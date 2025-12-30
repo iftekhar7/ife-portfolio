@@ -454,10 +454,11 @@ $flex-basis: (
   @include button-base; 
   color: rgba(var(--neutral-700), 1);
   border: 1px solid rgba(var(--neutral-300), 1) !important ;
-  background: rgba(var(--neutral-200), 1) !important;
+  background: rgba(var(--neutral-200), .7) !important;
   &:hover {
     background: rgba(var(--neutral-700), 0.04) !important;
     transform: translateY(-1px); 
+    box-shadow: shadow(md);
   }
 }
 
@@ -1037,7 +1038,7 @@ body {
 }
 
 .text-primary {
-  color: var(--color-primary) !important;
+  color: rgba(var(--primary), 1) !important;
 }
 
 .text-primary-light {
@@ -1392,4 +1393,7 @@ body {
 // border
 .border-none {
   border: none !important;
+}
+.border-bottom-1{
+  border-bottom: 1px solid rgba(var(--neutral-200), 1);
 }

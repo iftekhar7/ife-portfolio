@@ -152,9 +152,9 @@ function Home() {
         </div>
       </section>
       <section className="about-section section">
-        <div className="section-header">
-          <h2 className="text-heading4">Professional Journey</h2>
-          <p className="text-sm mb-4">
+        <div className="section-header mb-6">
+          <h2 className="text-heading4 mb-2">Professional Journey</h2>
+          <p className="text-sm">
             A snapshot of my professional growth, highlighting the roles and
             experiences that shaped my journey as a frontend developer.
           </p>
@@ -162,16 +162,16 @@ function Home() {
         <Work />
       </section>
       <section className="about-section section">
-        <div className="section-header flex-between mb-4">
+        <div className="section-header flex-between mb-6">
           <div>
-            <h2 className="text-heading4">Featured Projects</h2>
-            <p className="text-sm ">
+            <h2 className="text-heading4 mb-2">Featured Projects</h2>
+            <p className="text-sm">
               A selection of projects that reflect my experience, technical
               skills, and passion for building scalable, user-focused web
               applications.
             </p>
           </div>
-          <div className="flex-start">
+          <div className="flex-start mt-6">
             <SearchInput
               placeholder="Search Projects..."
               value={searchTerm}
@@ -207,8 +207,8 @@ function Home() {
         )}
       </section>
       <section className="about-section section">
-        <div className="section-header mb-4">
-          <h2 className="text-heading4">Contact</h2>
+        <div className="section-header mb-6">
+          <h2 className="text-heading4 mb-2">Contact</h2>
           <p className="text-sm ">
             I’m always open to new opportunities, collaborations, and
             interesting projects. If you have an idea, need a frontend
