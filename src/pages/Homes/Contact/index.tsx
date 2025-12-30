@@ -82,156 +82,164 @@ function Contact() {
         <div className="card responsive-card">
           <div className="card-header">
             <h5 className="text-heading mb-0">Get In Touch With Us</h5>
+            <p>
+              For more info on how we can deliver your project, and anything
+              else feel free to get in touch with us.
+            </p>
           </div>
-          <div className="card-body pb-0 ">
-            <div className="grid-responsive">
-              <div className="pr-4">
-                <h6 className="text-sub-heading text-secondary-dark  mb-1">We Are Here For You</h6>
-                <p className="text-sm mb-6">
-                  For more info on how we can deliver your project, and anything
-                  else feel free to get in touch with us.
-                </p>
-                <div className="mb-10">
-                  <div className="flex-start">
-                    <button className="btn btn-sm btn-primary-outlined">
-                      <i className="far fa-location-dot" />
-                    </button>
-                    <div className="ml-3">
-                      <h4 className="text-sub-heading text-secondary-dark mb-0">Address:</h4>
-                      <p className={`text-sm`}>
-                        Jharsa Village, Sector 39, Gurugram, Haryana 122003
-                      </p>
-                    </div>
-                  </div>
-                  <div className="flex-start mt-2">
-                    <button className="btn btn-sm btn-primary-outlined">
-                      <i className="far fa-phone"></i>
-                    </button>
-                    <div className="ml-3">
-                      <h4 className="text-sub-heading text-secondary-dark mb-0">Phone:</h4>
-                      <p className={`text-sm `}>+91 762-688-3755</p>
-                    </div>
-                  </div>
-                  <div className="flex-start mt-2">
-                    <button className="btn btn-sm btn-primary-outlined">
-                      <i className="far fa-envelope"></i>
-                    </button>
-                    <div className="ml-3">
-                      <h4 className="text-sub-heading text-secondary-dark mb-0">Email:</h4>
-                      <p className="text-sm text-primary">
-                        mohammadiftekhar120@mail.com
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <h6 className="text-sub-heading">Follow Us</h6>
-                <div className="social-links mt-0">
-                  {socialIconData.map((item) =>
-                    item.isTrue ? (
-                      <button
-                        key={item.id}
-                        onClick={() => handleLinkNavigate(item.sourceLink)}
-                        className={`btn btn-sm btn-${item.className}`}
-                      >
-                        <i className={item.icon}></i>
-                      </button>
-                    ) : null
-                  )}
+          <div className="card-body ">
+            <div className="list">
+              <div className="list-item">
+                <span className="status">
+                  <i className="far fa-location-dot" />
+                </span>
+                <div className="ml-3">
+                  <h6 className="text-sub-heading text-secondary-dark mb-0">
+                    Address:
+                  </h6>
+                  <p className={`text-sm`}>
+                    Jharsa Village, Sector 39, Gurugram, Haryana 122003
+                  </p>
                 </div>
               </div>
-              <MapSection />
+              <div className="list-item">
+                <span className="status">
+                  <i className="far fa-phone"></i>
+                </span>
+                <div className="ml-3">
+                  <h6 className="text-sub-heading text-secondary-dark mb-0">
+                    Phone:
+                  </h6>
+                  <p className={`text-sm `}>+91 762-688-3755</p>
+                </div>
+              </div>
+              <div className="list-item">
+                <span className="status">
+                  <i className="far fa-envelope"></i>
+                </span>
+                <div className="ml-3">
+                  <h6 className="text-sub-heading text-secondary-dark mb-0">
+                    Email:
+                  </h6>
+                  <p className="text-sm text-primary">
+                    mohammadiftekhar120@mail.com
+                  </p>
+                </div>
+              </div>
             </div>
-            <div className="contact-form mt-12">
-              <h4 className="text-heading">We Want To Here From You</h4>
-              <form ref={form} onSubmit={handleSubmit}>
-                <div className="flex">
-                  <div className="flex-50 pr-2">
-                    <div className="form-group">
-                      <label className="form-label">Your Name</label>
-                      <input
-                        type="text"
-                        className="form-control"
-                        placeholder="Enter your good name?"
-                        name="from_name"
-                        value={name}
-                        onChange={(e: ChangeEvent<HTMLInputElement>) =>
-                          setName(e.target.value)
-                        }
-                      />
-                      {errors.name && (
-                        <span className="error">
-                          <i className="fas fa-exclamation-circle"></i>{" "}
-                          {errors.name}
-                        </span>
-                      )}
-                    </div>
+            <h6 className="text-sub-heading text-secondary-dark mt-6">Follow Us</h6>
+            <div className="social-links mt-0 mb-4">
+              {socialIconData.map((item) =>
+                item.isTrue ? (
+                  <button
+                    key={item.id}
+                    onClick={() => handleLinkNavigate(item.sourceLink)}
+                    className={`btn btn-sm btn-ghost-outlined`}
+                  >
+                    <i className={item.icon}></i>
+                  </button>
+                ) : null
+              )}
+            </div>
+          </div>
+          <MapSection />
+        </div>
+        <div className="card">
+          <div className="card-header">
+            <h4 className="text-heading mb-0">We Want To Here From You</h4>
+            <p>
+              Feel free to reach out for collaborations or just a friendly hello
+            </p>
+          </div>
+          <div className="card-body pb-0">
+            <form ref={form} onSubmit={handleSubmit}>
+              <div className="flex">
+                <div className="flex-50 pr-2">
+                  <div className="form-group">
+                    <label className="form-label">Your Name</label>
+                    <input
+                      type="text"
+                      className="form-control"
+                      placeholder="Enter your good name?"
+                      name="from_name"
+                      value={name}
+                      onChange={(e: ChangeEvent<HTMLInputElement>) =>
+                        setName(e.target.value)
+                      }
+                    />
+                    {errors.name && (
+                      <span className="error">
+                        <i className="fas fa-exclamation-circle"></i>{" "}
+                        {errors.name}
+                      </span>
+                    )}
                   </div>
-                  <div className="flex-50 pl-2">
-                    <div className="form-group">
-                      <label className="form-label">Your Email</label>
-                      <input
-                        type="text"
-                        className="form-control"
-                        placeholder="Enter your Email Address"
-                        name="from_email"
-                        value={email}
-                        onChange={(e: ChangeEvent<HTMLInputElement>) =>
-                          setEmail(e.target.value)
-                        }
-                      />
-                      {errors.email && (
-                        <span className="error">
-                          <i className="fas fa-exclamation-circle"></i>{" "}
-                          {errors.email}
-                        </span>
-                      )}
-                    </div>
+                </div>
+                <div className="flex-50 pl-2">
+                  <div className="form-group">
+                    <label className="form-label">Your Email</label>
+                    <input
+                      type="text"
+                      className="form-control"
+                      placeholder="Enter your Email Address"
+                      name="from_email"
+                      value={email}
+                      onChange={(e: ChangeEvent<HTMLInputElement>) =>
+                        setEmail(e.target.value)
+                      }
+                    />
+                    {errors.email && (
+                      <span className="error">
+                        <i className="fas fa-exclamation-circle"></i>{" "}
+                        {errors.email}
+                      </span>
+                    )}
                   </div>
                 </div>
-                <div className="form-group">
-                  <label className="form-label">Subject</label>
-                  <input 
-                    className="form-control"
-                    placeholder="Enter Subject"
-                    name="subject"
-                    value={message}
-                    onChange={(e: any) =>
-                      setMessage(e.target.value)
-                    }
-                  />
-                </div>
-                <div className="form-group">
-                  <label className="form-label">Your Message</label>
-                  <textarea
-                    rows={7}
-                    className="form-control"
-                    placeholder="What you want to say?"
-                    name="message"
-                    value={message}
-                    onChange={(e: ChangeEvent<HTMLTextAreaElement>) =>
-                      setMessage(e.target.value)
-                    }
-                  />
-                </div>
-                {/* <ReCAPTCHA
+              </div>
+              <div className="form-group">
+                <label className="form-label">Subject</label>
+                <input
+                  className="form-control"
+                  placeholder="Enter Subject"
+                  name="subject"
+                  value={message}
+                  onChange={(e: any) => setMessage(e.target.value)}
+                />
+              </div>
+              <div className="form-group">
+                <label className="form-label">Your Message</label>
+                <textarea
+                  rows={7}
+                  className="form-control"
+                  placeholder="What you want to say?"
+                  name="message"
+                  value={message}
+                  onChange={(e: ChangeEvent<HTMLTextAreaElement>) =>
+                    setMessage(e.target.value)
+                  }
+                />
+              </div>
+              {/* <ReCAPTCHA
                   sitekey="6Ldr4V4pAAAAAC9zhtuGpSCzzIg4_kIbEblt6rBB"
                   onChange={recaptchaHandler}
                   theme="dark"
                 /> */}
-                <div className="card-footer">
-                  <div className="flex-end w-100">
-                    <button
-                      type="submit"
-                      value="Send"
-                      className="btn btn-primary"
-                      // disabled={!verified}
-                    >
-                      Send
-                    </button>
-                  </div>
+              <div className="card-footer">
+                <div className="flex-end w-100">
+                  <button
+                    type="submit"
+                    value="Send"
+                    className="btn btn-primary"
+                    // disabled={!verified}
+                  >
+                    Send
+                    <i className="fa-regular fa-paper-plane fa-rotate-315 ml-2"></i>
+
+                  </button>
                 </div>
-              </form>
-            </div>
+              </div>
+            </form>
           </div>
         </div>
       </>
