@@ -3,6 +3,7 @@ import { useLocalStorage } from "../hooks/useLocalStorage";
 import { useTheme } from "./ThemeProvider";
 import { Dropdown } from "./Dropdown"; 
 import { useNavigate } from "react-router";
+import Navbar from "./Navbar";
 
 const Header = () => {
   const navigate = useNavigate();
@@ -29,6 +30,7 @@ const Header = () => {
               </div>
             </div>
           </div>
+          <Navbar />
           <div className="header-right">
             <button
               className="theme-toggle-btn"
