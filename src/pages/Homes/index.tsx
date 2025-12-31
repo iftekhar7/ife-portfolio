@@ -41,7 +41,7 @@ function Home() {
 
   return (
     <>
-      <section className="hero section">
+      <section id="home" className="hero section">
         <div className="hero-content">
           <div className="hero-grid">
             <div>
@@ -119,7 +119,7 @@ function Home() {
           </div>
         </div>
       </section>
-      <section className="about-section section">
+      <section id="about" className="about-section section">
         <div className="section-header">
           <h2 className="text-heading4">About Me</h2>
           <p className="text-sm mb-4">
@@ -151,7 +151,7 @@ function Home() {
           </ul> */}
         </div>
       </section>
-      <section className="about-section section">
+      <section id="work" className="about-section section">
         <div className="section-header mb-6">
           <h2 className="text-heading4 mb-2">Professional Journey</h2>
           <p className="text-sm">
@@ -161,7 +161,7 @@ function Home() {
         </div>
         <Work />
       </section>
-      <section className="about-section section">
+      <section id="projects" className="about-section section">
         <div className="section-header flex-between mb-6">
           <div>
             <h2 className="text-heading4 mb-2">Featured Projects</h2>
@@ -206,7 +206,7 @@ function Home() {
           <Table data={filteredData} />
         )}
       </section>
-      <section className="about-section section">
+      <section id="contact" className="about-section section">
         <div className="section-header mb-6">
           <h2 className="text-heading4 mb-2">Contact</h2>
           <p className="text-sm ">

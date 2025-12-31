@@ -1,0 +1,67 @@
+@use "./core.scss" as *;
+.navbar {
+  @include flex-start;
+
+  ul {
+    margin: spacing(0);
+    padding: spacing(0);
+    list-style: none;
+    @include flex-center;
+    li {
+      position: relative;
+      padding: spacing(4) spacing(0) spacing(4) spacing(8);
+
+      &::before {
+        visibility: visible;
+        width: 25px;
+      }
+
+      p {
+        position: relative;
+        @include text-sm;
+        color: rgba(var(--neutral-600), 1);
+        cursor: pointer;
+
+        &::before {
+          content: "";
+          position: absolute;
+          width: 0;
+          height: 2px;
+          bottom: -8px;
+          left: 0;
+          @include gradient-primary;
+          visibility: hidden;
+          transition: all 0.3s ease-in-out 0s;
+        }
+      }
+    }
+  }
+
+  p:hover:before,
+  li:hover > p:before,
+  .active:before {
+    visibility: visible;
+    width: 25px;
+  }
+
+  p:hover,
+  .active,
+  .active:focus,
+  li:hover > p {
+    @include gradient-text;
+  }
+}
+
+.side-nav {
+  .navbar {
+    justify-content: start;
+    ul {
+      flex-direction: column;
+      align-items: normal;
+      width: 100%;
+      li {
+        padding-left: spacing(2);
+      }
+    }
+  }
+}

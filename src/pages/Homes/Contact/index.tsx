@@ -234,7 +234,7 @@ function Contact() {
                     // disabled={!verified}
                   >
                     Send
-                    <i className="fa-regular fa-paper-plane fa-rotate-315 ml-2"></i>
+                    <i className="fa-regular fa-paper-plane ml-2"></i>
 
                   </button>
                 </div>
