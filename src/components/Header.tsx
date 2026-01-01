@@ -1,13 +1,11 @@
  
 import { useLocalStorage } from "../hooks/useLocalStorage";
-import { useTheme } from "./ThemeProvider";
-import { Dropdown } from "./Dropdown"; 
-import { useNavigate } from "react-router";
+import { useTheme } from "./ThemeProvider"; 
 import Navbar from "./Navbar";
-import { DropdownMenu } from "./DopdownMenu";
+import { DropdownMenu } from "./DropdownMenu";
 
 const Header = () => {
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
   const [currentMode, setCurrentMode] = useLocalStorage("theme", "light");
   
   const { theme } = useTheme();
@@ -50,7 +48,7 @@ const Header = () => {
                 }`}
               ></i>
             </button> 
-            <Dropdown
+            {/* <Dropdown
               placement="right"
               className="btn-secondary-text"
               icon={"fas fa-gear"}
@@ -66,7 +64,7 @@ const Header = () => {
                 {" "}
                 <i className="fa-solid fa-right-from-bracket"></i>Logout
               </li>
-            </Dropdown>
+            </Dropdown> */}
             <DropdownMenu />
           </div>
         </div>
