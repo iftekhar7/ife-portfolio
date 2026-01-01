@@ -82,3 +82,41 @@
     padding: 0 spacing("8");
   }
 }
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 1024px) {
+  .header {
+    .navbar {
+      display: none;
+    }
+
+    .header-left-content {
+      flex-basis: auto !important;
+      max-width: none !important;
+      margin-right: auto;
+      z-index: 5; 
+    }
+
+    .header-right { 
+      .dropdown-nav-menu{
+        .dropdown{
+          margin-top: spacing(3);
+          box-shadow: 0 8px 24px #00000026;
+        }
+      }
+        .navbar {
+          display: block;
+          ul{
+           display: block;
+          }
+        } 
+    }
+
+  }
+}
+
+@media screen and (min-device-width: 1025px)  {
+
+  .dropdown-nav-menu {
+    display: none; 
+  }
+}
