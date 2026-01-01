@@ -162,7 +162,7 @@ function Home() {
         <Work />
       </section>
       <section id="projects" className="about-section section">
-        <div className="section-header flex-between mb-6">
+        <div className="section-header grid-responsive mb-6" style={{gap:'0px'}}>
           <div>
             <h2 className="text-heading4 mb-2">Featured Projects</h2>
             <p className="text-sm">
@@ -171,7 +171,7 @@ function Home() {
               applications.
             </p>
           </div>
-          <div className="flex-start mt-6">
+          <div className="flex-end mt-6">
             <SearchInput
               placeholder="Search Projects..."
               value={searchTerm}

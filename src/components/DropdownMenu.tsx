@@ -45,7 +45,7 @@ export function DropdownMenu() {
   return (
     <div className="dropdown-wrapper dropdown-nav-menu" ref={dropdownRef}>
       <button onClick={toggleDropdown} className='btn btn-secondary-text'>
-        <i className="fas fa-bars"></i>
+        <i className={`fas ${isOpen? 'fa-times fa-lg':'fa-bars'}`}></i>
       </button>
 
       {isOpen && (

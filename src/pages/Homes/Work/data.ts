@@ -1,4 +1,6 @@
-export const data = [
+import type { WorkExperience } from "../../../utils/types";
+
+export const data:WorkExperience[] = [
   {
     id: "3",
     year: "July 2022 – Present",
@@ -17,7 +19,7 @@ amCharts.`,
       { paragraph: `Actively participated in Agile processes, code reviews, and task tracking using JIRA and Git-based workflows.` },
       { paragraph: `Integrated SonarQube for code quality analysis and maintained 95%+ test coverage with Jest/RTL.` },
     ],
-    gradientClass: "pink-gradient",
+    gradientClass: "blue-gradient",
   },
   {
     id: "2",

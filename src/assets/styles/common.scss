@@ -79,24 +79,16 @@
   }
 }
 
-// experience
 // Timeline Section SCSS
 .timeline-section {
   position: relative;
-  // Timeline Line
   .timeline-line {
     position: absolute;
-    left: 1.5rem;
+    left: 6px;
     top: 0;
     bottom: 0;
-    width: 2px;
-
-    background: linear-gradient(
-      to bottom,
-      #f472b6 0%,
-      #60a5fa 50%,
-      #a78bfa 100%
-    );
+    width: 1.5px;
+    @include gradient-primary;
   }
 
   .timeline-items {
@@ -104,43 +96,35 @@
     flex-direction: column;
     gap: 3rem;
   }
-  
+
   // Timeline Item
   .timeline-item {
     position: relative;
-    padding-left: 4rem;
-  
+    padding-left: spacing(8);
+
     // Timeline Dot
     .timeline-dot {
       position: absolute;
-      left: 16px;
+      left: 0;
       top: 0;
-      width: 1rem;
-      height: 1rem;
+      width: spacing(3);
+      height: spacing(3);
       border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+      @include flex-center;
       box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
         0 4px 6px -2px rgba(0, 0, 0, 0.05);
-  
+
       .dot-inner {
-        width: 1.5rem;
-        height: 1.5rem;
+        width: spacing(2);
+        height: spacing(2);
         border-radius: 50%;
       }
     }
-  
-    // Color Variations for Dots
-    .pink-gradient {
-      background: linear-gradient(135deg, #ec4899, #f43f5e);
-    }
-  
+
     .blue-gradient {
-      background: linear-gradient(135deg, #3b82f6, #06b6d4);
+      @include gradient-primary;
     }
-  
-    // Content Card
+
     .timeline-card {
       transition: all 0.3s ease;
       &:hover {
