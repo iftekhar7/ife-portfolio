@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 
-function Navbar() {
+function Navbar(props: any) {
+  const { setIsOpen } = props;
   const [activeSection, setActiveSection] = useState("home");
 
   const scrollToSection = (id: string) => {
@@ -11,6 +12,7 @@ function Navbar() {
         block: "start",
       });
     }
+    setIsOpen(false);
   };
 
   useEffect(() => {

@@ -4,6 +4,7 @@ import { useTheme } from "./ThemeProvider";
 import { Dropdown } from "./Dropdown"; 
 import { useNavigate } from "react-router";
 import Navbar from "./Navbar";
+import { DropdownMenu } from "./DopdownMenu";
 
 const Header = () => {
   const navigate = useNavigate();
@@ -17,8 +18,7 @@ const Header = () => {
         <div className="header-content">
           <div
             className="header-left cursor-pointer"
-            role="button"
-            // onClick={() => navigate("/")}
+            role="button" 
           >
             <div className="nav-content">
               <div className="nav-brand">
@@ -67,6 +67,7 @@ const Header = () => {
                 <i className="fa-solid fa-right-from-bracket"></i>Logout
               </li>
             </Dropdown>
+            <DropdownMenu />
           </div>
         </div>
       </header>
