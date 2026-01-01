@@ -2,10 +2,11 @@ import React, { useEffect, useState } from "react";
 import { cardData, socialIconData } from "./data";
 import Projects from "./Projects";
 import SearchInput from "../../components/SearchInput";
-import { cloudinary } from "../../utils/commonutils";
+import { cloudinary, scrollToSection } from "../../utils/commonutils";
 import Contact from "./Contact";
 import Table from "../../components/Table";
 import Work from "./Work";
+import Skills from "./Skills";
 
 function Home() {
   const [searchTerm, setSearchTerm] = React.useState("");
@@ -77,7 +78,7 @@ function Home() {
               </div>
 
               <div className="cta-buttons">
-                <button className="btn btn-primary mr-3 ">
+                <button onClick={()=>scrollToSection('projects')} className="btn btn-primary mr-3 ">
                   View Projects <i className="far fa-arrow-right ml-2" />
                 </button>
                 <button
@@ -150,6 +151,15 @@ function Home() {
             <li>Working in Agile environments using Git, Jira, and code-review workflows</li>
           </ul> */}
         </div>
+      </section>
+       <section id="skills" className="about-section section">
+        <div className="section-header">
+          <h2 className="text-heading4">My Skills</h2>
+          <p className="text-sm mb-4">
+            Building exceptional web experiences
+          </p> 
+        </div>
+        <Skills />
       </section>
       <section id="work" className="about-section section">
         <div className="section-header mb-6">
