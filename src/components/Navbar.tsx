@@ -58,7 +58,14 @@ function Navbar(props: any) {
             About
           </p>
         </li>
-
+        <li>
+          <p
+            className={activeSection === "skills" ? "active" : ""}
+            onClick={() => scrollToSection("skills")}
+          >
+            Skills
+          </p>
+        </li>
         <li>
           <p
             className={activeSection === "work" ? "active" : ""}

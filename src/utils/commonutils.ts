@@ -19,3 +19,12 @@ export const getInitials = (name:string, email:string) => {
 export const cloudinary = (id: string, t = "w_600,f_auto,q_auto") =>
   `https://res.cloudinary.com/dhvkeskni/image/upload/${t}/${id}`;
 
+export const scrollToSection = (id: string) => {
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+    } 
+  };
