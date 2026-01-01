@@ -171,7 +171,7 @@ function Home() {
               applications.
             </p>
           </div>
-          <div className="flex-start mt-6">
+          <div className="flex-end mt-6">
             <SearchInput
               placeholder="Search Projects..."
               value={searchTerm}

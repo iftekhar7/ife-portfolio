@@ -704,7 +704,7 @@ $flex-basis: (
 
 // Gradients
 @mixin gradient-primary {
-  background: linear-gradient(135deg, color(primary), color(primary-light));
+  background: linear-gradient(135deg, color(neutral-900), color(primary));
 }
 
 @mixin gradient-text {
@@ -1388,7 +1388,7 @@ body {
     $sm: 1,
     $md: 1,
     $lg: 2,
-    $gap: "6",
+    $gap: "4",
     $min-width: 200px
   );
 }
