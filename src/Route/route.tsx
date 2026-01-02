@@ -1,8 +1,6 @@
 import { Navigate } from 'react-router-dom';
 import React, { Suspense } from 'react'; 
-import Loader from '../components/Loader';
-  
-const MyLibrary = React.lazy(() => import('../pages/MyLibrary')); 
+import Loader from '../components/Loader'; 
 const Home = React.lazy(() => import('../pages/Homes')); 
 
 export const RouteList = [
@@ -11,20 +9,12 @@ export const RouteList = [
         path: '*',
         element: () => <Navigate to="/home" replace />,
     },
-    {
-        id: 'my-library',
-        path: '/my-library',
-        element: () => (
-            <Suspense fallback={<Loader />}>
-                <MyLibrary />
-            </Suspense>
-        ),
-    }, 
+      
      {
         id: 'home',  
         path: '/home',
         element: () => (
-            <Suspense fallback={<Loader />}>
+            <Suspense fallback={<Loader height="calc(100vh - 300px)" />}>
                 <Home />
             </Suspense>
         ),
