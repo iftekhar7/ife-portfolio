@@ -1,10 +1,8 @@
 import React, { useRef, useState } from "react";
 import type { FormEvent, ChangeEvent } from "react";
-import emailjs from "@emailjs/browser";
-// import ReCAPTCHA from "react-google-recaptcha";
+import emailjs from "@emailjs/browser"; 
 import { ToastContainer, toast } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
-// import OSMMap from "./OSMMap";
+import "react-toastify/dist/ReactToastify.css"; 
 import MapSection from "./OSMMap";
 import { socialIconData } from "../data";
 
@@ -14,8 +12,7 @@ interface FormErrors {
 }
 
 function Contact() {
-  const form = useRef<HTMLFormElement>(null);
-  // const [verified, setVerified] = useState<boolean>(false);
+  const form = useRef<HTMLFormElement>(null); 
   const [name, setName] = useState<string>("");
   const [email, setEmail] = useState<string>("");
   const [message, setMessage] = useState<string>("");
@@ -36,12 +33,7 @@ function Contact() {
 
     setErrors(newErrors);
     return Object.keys(newErrors).length === 0;
-  };
-
-  // const recaptchaHandler = (value: string | null): void => {
-  //   setVerified(!!value);
-  // };
-
+  }; 
   const handleSubmit = (e: FormEvent<HTMLFormElement>): void => {
     e.preventDefault();
     if (validationHandler() && form.current) {
@@ -196,17 +188,7 @@ function Contact() {
                     )}
                   </div>
                 </div>
-              </div>
-              <div className="form-group">
-                <label className="form-label">Subject</label>
-                <input
-                  className="form-control"
-                  placeholder="Enter Subject"
-                  name="subject"
-                  value={message}
-                  onChange={(e: any) => setMessage(e.target.value)}
-                />
-              </div>
+              </div> 
               <div className="form-group">
                 <label className="form-label">Your Message</label>
                 <textarea
@@ -219,12 +201,7 @@ function Contact() {
                     setMessage(e.target.value)
                   }
                 />
-              </div>
-              {/* <ReCAPTCHA
-                  sitekey="6Ldr4V4pAAAAAC9zhtuGpSCzzIg4_kIbEblt6rBB"
-                  onChange={recaptchaHandler}
-                  theme="dark"
-                /> */}
+              </div> 
               <div className="card-footer">
                 <div className="flex-end w-100">
                   <button
