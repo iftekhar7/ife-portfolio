@@ -217,3 +217,27 @@
     grid-template-columns: repeat(6, 1fr);
   }
 }
+
+// .back-to-top {
+//   position: fixed;
+//   bottom: 2rem; // bottom-8
+//   right: 2rem;  // right-8
+//   width: 3rem;  // w-12
+//   height: 3rem; // h-12
+
+//   background-color: var(--primary); // bg-primary
+//   color: #fff; // text-white
+
+//   border-radius: 50%; // rounded-full
+//   display: flex; // flex
+//   align-items: center; // items-center
+//   justify-content: center; // justify-center
+
+//   box-shadow: 0 10px 15px rgba(0, 0, 0, 0.15); // shadow-lg
+//   transition: opacity 0.3s ease; // transition-opacity
+//   cursor: pointer;
+
+//   &:hover {
+//     transform: translateY(-4px);
+//   }
+// }

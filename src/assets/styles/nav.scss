@@ -9,7 +9,7 @@
     @include flex-center;
     li {
       position: relative;
-      padding: spacing(4) spacing(0) spacing(4) spacing(8);
+      padding: spacing(4) spacing(0) spacing(4) spacing(6);
 
       &::before {
         visibility: visible;
