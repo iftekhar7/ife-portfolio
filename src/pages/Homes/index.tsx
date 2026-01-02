@@ -156,7 +156,7 @@ function Home() {
         <div className="section-header">
           <h2 className="text-heading4">My Skills</h2>
           <p className="text-sm mb-4">
-            Building exceptional web experiences
+            Designing and developing scalable, user-focused frontend applications with modern tools, clean architecture, and attention to detail.
           </p> 
         </div>
         <Skills />
@@ -218,7 +218,7 @@ function Home() {
       </section>
       <section id="contact" className="about-section section">
         <div className="section-header mb-6">
-          <h2 className="text-heading4 mb-2">Contact</h2>
+          <h2 className="text-heading4 mb-2">Contact Information</h2>
           <p className="text-sm ">
             I’m always open to new opportunities, collaborations, and
             interesting projects. If you have an idea, need a frontend
