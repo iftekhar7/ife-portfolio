@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { cardData, socialIconData } from "./data";
+import { socialIconData } from "./data";
 import Projects from "./Projects";
 import SearchInput from "../../components/SearchInput";
 import { cloudinary, scrollToSection } from "../../utils/commonutils";
@@ -7,6 +7,7 @@ import Contact from "./Contact";
 import Table from "../../components/Table";
 import Work from "./Work";
 import Skills from "./Skills";
+import { cardData } from "./Projects/data";
 
 function Home() {
   const [searchTerm, setSearchTerm] = React.useState("");
@@ -24,7 +25,7 @@ function Home() {
   }
   const debouncedSearch = useDebounce(searchTerm, 400);
 
-  const filteredData = cardData.filter((item) =>
+  const filteredData = cardData.filter((item:any) =>
     item.projectName.toLowerCase().includes(debouncedSearch.toLowerCase())
   );
 

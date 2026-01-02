@@ -14,7 +14,7 @@ export const RouteList = [
         id: 'home',  
         path: '/home',
         element: () => (
-            <Suspense fallback={<Loader height="calc(100vh - 300px)" />}>
+            <Suspense fallback={<Loader height="100vh" />}>
                 <Home />
             </Suspense>
         ),

@@ -10,3 +10,32 @@ export interface WorkExperience {
   description: DescriptionItem[];
   gradientClass: string;
 }
+
+export interface SocialIcon{
+  id:number,
+  icon:string,
+  name:string,
+  className:string,
+  isTrue?:boolean,
+  sourceLink:string,
+}
+export interface Tools{ 
+  icon:string,
+  name:string,
+  color:string
+}
+export interface ProfessionalSkills{ 
+  percentage:number,
+  name:string, 
+}
+export interface CardData{ 
+  id:number,
+  projectName:string, 
+  companyName:string, 
+  description:string, 
+  url:string, 
+  languages:any, 
+  designStatus:string, 
+  startDate?:string, 
+  endDate?:string, 
+}
