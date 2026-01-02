@@ -8,16 +8,14 @@ import {
 } from "../../components/ThemeProvider";
 import { useLocalStorage } from "../../hooks/useLocalStorage";
 import { Route, Routes, useLocation } from "react-router-dom";
-import { RouteList } from "../../Route/route";
-// import Sidenav from "../../components/Sidenav";
+import { RouteList } from "../../Route/route"; 
 import Loader from "../../components/Loader";
 import Footer from "../../components/Footer";
 
 const Login = React.lazy(() => import("../../pages/Login")); 
 
 function HomePage() {
-  const path = useLocation();
-  console.log("path: ", path.pathname);
+  const path = useLocation(); 
   const { updateTheme } = useTheme();
   const [currentMode] = useLocalStorage("theme", "");
 
@@ -53,8 +51,7 @@ function HomePage() {
         </Routes>
       ) : (
         <div className="content-wrapper">
-          <Header />
-          {/* <Sidenav /> */}
+          <Header /> 
           <div className="content-body">
             <Routes>
               {RouteList?.map((route) => {

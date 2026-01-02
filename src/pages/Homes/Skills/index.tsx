@@ -1,37 +1,9 @@
- 
+import React from "react";
+import { professionalSkills, technicalSkills, tools } from "./data";
 
 const Skills = () => {
-  const technicalSkills = [
-    { name: 'HTML/CSS', percentage: 95 },
-    { name: 'JavaScript', percentage: 90 },
-    { name: 'React', percentage: 95 },
-    { name: 'Redux', percentage: 85 }
-  ];
-
-  const professionalSkills = [
-    { name: 'Communication', percentage: 85 },
-    { name: 'Teamwork', percentage: 85 },
-    { name: 'Problem Solving', percentage: 75 },
-    { name: 'Creativity', percentage: 80 }
-  ];
-
-  const tools = [
-    { icon: '📄', name: 'HTML5', color: '#e34c26' },
-    { icon: '🎨', name: 'CSS3', color: '#264de4' },
-    { icon: 'JS', name: 'JavaScript', color: '#f0db4f' },
-    { icon: '⚛️', name: 'React', color: '#61dafb' },
-    { icon: '📗', name: 'Node.js', color: '#68a063' },
-    { icon: '🍃', name: 'MongoDB', color: '#4db33d' },
-    { icon: '🔀', name: 'Git', color: '#f34f29' },
-    { icon: '📦', name: 'npm', color: '#cb3837' },
-    { icon: '💅', name: 'Sass', color: '#cc6699' },
-    { icon: '🎯', name: 'Figma', color: '#a259ff' },
-    { icon: '💻', name: 'VS Code', color: '#007acc' },
-    { icon: '🐧', name: 'Linux', color: '#fcc624' }
-  ];
-
   return (
-    <>
+    <React.Fragment>
         <div className="skills-grid">
           <div className="skill-category">
             <h3 className="text-heading">Technical Skills</h3>
@@ -89,7 +61,7 @@ const Skills = () => {
             ))}
           </div>
         </div> 
-    </>
+    </React.Fragment>
   );
 };
 
