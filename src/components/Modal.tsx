@@ -57,6 +57,7 @@ function Modal({
                   <p>{props.subheading}</p>
                 </div>
               </div>
+              <button className="btn btn-danger-text" onClick={() => onCancel()}><i className="fas fa-times"/></button>
             </div>
 
             {props.modalType === "delete" ? (
@@ -105,7 +106,7 @@ function Modal({
             )}
             <div className="modal-footer">
               <button className="btn btn-secondary-text mr-2" onClick={() => onCancel()}>
-                Cancel
+                Close
               </button>
               {props.modalType === "delete" ? (
                 <button
@@ -116,7 +117,8 @@ function Modal({
                   Delete
                 </button>
               ) : (
-                <button className="btn btn-primary">Save</button>
+                // <button className="btn btn-primary">Save</button>
+                null
               )}
             </div>
           </div>}
