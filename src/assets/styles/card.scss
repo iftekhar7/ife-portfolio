@@ -39,7 +39,7 @@
     @include card-hover;
   } 
   &-footer {
-    @include flex-start;
+    @include flex-between;
     border-top: 1px solid rgba(var(--neutral-200), 1);
     padding: spacing(4) 0 spacing(0);
   }

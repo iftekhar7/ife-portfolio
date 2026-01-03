@@ -10,12 +10,14 @@ function Work() {
             <div className="dot-inner" />
           </div> 
           <div className="timeline-card card">
-            <div className="card-header flex-between flex-align-start">
+            <div className="card-header grid-responsive">
               <div>
                 <h4 className="text-heading mb-1">{item.role}</h4>
                 <p className="text-primary">{item.company}</p>
               </div>
-              <span className="pill pill-secondary mr-0">{item.year}</span>
+             <div className="flex-end" style={{height:'fit-content'}}>
+               <span className="pill pill-secondary mr-0">{item.year}</span>
+             </div>
             </div> 
             <ul className="pl-8">
               {item.description.map((subItem, index) => (

@@ -1,4 +1,4 @@
-import type { CardData } from "../../../utils/types";
+import type { CardData, ProjectDetailsData } from "../../../utils/types";
 
 export const cardData:CardData[] = [
   {
@@ -24,7 +24,7 @@ export const cardData:CardData[] = [
   },
   {
     id: 2,
-    projectName: "MAH (Multi Asset Handler) - Version 6 ",
+    projectName: "MAH (Multi Asset Handler) - Version 6",
     companyName: "@iot83",
     description:
       "Built an IoT device management system that enables seamless device lifecycle management and firmware updates for large-scale IoT deployments",
@@ -210,3 +210,36 @@ export const cardData:CardData[] = [
     designStatus: "Dashboard",
   },
 ];
+
+export const projectDetailsData:ProjectDetailsData[]=[
+  {
+    id:1,
+    name:'Flex83 - AIoT Platform - version 7',
+    url:'https://res.cloudinary.com/dhvkeskni/image/upload/v1767427575/Screenshot_2025-11-19_183236_wfhxqs.png'
+  },
+   {
+    id:2,
+    name:'Flex83 - AIoT Platform - version 7',
+    url:'https://res.cloudinary.com/dhvkeskni/image/upload/v1767428133/Screenshot_2026-01-03_134337_n8h5tn.png'
+  },
+   {
+    id:3,
+    name:'Flex83 - AIoT Platform - version 7',
+    url:'https://res.cloudinary.com/dhvkeskni/image/upload/v1767429449/Screenshot_2026-01-03_140712_pytwyu.png'
+  },
+   {
+    id:4,
+    name:'Flex83 - AIoT Platform - version 7',
+    url:'https://res.cloudinary.com/dhvkeskni/image/upload/v1767428109/Screenshot_2026-01-03_134305_o6knwe.png'
+  },
+   {
+    id:5,
+    name:'Flex83 - AIoT Platform - version 7',
+    url:'https://res.cloudinary.com/dhvkeskni/image/upload/v1767428088/Screenshot_2026-01-03_134200_du13oz.png'
+  },
+  {
+    id:6,
+    name:'MAH (Multi Asset Handler) - Version 6',
+    url:'https://res.cloudinary.com/dhvkeskni/image/upload/v1767455635/Screenshot_2026-01-03_212038_ho08ou.png'
+  },
+]

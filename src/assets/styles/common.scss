@@ -187,10 +187,10 @@
     transition: all 0.3s ease;
     &:hover {
       transform: translateY(-5px);
-      box-shadow: 0 10px 30px  rgba(var(--primary), .5);
+      box-shadow: 0 10px 30px rgba(var(--primary), 0.5);
     }
     .tool-icon {
-      font-size: font-size(4xl); 
+      font-size: font-size(4xl);
     }
     .tool-name {
       font-size: font-size(sm);
@@ -201,7 +201,7 @@
 
 @media (min-width: 640px) {
   .tools-grid {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3, 1fr); 
   }
 }
 
@@ -216,27 +216,80 @@
     grid-template-columns: repeat(6, 1fr);
   }
 }
+@media only screen and (max-width: 600px) {
+  .tool-card {
+    flex-direction: column;
+  }
+}
 
-// .back-to-top {
-//   position: fixed;
-//   bottom: 2rem; // bottom-8
-//   right: 2rem;  // right-8
-//   width: 3rem;  // w-12
-//   height: 3rem; // h-12
+/* ===============================
+   Carousel Wrapper
+================================ */
+.carousel {
+  width: 100%;
+  height: 100%;
 
-//   background-color: var(--primary); // bg-primary
-//   color: #fff; // text-white
+  .slide {
+    background: transparent;
+    padding: 0;
 
-//   border-radius: 50%; // rounded-full
-//   display: flex; // flex
-//   align-items: center; // items-center
-//   justify-content: center; // justify-center
+    img {
+      width: 100%;
+      height: calc(100vh - 300px);
+    }
+  }
 
-//   box-shadow: 0 10px 15px rgba(0, 0, 0, 0.15); // shadow-lg
-//   transition: opacity 0.3s ease; // transition-opacity
-//   cursor: pointer;
+  /* Arrows */
+  .control-arrow {
+    background: rgba(0, 0, 0, 0.5) !important;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    top: 50% !important;
+    transform: translateY(-50%);
 
-//   &:hover {
-//     transform: translateY(-4px);
-//   }
-// }
+    &:hover {
+      background: rgba(0, 0, 0, 0.75) !important;
+    }
+  }
+
+  .control-prev.control-arrow {
+    left: 10px;
+  }
+
+  .control-next.control-arrow {
+    right: 10px;
+  }
+
+  /* Thumbnails */
+  .thumbs-wrapper {
+    margin-top: 12px;
+  }
+
+  .thumb {
+    border-radius: 6px;
+    border: 2px solid transparent;
+
+    &.selected,
+    &:hover {
+      border-color: #0d6efd;
+    }
+  }
+
+  /* Indicators (Dots) */
+  .control-dots {
+    bottom: 15px;
+
+    .dot {
+      width: 10px;
+      height: 10px;
+      background: rgba(var(--neutral-200), 1);
+      box-shadow: none;
+      opacity: 1;
+
+      &.selected {
+        background: #0d6efd;
+      }
+    }
+  }
+}

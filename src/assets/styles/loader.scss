@@ -31,3 +31,12 @@
     transform: rotate(360deg);
   }
 }
+
+// no data found
+.no-data-found{
+  height: calc(100vh - 400px);
+  @include flex-center;
+  h6{
+    @include heading;
+  }
+}
