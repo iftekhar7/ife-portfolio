@@ -45,7 +45,7 @@ export const cardData:CardData[] = [
   },
   {
     id: 3,
-    projectName: "OEDC (Data Studio Application) ",
+    projectName: "OEDC (Data Studio Application)",
     companyName: "@iot83",
     startDate: "Nov 2023",
     endDate: "Dec 2024",
@@ -66,7 +66,7 @@ export const cardData:CardData[] = [
   },
   {
     id: 4,
-    projectName: "SGRM (Smart Generator Remote Monitoring) ",
+    projectName: "SGRM (Smart Generator Remote Monitoring)",
     companyName: "@iot83",
     description:
       "Built an IoT device management platform to monitor generator status in real time, helping teams perform timely maintenance and reduce downtime.",
@@ -156,7 +156,7 @@ export const cardData:CardData[] = [
   },
   {
     id: 9,
-    projectName: "Flex MLOps",
+    projectName: "Face Recognition Application",
     companyName: "@iot83",
     description:
       "Machine Learning Operations platform with flexible deployment options",
@@ -178,7 +178,7 @@ export const cardData:CardData[] = [
     projectName: "Sales Portfolio",
     companyName: "@iot83",
     description: "Stakeholder and governance risk management system",
-    url: "/sales-portfolio/sales-portfolio-login.png",
+    url: "https://res.cloudinary.com/dhvkeskni/image/upload/v1767546435/sales-portfolio-login_whdnxn.png",
     languages: [
       "React",
       "JavaScript",
@@ -241,5 +241,45 @@ export const projectDetailsData:ProjectDetailsData[]=[
     id:6,
     name:'MAH (Multi Asset Handler) - Version 6',
     url:'https://res.cloudinary.com/dhvkeskni/image/upload/v1767455635/Screenshot_2026-01-03_212038_ho08ou.png'
+  },
+  {
+    id:7,
+    name:'OEDC (Data Studio Application)',
+    url:'https://res.cloudinary.com/dhvkeskni/image/upload/v1767546652/Screenshot_2026-01-04_224019_bqo9jl.png'
+  },
+   {
+    id:8,
+    name:'OEDC (Data Studio Application)',
+    url:'https://res.cloudinary.com/dhvkeskni/image/upload/v1767549567/oedc-mqtt_lgy6vv.png'
+  },
+   {
+    id:9,
+    name:'OEDC (Data Studio Application)',
+    url:'https://res.cloudinary.com/dhvkeskni/image/upload/v1767549344/oedc-add-alarm_yrcm2i.png'
+  },
+   {
+    id:10,
+    name:'OEDC (Data Studio Application)',
+    url:'https://res.cloudinary.com/dhvkeskni/image/upload/v1767549653/oedc-dashboard-ingestion2_wtrraw.png'
+  },
+   {
+    id:11,
+    name:'OEDC (Data Studio Application)',
+    url:'https://res.cloudinary.com/dhvkeskni/image/upload/v1767549643/oedc-create-widget_pbipnt.png'
+  },
+   {
+    id:12,
+    name:'OEDC (Data Studio Application)',
+    url:'https://res.cloudinary.com/dhvkeskni/image/upload/v1767549430/oedc-dashboard-intellegence_kxjadu.png'
+  },
+  {
+    id:13,
+    name:'OEDC (Data Studio Application)',
+    url:'https://res.cloudinary.com/dhvkeskni/image/upload/v1767550277/oedc-workflow_kbtaui.png'
+  },
+  {
+    id:13,
+    name:'OEDC (Data Studio Application)',
+    url:'https://res.cloudinary.com/dhvkeskni/image/upload/v1767550301/oedc-insight-overview_fezfb2.png'
   },
 ]
