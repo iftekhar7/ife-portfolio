@@ -240,7 +240,27 @@ export const projectDetailsData:ProjectDetailsData[]=[
   {
     id:6,
     name:'MAH (Multi Asset Handler) - Version 6',
-    url:'https://res.cloudinary.com/dhvkeskni/image/upload/v1767455635/Screenshot_2026-01-03_212038_ho08ou.png'
+    url:'https://res.cloudinary.com/dhvkeskni/image/upload/v1767807037/Screenshot_2026-01-07_170223_twuluq.png'
+  },
+  {
+    id:6.2,
+    name:'MAH (Multi Asset Handler) - Version 6',
+    url:'https://res.cloudinary.com/dhvkeskni/image/upload/v1767807133/Screenshot_2026-01-07_170310_ves9ki.png'
+  },
+  {
+    id:6.3,
+    name:'MAH (Multi Asset Handler) - Version 6',
+    url:'https://res.cloudinary.com/dhvkeskni/image/upload/v1767807211/Screenshot_2026-01-07_170415_jtwoxg.png'
+  },
+  {
+    id:6.4,
+    name:'MAH (Multi Asset Handler) - Version 6',
+    url:'https://res.cloudinary.com/dhvkeskni/image/upload/v1767807265/Screenshot_2026-01-07_225601_hgl7h6.png'
+  },
+  {
+    id:6.5,
+    name:'MAH (Multi Asset Handler) - Version 6',
+    url:'https://res.cloudinary.com/dhvkeskni/image/upload/v1767807860/Screenshot_2026-01-07_231308_qjoqvr.png'
   },
   {
     id:7,
