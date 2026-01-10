@@ -1,14 +1,14 @@
 import { useMemo, useState } from "react";
 import ProjectDetailsModal from "./ProjectDetailsModal";
-import { projectDetailsData } from "./data";
-import type { ModalState } from "../../../utils/types";
+import { projectDetailsData } from "./data"; 
 import NoFound from "../../../components/NoFound";
 
 function Projects({ data }: any) {
   const [showAll, setShowAll] = useState(false);
-  const [isOpenModal, setIsOpenModal] = useState<ModalState>({
+  const [isOpenModal, setIsOpenModal] = useState<any>({
     isOpen: false,
     details: null,
+    name:'',
   });
 
   const visibleData = useMemo(() => {
@@ -18,10 +18,10 @@ function Projects({ data }: any) {
   const handleDetails = (name: string) => {
     const filterData =
       projectDetailsData?.filter((item) => item?.name === name) || [];
-    setIsOpenModal({ isOpen: true, details: filterData });
+    setIsOpenModal({ isOpen: true, details: filterData , name});
   };
   const cancelModalHandler = () => {
-    setIsOpenModal({ isOpen: false, details: null });
+    setIsOpenModal({ isOpen: false, details: null, name:'' });
   };
   return (
     <>
