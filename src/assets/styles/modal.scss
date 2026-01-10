@@ -49,7 +49,7 @@
       border-radius: 12px;
 
       .modal-header {
-        @include flex-between;
+        // @include flex-between;
         padding: 16px 24px;
         border-radius: 12px 12px 0px 0px;
         border-bottom: 1px solid rgba(var(--neutral-300), 1);

@@ -47,4 +47,5 @@ export interface ProjectDetailsData {
 export type ModalState = {
   isOpen: boolean;
   details: ProjectDetailsData[] | null;
+  name:string,
 };
