@@ -145,8 +145,7 @@ function Contact() {
           </div>
           <div className="card-body pb-0">
             <form ref={form} onSubmit={handleSubmit}>
-              <div className="flex">
-                <div className="flex-50 pr-2">
+              <div className="grid-responsive"> 
                   <div className="form-group">
                     <label className="form-label">Your Name</label>
                     <input
@@ -165,9 +164,7 @@ function Contact() {
                         {errors.name}
                       </span>
                     )}
-                  </div>
-                </div>
-                <div className="flex-50 pl-2">
+                  </div>  
                   <div className="form-group">
                     <label className="form-label">Your Email</label>
                     <input
@@ -186,8 +183,7 @@ function Contact() {
                         {errors.email}
                       </span>
                     )}
-                  </div>
-                </div>
+                  </div> 
               </div> 
               <div className="form-group">
                 <label className="form-label">Your Message</label>

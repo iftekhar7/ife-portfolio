@@ -16,11 +16,11 @@ export const professionalSkills:ProfessionalSkills[] = [
 
 export const tools:Tools[] = [
   // Core Web
-  { icon: "fa-brands fa-html5", name: "HTML5", color: "#e34c26" },
-  { icon: "fa-brands fa-css3-alt", name: "CSS3", color: "#264de4" },
   { icon: "fa-brands fa-js", name: "JavaScript", color: "#f7df1e" },
   { icon: "fa-brands fa-js", name: "TypeScript", color: "#3178c6" },
-
+  { icon: "fa-brands fa-html5", name: "HTML5", color: "#e34c26" },
+  { icon: "fa-brands fa-css3-alt", name: "CSS3", color: "#264de4" },
+  
   // Frameworks & Libraries
   { icon: "fa-brands fa-react", name: "React.js", color: "#61dafb" },
   { icon: "fa-brands fa-react", name: "Next.js", color: "#000000" },

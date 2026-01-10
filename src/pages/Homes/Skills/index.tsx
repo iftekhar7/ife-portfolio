@@ -1,7 +1,13 @@
-import React from "react";
+import React, { useMemo, useState } from "react";
 import { professionalSkills, technicalSkills, tools } from "./data";
 
 const Skills = () => {
+  const [showAll, setShowAll] = useState(false);
+
+  const visibleData = useMemo(() => {
+    return showAll ? tools : tools?.slice(0, 8);
+  }, [tools, showAll]);
+
   return (
     <React.Fragment>
       <div className="skills-grid">
@@ -51,7 +57,7 @@ const Skills = () => {
           Tools & <span className="gradient-text">Technologies</span>
         </h6>
         <div className="tools-grid">
-          {tools.map((tool, index) => (
+          {visibleData.map((tool, index) => (
             <div key={index} className="tool-card">
               <div className="tool-icon">
                 {tool.icon.length <= 3 ? (
@@ -68,6 +74,14 @@ const Skills = () => {
           ))}
         </div>
       </div>
+      {tools?.length > 6 && !showAll && (
+        <button
+          className="btn btn-primary mt-4"
+          onClick={() => setShowAll(true)}
+        >
+          Tools & Technologies <i className="fas fa-arrow-right ml-2"></i>
+        </button>
+      )}
     </React.Fragment>
   );
 };
