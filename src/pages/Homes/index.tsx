@@ -47,7 +47,7 @@ function Home() {
         <div className="hero-content">
           <div className="hero-grid">
             <div>
-              <div className="availability-badge  ">
+              <div className="availability-badge">
                 <div className="status-dot" />
                 <span className="status-text">Available for opportunities</span>
               </div>
