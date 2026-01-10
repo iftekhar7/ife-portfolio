@@ -1,8 +1,8 @@
 import React, { useRef, useState } from "react";
 import type { FormEvent, ChangeEvent } from "react";
-import emailjs from "@emailjs/browser"; 
+import emailjs from "@emailjs/browser";
 import { ToastContainer, toast } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css"; 
+import "react-toastify/dist/ReactToastify.css";
 import MapSection from "./OSMMap";
 import { socialIconData } from "../data";
 
@@ -12,11 +12,12 @@ interface FormErrors {
 }
 
 function Contact() {
-  const form = useRef<HTMLFormElement>(null); 
+  const form = useRef<HTMLFormElement>(null);
   const [name, setName] = useState<string>("");
   const [email, setEmail] = useState<string>("");
   const [message, setMessage] = useState<string>("");
   const [errors, setErrors] = useState<FormErrors>({});
+  const [isLoading, setIsLoading] = useState<boolean>(false);
 
   const validationHandler = (): boolean => {
     const newErrors: FormErrors = {};
@@ -33,16 +34,17 @@ function Contact() {
 
     setErrors(newErrors);
     return Object.keys(newErrors).length === 0;
-  }; 
+  };
   const handleSubmit = (e: FormEvent<HTMLFormElement>): void => {
     e.preventDefault();
+    setIsLoading(true);
     if (validationHandler() && form.current) {
       emailjs
         .sendForm(
-          "service_118im9r",
-          "template_9w2y73m",
+          "service_gofaxwr",
+          "template_rfeoxij",
           form.current,
-          "G810kYjrbq7ffQ8SD"
+          "-X-oDJ6_6Tbn729of"
         )
         .then(
           (result) => {
@@ -53,12 +55,14 @@ function Contact() {
             setEmail("");
             setName("");
             console.log(result.text);
+            setIsLoading(false);
           },
           (error) => {
             toast(error.text, {
               type: "error",
             });
             console.log(error.text);
+            setIsLoading(false);
           }
         );
     }
@@ -119,7 +123,9 @@ function Contact() {
                 </div>
               </div>
             </div>
-            <h6 className="text-sub-heading text-secondary-dark mt-6">Follow Us</h6>
+            <h6 className="text-sub-heading text-secondary-dark mt-6">
+              Follow Us
+            </h6>
             <div className="social-links mt-0 mb-4">
               {socialIconData.map((item) =>
                 item.isTrue ? (
@@ -145,46 +151,46 @@ function Contact() {
           </div>
           <div className="card-body pb-0">
             <form ref={form} onSubmit={handleSubmit}>
-              <div className="grid-responsive"> 
-                  <div className="form-group">
-                    <label className="form-label">Your Name</label>
-                    <input
-                      type="text"
-                      className="form-control"
-                      placeholder="Enter your good name?"
-                      name="from_name"
-                      value={name}
-                      onChange={(e: ChangeEvent<HTMLInputElement>) =>
-                        setName(e.target.value)
-                      }
-                    />
-                    {errors.name && (
-                      <span className="error">
-                        <i className="fas fa-exclamation-circle"></i>{" "}
-                        {errors.name}
-                      </span>
-                    )}
-                  </div>  
-                  <div className="form-group">
-                    <label className="form-label">Your Email</label>
-                    <input
-                      type="text"
-                      className="form-control"
-                      placeholder="Enter your Email Address"
-                      name="from_email"
-                      value={email}
-                      onChange={(e: ChangeEvent<HTMLInputElement>) =>
-                        setEmail(e.target.value)
-                      }
-                    />
-                    {errors.email && (
-                      <span className="error">
-                        <i className="fas fa-exclamation-circle"></i>{" "}
-                        {errors.email}
-                      </span>
-                    )}
-                  </div> 
-              </div> 
+              <div className="grid-responsive">
+                <div className="form-group">
+                  <label className="form-label">Your Name</label>
+                  <input
+                    type="text"
+                    className="form-control"
+                    placeholder="Enter your good name?"
+                    name="from_name"
+                    value={name}
+                    onChange={(e: ChangeEvent<HTMLInputElement>) =>
+                      setName(e.target.value)
+                    }
+                  />
+                  {errors.name && (
+                    <span className="error">
+                      <i className="fas fa-exclamation-circle"></i>{" "}
+                      {errors.name}
+                    </span>
+                  )}
+                </div>
+                <div className="form-group">
+                  <label className="form-label">Your Email</label>
+                  <input
+                    type="text"
+                    className="form-control"
+                    placeholder="Enter your Email Address"
+                    name="from_email"
+                    value={email}
+                    onChange={(e: ChangeEvent<HTMLInputElement>) =>
+                      setEmail(e.target.value)
+                    }
+                  />
+                  {errors.email && (
+                    <span className="error">
+                      <i className="fas fa-exclamation-circle"></i>{" "}
+                      {errors.email}
+                    </span>
+                  )}
+                </div>
+              </div>
               <div className="form-group">
                 <label className="form-label">Your Message</label>
                 <textarea
@@ -197,18 +203,17 @@ function Contact() {
                     setMessage(e.target.value)
                   }
                 />
-              </div> 
+              </div>
               <div className="card-footer">
                 <div className="flex-end w-100">
                   <button
                     type="submit"
                     value="Send"
                     className="btn btn-primary"
-                    // disabled={!verified}
+                    disabled={isLoading}
                   >
                     Send
                     <i className="fa-regular fa-paper-plane ml-2"></i>
-
                   </button>
                 </div>
               </div>
