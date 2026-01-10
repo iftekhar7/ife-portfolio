@@ -79,7 +79,7 @@ const Skills = () => {
           className="btn btn-primary mt-4"
           onClick={() => setShowAll(true)}
         >
-          Tools & Technologies <i className="fas fa-arrow-right ml-2"></i>
+          View All Tools & Technologies <i className="fas fa-arrow-right ml-2"></i>
         </button>
       )}
     </React.Fragment>
