@@ -3,7 +3,7 @@ import type { CardData, ProjectDetailsData } from "../../../utils/types";
 export const cardData: CardData[] = [
   {
     id: 1,
-    projectName: "Flex83 - AIoT Platform - version 7",
+    projectName: "Flex83 - AIoT Platform - Latest Version",
     companyName: "@iot83",
     description:
       "The Flex83 AIoT Platform serves as a unified interface that connects, manages, and monitors all core components across your data and analytics ecosystem.",
@@ -214,27 +214,27 @@ export const cardData: CardData[] = [
 export const projectDetailsData: ProjectDetailsData[] = [
   {
     id: 1,
-    name: "Flex83 - AIoT Platform - version 7",
+    name: "Flex83 - AIoT Platform - Latest Version",
     url: "https://res.cloudinary.com/dhvkeskni/image/upload/v1767427575/Screenshot_2025-11-19_183236_wfhxqs.png",
   },
   {
     id: 2,
-    name: "Flex83 - AIoT Platform - version 7",
+    name: "Flex83 - AIoT Platform - Latest Version",
     url: "https://res.cloudinary.com/dhvkeskni/image/upload/v1767428133/Screenshot_2026-01-03_134337_n8h5tn.png",
   },
   {
     id: 3,
-    name: "Flex83 - AIoT Platform - version 7",
+    name: "Flex83 - AIoT Platform - Latest Version",
     url: "https://res.cloudinary.com/dhvkeskni/image/upload/v1767429449/Screenshot_2026-01-03_140712_pytwyu.png",
   },
   {
     id: 4,
-    name: "Flex83 - AIoT Platform - version 7",
+    name: "Flex83 - AIoT Platform - Latest Version",
     url: "https://res.cloudinary.com/dhvkeskni/image/upload/v1767428109/Screenshot_2026-01-03_134305_o6knwe.png",
   },
   {
     id: 5,
-    name: "Flex83 - AIoT Platform - version 7",
+    name: "Flex83 - AIoT Platform - Latest Version",
     url: "https://res.cloudinary.com/dhvkeskni/image/upload/v1767428088/Screenshot_2026-01-03_134200_du13oz.png",
   },
   {
@@ -260,7 +260,7 @@ export const projectDetailsData: ProjectDetailsData[] = [
   {
     id: 6.5,
     name: "MAH (Multi Asset Handler) - Version 6",
-    url: "https://res.cloudinary.com/dhvkeskni/image/upload/v1767807860/Screenshot_2026-01-07_231308_qjoqvr.png",
+    url: "https://res.cloudinary.com/dhvkeskni/image/upload/v1768317508/Screenshot_2026-01-13_201641_bryxtv.png",
   },
   {
     id: 7,
@@ -312,11 +312,11 @@ export const projectDetailsData: ProjectDetailsData[] = [
     name: "SGRM (Smart Generator Remote Monitoring)",
     url: "https://res.cloudinary.com/dhvkeskni/image/upload/v1768060310/sgrm3_uqjret.png",
   },
-  {
-    id: 17,
-    name: "SGRM (Smart Generator Remote Monitoring)",
-    url: "https://res.cloudinary.com/dhvkeskni/image/upload/v1768060350/sgrm_ylacoo.png",
-  },
+  // {
+  //   id: 17,
+  //   name: "SGRM (Smart Generator Remote Monitoring)",
+  //   url: "https://res.cloudinary.com/dhvkeskni/image/upload/v1768060350/sgrm_ylacoo.png",
+  // },
   {
     id: 18,
     name: "SGRM (Smart Generator Remote Monitoring)",
@@ -402,7 +402,7 @@ export const projectDescription = [
     ],
   },
   {
-    name: "Flex83 - AIoT Platform - version 7",
+    name: "Flex83 - AIoT Platform - Latest Version",
     subTitle:
       "Built an IoT device management system that enables seamless device lifecycle management and firmware updates for large-scale IoT deployments.",
     description: ["In Progress"],

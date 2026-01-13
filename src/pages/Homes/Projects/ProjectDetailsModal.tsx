@@ -50,7 +50,7 @@ function ProjectDetailsModal(props: ModalProps) {
             <div className="flex-60">
               <div className="asset-card">
                 <div className="card-header">
-                  <h6>Project Screen</h6>
+                  <h6>Some Project Screenshots</h6>
                 </div>
                 <div className="card-body">
                   <Carousel
@@ -62,7 +62,7 @@ function ProjectDetailsModal(props: ModalProps) {
                     {isOpenModal?.details?.map((item: ProjectDetail) => {
                       return (
                         <div key={item.id}>
-                          <img src={item?.url} alt={item?.name} />
+                          <img src={item?.url} alt={item?.name}loading="lazy" />
                         </div>
                       );
                     })}
