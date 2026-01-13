@@ -28,7 +28,7 @@ export const cardData: CardData[] = [
     companyName: "@iot83",
     description:
       "Built an IoT device management system that enables seamless device lifecycle management and firmware updates for large-scale IoT deployments",
-    url: "https://res.cloudinary.com/dhvkeskni/image/upload/v1766330998/Screenshot_2025-12-21_205849_kcmqro.png",
+    url: "https://res.cloudinary.com/dhvkeskni/image/upload/v1768294267/Screenshot_2026-01-13_141542_ycdkmq.png",
     languages: [
       "React",
       "TypeScript",
