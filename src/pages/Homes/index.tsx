@@ -59,7 +59,7 @@ function Home() {
               </h1>
 
               <p className="text-sub-heading mb-6">
-                {/* Frontend Developer with 3.6 years of experience building
+                Frontend Developer with 3.6 years of experience building
                 responsive and scalable web applications using HTML5, CSS3,
                 JavaScript, TypeScript, and React.js. Familiar with UI and
                 styling libraries such as Material UI, Tailwind CSS, and SASS.
@@ -67,8 +67,8 @@ function Home() {
                 management. Experienced in using modern development tools like
                 Vite and Vitest to streamline coding, testing, and performance
                 tuning. Strong collaborator with a passion for clean code,
-                accessibility, and delivering intuitive user experiences. */}
-                Building fast, accessible, and scalable web experiences with React & TypeScript
+                accessibility, and delivering intuitive user experiences.
+                {/* Building fast, accessible, and scalable web experiences with React & TypeScript */}
               </p>
                
               <div className="flex-start mb-6">

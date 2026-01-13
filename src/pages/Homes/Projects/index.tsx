@@ -40,11 +40,11 @@ function Projects({ data }: any) {
 
                 <div className="p-5">
                   <h3 className="text-heading mb-0">
-                    {item.projectName ?? "N/A"}
+                    {item.projectName ?? "N/A"},(NDA)
                   </h3>
 
                   <h6 className="text-sub-heading">
-                    {item.companyName ?? "--"}
+                    {item.companyName ?? "--"} 
                   </h6>
 
                   <p className="text-sm">{item.description ?? "--"}</p>
