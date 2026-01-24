@@ -32,6 +32,7 @@ function Projects({ data }: any) {
               className="card card--hover p-0 mb-0"
               key={item.id}
               onClick={() => handleDetails(item?.projectName)}
+              title='click here to see what I did on this project'
             >
               <div className="card-body py-0">
                 <div className="img-wrapper">
@@ -68,7 +69,7 @@ function Projects({ data }: any) {
                       className="btn btn-primary-text"
                       onClick={() => handleDetails(item?.projectName)}
                     >
-                      View Details <i className="fas fa-arrow-right ml-2" />
+                      My Contributions <i className="fas fa-arrow-right ml-2" />
                     </button>
                   </div>
                 </div>
