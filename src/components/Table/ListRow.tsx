@@ -1,7 +1,6 @@
 import { projectDetailsData } from "../../pages/Homes/Projects/data";
 
-const RunRow = ({ item, isOpenModal, setIsOpenModal }: any) => {
-  console.log('isOpenModal: ', isOpenModal);
+const RunRow = ({ item, setIsOpenModal }: any) => { 
 
     const handleDetails = (name: string) => {
       const filterData =
@@ -29,7 +28,7 @@ const RunRow = ({ item, isOpenModal, setIsOpenModal }: any) => {
         {item?.languages.slice(0, 2)?.map((item:string, index:string)=>{
             return <span className="pill pill-secondary mr-2 font-sxs" key={index}>{item}</span>
         })}
-        <span className="pill pill-secondary mr-2 font-sxs"  >More... </span>
+        <span className="pill pill-secondary mr-2 font-sxs">More...</span>
       </div> 
       <div className="flex-10">
         <h6 className="truncate pr-2">

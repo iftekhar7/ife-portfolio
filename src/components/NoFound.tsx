@@ -1,9 +1,15 @@
-function NoFound() {
+function NoDataFound({ 
+  title = "No Data Found", 
+  description = "There is no data available to display." 
+}) {
   return (
     <div className="no-data-found">
-      <h6>No Data Found</h6>
+      <i className="fas fa-database" aria-hidden="true"></i>
+      <h6 className="mb-1">{title}</h6>
+      <p>{description}</p>
     </div>
   );
 }
 
-export default NoFound;
+export default NoDataFound;
+
