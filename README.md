@@ -66,7 +66,7 @@ src/
  ├── assets/         # Images, fonts, icons
  ├── api/            # API services
  ├── hooks/          # Custom React hooks
- ├── routes/          # Routing configuration
+ ├── routes/         # Routing configuration
  ├── utils/          # Helper functions
  ├── App.tsx         # Root component
  └── main.tsx        # App entry point
