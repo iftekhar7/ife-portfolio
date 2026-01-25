@@ -1,9 +1,9 @@
-import { useMemo, useState } from "react"; 
-import { projectDetailsData } from "./data"; 
+import { useMemo, useState } from "react";
+import { projectDetailsData } from "./data";
 import NoFound from "../../../components/NoFound";
 
-function Projects({ data, setIsOpenModal }: any) { 
-  const [showAll, setShowAll] = useState(false); 
+function Projects({ data, setIsOpenModal }: any) {
+  const [showAll, setShowAll] = useState(false);
 
   const visibleData = useMemo(() => {
     return showAll ? data : data?.slice(0, 6);
@@ -12,7 +12,7 @@ function Projects({ data, setIsOpenModal }: any) {
   const handleDetails = (name: string) => {
     const filterData =
       projectDetailsData?.filter((item) => item?.name === name) || [];
-    setIsOpenModal({ isOpen: true, details: filterData , name});
+    setIsOpenModal({ isOpen: true, details: filterData, name });
   };
 
   return (
@@ -24,7 +24,7 @@ function Projects({ data, setIsOpenModal }: any) {
               className="card card--hover p-0 mb-0"
               key={item.id}
               onClick={() => handleDetails(item?.projectName)}
-              title='click here to see what I did on this project'
+              title="click here to see what I did on this project"
             >
               <div className="card-body py-0">
                 <div className="img-wrapper">
@@ -37,7 +37,7 @@ function Projects({ data, setIsOpenModal }: any) {
                   </h3>
 
                   <h6 className="text-sub-heading">
-                    {item.companyName ?? "--"} 
+                    {item.companyName ?? "--"}
                   </h6>
 
                   <p className="text-sm">{item.description ?? "--"}</p>
@@ -70,7 +70,10 @@ function Projects({ data, setIsOpenModal }: any) {
           ))}
         </div>
       ) : (
-        <NoFound />
+        <NoFound
+          title="No Results"
+          description="No matching results found for your search."
+        />
       )}
 
       {data?.length > 6 && !showAll && (
@@ -81,7 +84,6 @@ function Projects({ data, setIsOpenModal }: any) {
           View All Projects <i className="fas fa-arrow-right ml-2"></i>
         </button>
       )}
-     
     </>
   );
 }

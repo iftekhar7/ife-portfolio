@@ -36,7 +36,17 @@
 .no-data-found{
   height: calc(100vh - 400px);
   @include flex-center;
+  flex-direction: column;
+  i{
+    font-size: 2rem;
+    color: rgba(var(--neutral-500), 1);
+    margin-bottom: spacing(5);
+  }
   h6{
     @include heading;
+
+  }
+  p{
+    @include text;
   }
 }
