@@ -38,9 +38,7 @@ It follows modern frontend best practices including component reusability, perfo
 ## 📦 Installation & Setup
 
 Clone the repository and install dependencies:
-you can run: 
-
-``bash
+you can run:  
 
 ### yarn
 
@@ -61,13 +59,14 @@ you can run:
 
 ## 📁 Project Structure
 
+```txt
 src/
  ├── components/     # Reusable UI components
  ├── pages/          # Application pages
  ├── assets/         # Images, fonts, icons
  ├── api/            # API services
  ├── hooks/          # Custom React hooks
- ├── route/          # Routing configuration
+ ├── routes/         # Routing configuration
  ├── utils/          # Helper functions
  ├── App.tsx         # Root component
  └── main.tsx        # App entry point
