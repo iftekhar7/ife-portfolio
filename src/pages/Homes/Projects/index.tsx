@@ -1,15 +1,9 @@
-import { useMemo, useState } from "react";
-import ProjectDetailsModal from "./ProjectDetailsModal";
+import { useMemo, useState } from "react"; 
 import { projectDetailsData } from "./data"; 
 import NoFound from "../../../components/NoFound";
 
-function Projects({ data }: any) {
-  const [showAll, setShowAll] = useState(false);
-  const [isOpenModal, setIsOpenModal] = useState<any>({
-    isOpen: false,
-    details: null,
-    name:'',
-  });
+function Projects({ data, setIsOpenModal }: any) { 
+  const [showAll, setShowAll] = useState(false); 
 
   const visibleData = useMemo(() => {
     return showAll ? data : data?.slice(0, 6);
@@ -20,9 +14,7 @@ function Projects({ data }: any) {
       projectDetailsData?.filter((item) => item?.name === name) || [];
     setIsOpenModal({ isOpen: true, details: filterData , name});
   };
-  const cancelModalHandler = () => {
-    setIsOpenModal({ isOpen: false, details: null, name:'' });
-  };
+
   return (
     <>
       {visibleData?.length ? (
@@ -89,10 +81,7 @@ function Projects({ data }: any) {
           View All Projects <i className="fas fa-arrow-right ml-2"></i>
         </button>
       )}
-      <ProjectDetailsModal
-        isOpenModal={isOpenModal}
-        cancelModalHandler={cancelModalHandler}
-      />
+     
     </>
   );
 }
