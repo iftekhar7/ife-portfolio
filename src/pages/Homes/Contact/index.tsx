@@ -5,6 +5,8 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import MapSection from "./OSMMap";
 import { socialIconData } from "../data";
+import { Tooltip } from "react-tooltip";
+import "react-tooltip/dist/react-tooltip.css";
 
 interface FormErrors {
   name?: string;
@@ -18,6 +20,7 @@ function Contact() {
   const [message, setMessage] = useState<string>("");
   const [errors, setErrors] = useState<FormErrors>({});
   const [isLoading, setIsLoading] = useState<boolean>(false);
+  const [isCopying, setIsCopying] = useState({ isTrue: false, id: "" });
 
   const validationHandler = (): boolean => {
     const newErrors: FormErrors = {};
@@ -44,7 +47,7 @@ function Contact() {
           "service_gofaxwr",
           "template_rfeoxij",
           form.current,
-          "-X-oDJ6_6Tbn729of"
+          "-X-oDJ6_6Tbn729of",
         )
         .then(
           (result) => {
@@ -63,13 +66,22 @@ function Contact() {
             });
             console.log(error.text);
             setIsLoading(false);
-          }
+          },
         );
     }
   };
 
   const handleLinkNavigate = (url: string) => {
     window.open(url, "_blank");
+  };
+  const handleCopyClick = (id: "phone" | "email", value: string) => {
+    setIsCopying({ isTrue: true, id });
+
+    navigator.clipboard.writeText(value).then(() => {
+      setTimeout(() => {
+        setIsCopying({ isTrue: false, id: "" });
+      }, 800);
+    });
   };
 
   return (
@@ -106,7 +118,19 @@ function Contact() {
                   <h6 className="text-sub-heading text-secondary-dark mb-0">
                     Phone:
                   </h6>
-                  <p className={`text-sm `}>+91 762-688-3755</p>
+                  <p className={`text-sm `}>
+                    +91 762-688-3755{" "}
+                    <i
+                      className={`ml-2 cursor-pointer ${
+                        isCopying.isTrue && isCopying.id === "phone"
+                          ? "fas fa-check text-success"
+                          : "fa-regular fa-copy"
+                      }`}
+                      onClick={() => handleCopyClick("phone", "762-688-3755")}
+                      data-tooltip-id={`copy`}
+                      data-tooltip-content={isCopying.isTrue?'Copied':'Copy'}
+                    />{" "}
+                  </p>
                 </div>
               </div>
               <div className="list-item">
@@ -118,9 +142,22 @@ function Contact() {
                     Email:
                   </h6>
                   <p className="text-sm text-primary">
-                    mohammadiftekhar120@mail.com
+                    iftekharhussain120@gmail.com{" "}
+                    <i
+                      className={`ml-2 cursor-pointer ${
+                        isCopying.isTrue && isCopying.id === "email"
+                          ? "fas fa-check text-success"
+                          : "fa-regular fa-copy"
+                      }`}
+                      onClick={() =>
+                        handleCopyClick("email", "iftekharhussain120@gmail.com")
+                      }
+                      data-tooltip-id={`copy`}
+                    data-tooltip-content={isCopying.isTrue?'Copied':'Copy'}
+                    />
                   </p>
                 </div>
+                <Tooltip className="tooltip" id={`copy`} place="top" />
               </div>
             </div>
             <h6 className="text-sub-heading text-secondary-dark mt-6">
@@ -136,7 +173,7 @@ function Contact() {
                   >
                     <i className={item.icon}></i>
                   </button>
-                ) : null
+                ) : null,
               )}
             </div>
           </div>
