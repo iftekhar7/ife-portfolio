@@ -3,12 +3,12 @@ import RunRow from "./ListRow";
 // import Pagination from "./Pagination";
 
 function Table(props: any) {
-  const { data } = props;
+  const { data, isOpenModal, setIsOpenModal } = props;
   return (
     < > 
       <div className="list-wrapper">
         <div className="list-header">
-          <h6 className="flex-40">Project Name</h6>
+          <h6 className="flex-40">Project</h6>
           <h6 className="flex-15">Company Name</h6> 
            <h6 className="flex-25">Languages</h6>
           <h6 className="flex-10">Start Date</h6>
@@ -16,7 +16,7 @@ function Table(props: any) {
         </div>
         <ul className="list-view">
           {data.map((item: any) => (
-            <RunRow key={item?.id} item={item} />
+            <RunRow key={item?.id} item={item} setIsOpenModal={setIsOpenModal} isOpenModal={isOpenModal}/>
           ))}
         </ul>
          {/* <Pagination

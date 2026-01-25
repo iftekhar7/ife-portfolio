@@ -1,6 +1,16 @@
-const RunRow = ({ item }: any) => {
+import { projectDetailsData } from "../../pages/Homes/Projects/data";
+
+const RunRow = ({ item, isOpenModal, setIsOpenModal }: any) => {
+  console.log('isOpenModal: ', isOpenModal);
+
+    const handleDetails = (name: string) => {
+      const filterData =
+        projectDetailsData?.filter((item) => item?.name === name) || [];
+      setIsOpenModal({ isOpen: true, details: filterData , name});
+    }; 
+
   return (
-    <li className={`list-view-item flex `} key={item?.id}>
+    <li className={`list-view-item flex `} key={item?.id} onClick={() => handleDetails(item?.projectName)}>
       <div className="profile-list flex-40 ">
         <div className="profile-view-avatar">
           {item?.url?

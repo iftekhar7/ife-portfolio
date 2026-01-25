@@ -8,10 +8,16 @@ import Table from "../../components/Table";
 import Work from "./Work";
 import Skills from "./Skills";
 import { cardData } from "./Projects/data";
+import ProjectDetailsModal from "./Projects/ProjectDetailsModal";
 
 function Home() {
   const [searchTerm, setSearchTerm] = React.useState("");
   const [viewTab, setViewTab] = useState("card");
+  const [isOpenModal, setIsOpenModal] = useState<any>({
+    isOpen: false,
+    details: null,
+    name: "",
+  });
 
   function useDebounce(value: any, delay = 400) {
     const [debounced, setDebounced] = useState(value);
@@ -25,8 +31,8 @@ function Home() {
   }
   const debouncedSearch = useDebounce(searchTerm, 400);
 
-  const filteredData = cardData.filter((item:any) =>
-    item.projectName.toLowerCase().includes(debouncedSearch.toLowerCase())
+  const filteredData = cardData.filter((item: any) =>
+    item.projectName.toLowerCase().includes(debouncedSearch.toLowerCase()),
   );
 
   const handleDownload = () => {
@@ -39,6 +45,10 @@ function Home() {
 
   const handleLinkNavigate = (url: string) => {
     window.open(url, "_blank");
+  };
+
+  const cancelModalHandler = () => {
+    setIsOpenModal({ isOpen: false, details: null, name: "" });
   };
 
   return (
@@ -70,7 +80,7 @@ function Home() {
                 accessibility, and delivering intuitive user experiences.
                 {/* Building fast, accessible, and scalable web experiences with React & TypeScript */}
               </p>
-               
+
               <div className="flex-start mb-6">
                 {["React Expert", "TypeScript", "UI/UX Design"].map((skill) => (
                   <span className="pill pill-primary mr-3 " key={skill}>
@@ -80,7 +90,10 @@ function Home() {
               </div>
 
               <div className="cta-buttons">
-                <button onClick={()=>scrollToSection('projects')} className="btn btn-primary mr-3 ">
+                <button
+                  onClick={() => scrollToSection("projects")}
+                  className="btn btn-primary mr-3 "
+                >
                   View My Work <i className="far fa-arrow-right ml-2" />
                 </button>
                 <button
@@ -96,7 +109,7 @@ function Home() {
                 {socialIconData
                   .filter(
                     (item) =>
-                      item.name !== "Facebook" && item.name !== "Twitter"
+                      item.name !== "Facebook" && item.name !== "Twitter",
                   )
                   .map((item) => (
                     <button
@@ -125,9 +138,7 @@ function Home() {
       <section id="about" className="about-section section">
         <div className="section-header">
           <h2 className="text-heading4">About Me</h2>
-          <p className="text-sm mb-4">
-            Building exceptional web experiences
-          </p>
+          <p className="text-sm mb-4">Building exceptional web experiences</p>
           <p className="text-sub-heading">
             I’m <b className="gradient-text">Mohammad Iftekhar</b>, a Frontend
             Software Engineer with 3.6 years of experience building modern,
@@ -138,10 +149,10 @@ function Home() {
           <p className="text-sub-heading">
             Over the years, I’ve worked on dashboards, data-visualization
             platforms, IoT applications, and component-driven frontend
-            architectures. I have hands-on experience with amCharts, HighCharts, apacheEcharts,
-            WebSocket/MQTT data, and building reusable, design-system-based
-            components. I regularly collaborate with product, design, and
-            backend teams to deliver features end-to-end.
+            architectures. I have hands-on experience with amCharts, HighCharts,
+            apacheEcharts, WebSocket/MQTT data, and building reusable,
+            design-system-based components. I regularly collaborate with
+            product, design, and backend teams to deliver features end-to-end.
           </p>
           {/* <p>Technically, I enjoy:</p>
           <ul className="pl-12">
@@ -154,12 +165,14 @@ function Home() {
           </ul> */}
         </div>
       </section>
-       <section id="skills" className="about-section section">
+      <section id="skills" className="about-section section">
         <div className="section-header">
           <h2 className="text-heading4">My Skills</h2>
           <p className="text-sm mb-4">
-            Designing and developing scalable, user-focused frontend applications with modern tools, clean architecture, and attention to detail.
-          </p> 
+            Designing and developing scalable, user-focused frontend
+            applications with modern tools, clean architecture, and attention to
+            detail.
+          </p>
         </div>
         <Skills />
       </section>
@@ -174,7 +187,10 @@ function Home() {
         <Work />
       </section>
       <section id="projects" className="about-section section">
-        <div className="section-header grid-responsive mb-6" style={{gap:'0px'}}>
+        <div
+          className="section-header grid-responsive mb-6"
+          style={{ gap: "0px" }}
+        >
           <div>
             <h2 className="text-heading4 mb-2">Professional Experience</h2>
             <p className="text-sm">
@@ -213,9 +229,17 @@ function Home() {
           </div>
         </div>
         {viewTab === "card" ? (
-          <Projects data={filteredData} />
+          <Projects
+            data={filteredData}
+            setIsOpenModal={setIsOpenModal}
+            isOpenModal={isOpenModal}
+          />
         ) : (
-          <Table data={filteredData} />
+          <Table
+            data={filteredData}
+            setIsOpenModal={setIsOpenModal}
+            isOpenModal={isOpenModal}
+          />
         )}
       </section>
       <section id="contact" className="about-section section">
@@ -230,6 +254,10 @@ function Home() {
         </div>
         <Contact />
       </section>
+      <ProjectDetailsModal
+        isOpenModal={isOpenModal}
+        cancelModalHandler={cancelModalHandler}
+      />
     </>
   );
 }
