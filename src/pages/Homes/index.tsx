@@ -81,7 +81,7 @@ function Home() {
 
               <div className="cta-buttons">
                 <button onClick={()=>scrollToSection('projects')} className="btn btn-primary mr-3 ">
-                  View Projects <i className="far fa-arrow-right ml-2" />
+                  View My Work <i className="far fa-arrow-right ml-2" />
                 </button>
                 <button
                   className="btn btn-ghost-outlined"
@@ -176,7 +176,7 @@ function Home() {
       <section id="projects" className="about-section section">
         <div className="section-header grid-responsive mb-6" style={{gap:'0px'}}>
           <div>
-            <h2 className="text-heading4 mb-2">Featured Projects</h2>
+            <h2 className="text-heading4 mb-2">Professional Experience</h2>
             <p className="text-sm">
               A selection of projects that reflect my experience, technical
               skills, and passion for building scalable, user-focused web

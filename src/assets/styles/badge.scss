@@ -42,22 +42,21 @@
 .availability-badge {
   display: inline-flex;
   align-items: center;
-  gap: 0.5rem;
-  padding: 0.5rem 1rem;
-  margin-bottom: 1.5rem;
+  gap: spacing(2);
+  padding: spacing(2) spacing(4);
+  margin-bottom: spacing(6);
   border-radius: 30px;
   background-image: linear-gradient(
     135deg,
-    rgba(var(--neutral-900), 1),
-    rgba(var(--primary), 1)
-  );
-  border: 1px solid rgba(var(--success), 0.2);
+    #1a1a1a,
+    #1b4c96
+  ); 
   font-size: 0.875rem;
 
   .status-dot {
     width: 0.5rem;
     height: 0.5rem;
-    background-color: #10b981;
+    background-color: rgba(var(--success),1);
     border-radius: 9999px;
     animation: pulse 2s infinite;
   }
