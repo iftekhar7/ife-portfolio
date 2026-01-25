@@ -350,6 +350,20 @@ export const projectDetailsData: ProjectDetailsData[] = [
 ];
 
 export const projectDescription = [
+   {
+    name: "Flex83 - AIoT Platform - Latest Version",
+    subTitle:
+      "Built an IoT device management system that enables seamless device lifecycle management and firmware updates for large-scale IoT deployments.",
+    description: [
+      "Converted Figma designs into responsive, pixel-perfect UI components using React, TypeScript, HTML and SASS.",
+      "Built a responsive, data-rich UI using React and TypeScript , providing users with intuitive access to device status, firmware updates, and lifecycle management tools.",
+      "Created interactive data visualizations with amCharts5 and dynamic tables, allowing users to track asset or device health, firmware versions, and update statuses in real time",
+      "Designed and implemented modular UI components for device filtering, grouping, and management, improving scalability and maintainability.",
+      "Reduced development time by 60% through the creation of pre-built widgets and reusable components, significantly accelerating onboarding for non-technical users",
+      "Ensured application security and access control by integrating Keycloak for authentication and role-based authorization",
+      "Reduced operational errors by providing clear feedback on device status and firmware update progress,enabling IT teams to manage updates efficiently.",
+    ],
+  },
   {
     name: "MAH (Multi Asset Handler) - Version 6",
     subTitle:
