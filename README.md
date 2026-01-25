@@ -2,6 +2,8 @@
 
 A personal portfolio website built using **React** and **Vite**, showcasing my frontend development skills, projects, and experience with modern UI practices.
 
+🔗 **Live Demo:** https://ife-portfolio-dusky.vercel.app/home 
+
 ---
 
 ## 📌 Project Overview
@@ -37,8 +39,11 @@ It follows modern frontend best practices including component reusability, perfo
 
 ## 📦 Installation & Setup
 
-Clone the repository and install dependencies:
-you can run:  
+Clone the repository and install dependencies: 
+
+``bash  
+git clone https://github.com/iftekhar7/ife-portfolio.git
+cd ife-portfolio
 
 ### yarn
 
