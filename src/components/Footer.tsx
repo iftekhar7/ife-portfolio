@@ -12,7 +12,7 @@ function Footer() {
             href="https://github.com/iftekhar7/ife-portfolio.git"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-hover-underlined"
+            className="text text-hover-underlined"
           >
           <i className="fab fa-github mr-1"/>  View Source on GitHub
           </a>
