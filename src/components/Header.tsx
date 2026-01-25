@@ -47,24 +47,7 @@ const Header = () => {
                   currentMode === "dark" ? "fas fa-brightness" : "fas fa-moon"
                 }`}
               ></i>
-            </button> 
-            {/* <Dropdown
-              placement="right"
-              className="btn-secondary-text"
-              icon={"fas fa-gear"}
-            > 
-              <li className="dropdown-menu-item">
-                <i className="fa-regular fa-user" />
-                My Account
-              </li>
-              <li
-                className="dropdown-menu-item"
-                onClick={() => navigate("/login")}
-              >
-                {" "}
-                <i className="fa-solid fa-right-from-bracket"></i>Logout
-              </li>
-            </Dropdown> */}
+            </button>  
             <DropdownMenu />
           </div>
         </div>

@@ -28,8 +28,8 @@ function Navbar(props: any) {
       },
       {
         root: null,
-        rootMargin: "-80px 0px -60% 0px", // 🔥 navbar-aware
-        threshold: 0.1, // 🔥 very important
+        rootMargin: "-80px 0px -60% 0px", 
+        threshold: 0.1, 
       }
     );
 

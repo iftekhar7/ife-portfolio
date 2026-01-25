@@ -50,9 +50,9 @@ function HomePage() {
           />
         </Routes>
       ) : (
-        <div className="content-wrapper">
+        <main className="content-wrapper">
           <Header /> 
-          <div className="content-body">
+          <section className="content-body">
             <Routes>
               {RouteList?.map((route) => {
                 return (
@@ -64,9 +64,9 @@ function HomePage() {
                 );
               })}
             </Routes>
-          </div>
+          </section>
            <Footer />
-        </div>
+        </main>
       )}
     </>
   );
