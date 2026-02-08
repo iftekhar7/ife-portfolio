@@ -2,7 +2,7 @@ import type { WorkExperience } from "../../../utils/types";
 
 export const data:WorkExperience[] = [
   {
-    id: "3",
+    id: "1",
     year: "July 2022 – Present",
     role: "Software Engineer",
     company: "83INCS PRIVATE LIMITED",

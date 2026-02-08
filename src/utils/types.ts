@@ -34,6 +34,7 @@ export interface CardData {
   companyName: string;
   description: string;
   url: string;
+  type?: string;
   languages: any;
   designStatus: string;
   startDate?: string;
@@ -47,5 +48,5 @@ export interface ProjectDetailsData {
 export type ModalState = {
   isOpen: boolean;
   details: ProjectDetailsData[] | null;
-  name:string,
+  name: string;
 };

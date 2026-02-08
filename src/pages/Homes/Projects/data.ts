@@ -5,6 +5,7 @@ export const cardData: CardData[] = [
     id: 1,
     projectName: "Flex83 - AIoT Platform - Latest Version",
     companyName: "@iot83",
+    type: "Micro-Frontend (React + Module Federation)",
     description:
       "The Flex83 AIoT Platform serves as a unified interface that connects, manages, and monitors all core components across your data and analytics ecosystem.",
     url: "https://res.cloudinary.com/dhvkeskni/image/upload/v1766334685/Screenshot_2025-12-21_220019_mzentr.png",
@@ -26,6 +27,7 @@ export const cardData: CardData[] = [
     id: 2,
     projectName: "MAH (Multi Asset Handler) - Version 6",
     companyName: "@iot83",
+     type: "Monolithic Frontend Architecture",
     description:
       "Built an IoT device management system that enables seamless device lifecycle management and firmware updates for large-scale IoT deployments",
     url: "https://res.cloudinary.com/dhvkeskni/image/upload/v1768294267/Screenshot_2026-01-13_141542_ycdkmq.png",
@@ -47,6 +49,7 @@ export const cardData: CardData[] = [
     id: 3,
     projectName: "OEDC (Data Studio Application)",
     companyName: "@iot83",
+    type: "Monolithic Frontend Architecture",
     startDate: "Nov 2023",
     endDate: "Dec 2024",
     description:
@@ -68,6 +71,7 @@ export const cardData: CardData[] = [
     id: 4,
     projectName: "SGRM (Smart Generator Remote Monitoring)",
     companyName: "@iot83",
+    type: "Monolithic Frontend Architecture",
     description:
       "Built an IoT device management platform to monitor generator status in real time, helping teams perform timely maintenance and reduce downtime.",
     languages: [
@@ -88,6 +92,7 @@ export const cardData: CardData[] = [
     id: 5,
     projectName: "IAP – Integrated Automation Platform (SIEMENS)",
     companyName: "@iot83",
+    type: "Monolithic Frontend Architecture",
     description:
       "Create a unified platform that integrates diverse facility management systems into a single scalable web application",
     languages: [
@@ -109,6 +114,7 @@ export const cardData: CardData[] = [
     id: 6,
     projectName: "Eaton",
     companyName: "@iot83",
+    type: "Monolithic Frontend Architecture",
     url: "https://res.cloudinary.com/dhvkeskni/image/upload/v1766331792/dlm-login_no6oyc.png",
     description: "Stakeholder and governance risk management system",
     languages: ["React", "TypeScript", "HTML5", "MUI", "Scss", "AmCharts"],
@@ -120,6 +126,7 @@ export const cardData: CardData[] = [
     id: 7,
     projectName: "Shorting Hat (True Feature)",
     companyName: "@iot83",
+    type: "Monolithic Frontend Architecture",
     description:
       "Interactive dashboard with real-time data visualization and sorting capabilities",
     url: "https://res.cloudinary.com/dhvkeskni/image/upload/v1766331989/shorting-hat-login_mx49ff.png",
@@ -139,6 +146,7 @@ export const cardData: CardData[] = [
     id: 8,
     projectName: "Application Enablement platform - Version -5",
     companyName: "@iot83",
+    type: "Monolithic Frontend Architecture",
     description:
       "Comprehensive platform for rapid application development and deployment",
     url: "https://res.cloudinary.com/dhvkeskni/image/upload/v1766335231/Application_zm9aha.png",
@@ -150,14 +158,14 @@ export const cardData: CardData[] = [
       "BootStrap",
       "Scss",
       "AmCharts",
-    ],
-
+    ], 
     designStatus: "Dashboard",
   },
   {
     id: 9,
     projectName: "Face Recognition Application",
     companyName: "@iot83",
+    type: "Monolithic Frontend Architecture",
     description:
       "Machine Learning Operations platform with flexible deployment options",
     url: "/flexv6login.png",
@@ -177,6 +185,7 @@ export const cardData: CardData[] = [
     id: 10,
     projectName: "Sales Portfolio",
     companyName: "@iot83",
+    type: "Monolithic Frontend Architecture",
     description: "Stakeholder and governance risk management system",
     url: "https://res.cloudinary.com/dhvkeskni/image/upload/v1767546435/sales-portfolio-login_whdnxn.png",
     languages: [
@@ -194,6 +203,7 @@ export const cardData: CardData[] = [
     id: 11,
     projectName: "ARM-DLM-WEB",
     companyName: "@iot83",
+    type: "Monolithic Frontend Architecture",
     url: "/arm-dlm/dlm-login.png",
     description: "Stakeholder and governance risk management system",
     languages: [
@@ -355,13 +365,13 @@ export const projectDescription = [
     subTitle:
       "Built an IoT device management system that enables seamless device lifecycle management and firmware updates for large-scale IoT deployments.",
     description: [
+      "Developed and maintained multiple Micro-Frontend services using React and Module Federation, enabling independent builds and deployments.",
       "Converted Figma designs into responsive, pixel-perfect UI components using React, TypeScript, HTML and SASS.",
-      "Built a responsive, data-rich UI using React and TypeScript , providing users with intuitive access to device status, firmware updates, and lifecycle management tools.",
-      "Created interactive data visualizations with amCharts5 and dynamic tables, allowing users to track asset or device health, firmware versions, and update statuses in real time",
-      "Designed and implemented modular UI components for device filtering, grouping, and management, improving scalability and maintainability.",
+      "Built and optimized the Landing/Home Page, ensuring seamless navigation across federated micro-apps.",
+      "Integrated shared authentication, routing, and state communication across micro-frontends.",
       "Reduced development time by 60% through the creation of pre-built widgets and reusable components, significantly accelerating onboarding for non-technical users",
       "Ensured application security and access control by integrating Keycloak for authentication and role-based authorization",
-      "Reduced operational errors by providing clear feedback on device status and firmware update progress,enabling IT teams to manage updates efficiently.",
+      "Enabled independent deployments and improved scalability across the platform.",
     ],
   },
   {
@@ -384,9 +394,9 @@ export const projectDescription = [
       "Built an IoT device management platform to monitor generator status in real time, helping teams perform timely maintenance and reduce downtime.",
     description: [
       "Converted Figma designs into responsive, pixel-perfect UI components using React, JavaScript, HTML and SASS.",
-      "Created a user-friendly dashboard with real-time asset health updates and location tracking, integrating Google Maps API and enabling <Strong>real-time data streaming</Strong>.",
+      "Created a user-friendly dashboard with real-time asset health updates and location tracking, integrating Google Maps API and enabling real-time data streaming.",
       "Executed advanced data visualizations using amCharts4 to display real-time sensor data with powerful graphical tools.",
-      "Ensured code quality by writing unit and integration tests with JEST and continuously scanning vulnerabilities using SonarQube and Mend .",
+      "Ensured code quality by writing unit and integration tests with JEST and continuously scanning vulnerabilities using SonarQube and Mend.",
       "Collaborated with backend teams to integrate RESTful APIs , ensuring seamless and accurate data visualization.",
     ],
   },
