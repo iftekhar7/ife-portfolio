@@ -2,7 +2,11 @@ import React, { useEffect, useState } from "react";
 import { socialIconData } from "./data";
 import Projects from "./Projects";
 import SearchInput from "../../components/SearchInput";
-import { cloudinary, scrollToSection } from "../../utils/commonutils";
+import {
+  cloudinary,
+  getWorkingExperience,
+  scrollToSection,
+} from "../../utils/commonutils";
 import Contact from "./Contact";
 import Table from "../../components/Table";
 import Work from "./Work";
@@ -18,6 +22,7 @@ function Home() {
     details: null,
     name: "",
   });
+  const { years, months } = getWorkingExperience("2022-07-18");
 
   function useDebounce(value: any, delay = 400) {
     const [debounced, setDebounced] = useState(value);
@@ -67,17 +72,20 @@ function Home() {
                 <br />
                 <span>Engineer</span>
               </h1>
-
               <p className="text-sub-heading mb-6">
-                Frontend Developer with 3.6 years of experience building
-                responsive and scalable web applications using HTML5, CSS3,
-                JavaScript, TypeScript, and React.js. Familiar with UI and
-                styling libraries such as Material UI, Tailwind CSS, and SASS.
-                Proficient in Redux and RTK Query for efficient state and API
-                management. Experienced in using modern development tools like
-                Vite and Vitest to streamline coding, testing, and performance
-                tuning. Strong collaborator with a passion for clean code,
-                accessibility, and delivering intuitive user experiences.
+                Frontend Developer with{" "}
+                <strong>
+                  {years}.{months} years{" "}
+                </strong>{" "}
+                of experience building responsive and scalable web applications
+                using HTML5, CSS3, JavaScript, TypeScript, and React.js.
+                Familiar with UI and styling libraries such as Material UI,
+                Tailwind CSS, and SASS. Proficient in Redux and RTK Query for
+                efficient state and API management. Experienced in using modern
+                development tools like Vite and Vitest to streamline coding,
+                testing, and performance tuning. Strong collaborator with a
+                passion for clean code, accessibility, and delivering intuitive
+                user experiences.
                 {/* Building fast, accessible, and scalable web experiences with React & TypeScript */}
               </p>
 
@@ -142,10 +150,11 @@ function Home() {
           <p className="text-sm mb-4">Building exceptional web experiences</p>
           <p className="text-sub-heading">
             I’m <b className="gradient-text">Mohammad Iftekhar</b>, a Frontend
-            Software Engineer with 3.6 years of experience building modern,
-            responsive, and user-friendly web applications using React.js,
-            TypeScript, Redux Toolkit, HTML, and CSS. I enjoy transforming UI/UX
-            ideas into clean, scalable, and high-performance interfaces.
+            Software Engineer with {years}.{months} years of experience building
+            modern, responsive, and user-friendly web applications using
+            React.js, TypeScript, Redux Toolkit, HTML, and CSS. I enjoy
+            transforming UI/UX ideas into clean, scalable, and high-performance
+            interfaces.
           </p>
           <p className="text-sub-heading">
             Over the years, I’ve worked on dashboards, data-visualization
@@ -193,7 +202,9 @@ function Home() {
           style={{ gap: "0px" }}
         >
           <div>
-            <h2 className="text-heading4 mb-2">Professional Experience</h2>
+            <h2 className="text-heading4 mb-2">
+              Professional Experience ({cardData?.length ?? 0})
+            </h2>
             <p className="text-sm">
               A selection of projects that reflect my experience, technical
               skills, and passion for building scalable, user-focused web
