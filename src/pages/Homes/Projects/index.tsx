@@ -27,7 +27,7 @@ function Projects({ data, setIsOpenModal }: any) {
               title="click here to see what I did on this project"
             >
               <div className="card-body py-0 position-relative">
-                 <span className="badge badge-purple">{item?.type}</span>
+                <span className="badge badge-purple badge-right">{item?.projectType??'--'}</span>
                 <div className="img-wrapper">
                   <img src={item.url} alt={item.projectName} loading="lazy" />
                 </div>
@@ -36,10 +36,12 @@ function Projects({ data, setIsOpenModal }: any) {
                   <h3 className="text-heading mb-0">
                     {item.projectName ?? "N/A"},(NDA)
                   </h3>
-
-                  <h6 className="text-sub-heading">
-                    {item.companyName ?? "--"}
-                  </h6>
+                  <div className="flex-start mb-3 mt-1">
+                    <h6 className="text-sub-heading mb-0">
+                      {item.companyName ?? "--"}
+                    </h6>
+                    <span className="badge badge-primary truncate ml-3">{item?.type}</span>
+                  </div>
 
                   <p className="text-sm">{item.description ?? "--"}</p>
 

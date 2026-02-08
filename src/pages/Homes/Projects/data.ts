@@ -5,6 +5,7 @@ export const cardData: CardData[] = [
     id: 1,
     projectName: "Flex83 - AIoT Platform - Latest Version",
     companyName: "@iot83",
+    projectType: 'Product-Based Project',
     type: "Micro-Frontend (React + Module Federation)",
     description:
       "The Flex83 AIoT Platform serves as a unified interface that connects, manages, and monitors all core components across your data and analytics ecosystem.",
@@ -27,6 +28,7 @@ export const cardData: CardData[] = [
     id: 2,
     projectName: "MAH (Multi Asset Handler) - Version 6",
     companyName: "@iot83",
+     projectType: 'Product-Based Project',
      type: "Monolithic Frontend Architecture",
     description:
       "Built an IoT device management system that enables seamless device lifecycle management and firmware updates for large-scale IoT deployments",
@@ -49,6 +51,7 @@ export const cardData: CardData[] = [
     id: 3,
     projectName: "OEDC (Data Studio Application)",
     companyName: "@iot83",
+     projectType: 'Product-Based Project',
     type: "Monolithic Frontend Architecture",
     startDate: "Nov 2023",
     endDate: "Dec 2024",
@@ -71,6 +74,7 @@ export const cardData: CardData[] = [
     id: 4,
     projectName: "SGRM (Smart Generator Remote Monitoring)",
     companyName: "@iot83",
+     projectType: 'Product-Based Project',
     type: "Monolithic Frontend Architecture",
     description:
       "Built an IoT device management platform to monitor generator status in real time, helping teams perform timely maintenance and reduce downtime.",
@@ -92,6 +96,7 @@ export const cardData: CardData[] = [
     id: 5,
     projectName: "IAP – Integrated Automation Platform (SIEMENS)",
     companyName: "@iot83",
+   projectType: 'Client-Based Project',
     type: "Monolithic Frontend Architecture",
     description:
       "Create a unified platform that integrates diverse facility management systems into a single scalable web application",
@@ -114,6 +119,7 @@ export const cardData: CardData[] = [
     id: 6,
     projectName: "Eaton",
     companyName: "@iot83",
+    projectType: 'Client-Based Project',
     type: "Monolithic Frontend Architecture",
     url: "https://res.cloudinary.com/dhvkeskni/image/upload/v1766331792/dlm-login_no6oyc.png",
     description: "Stakeholder and governance risk management system",
@@ -126,6 +132,7 @@ export const cardData: CardData[] = [
     id: 7,
     projectName: "Shorting Hat (True Feature)",
     companyName: "@iot83",
+    projectType: 'Client-Based Project',
     type: "Monolithic Frontend Architecture",
     description:
       "Interactive dashboard with real-time data visualization and sorting capabilities",
@@ -146,6 +153,7 @@ export const cardData: CardData[] = [
     id: 8,
     projectName: "Application Enablement platform - Version -5",
     companyName: "@iot83",
+    projectType: 'Product-Based Project',
     type: "Monolithic Frontend Architecture",
     description:
       "Comprehensive platform for rapid application development and deployment",
@@ -165,6 +173,7 @@ export const cardData: CardData[] = [
     id: 9,
     projectName: "Face Recognition Application",
     companyName: "@iot83",
+    projectType: 'Product-Based Project',
     type: "Monolithic Frontend Architecture",
     description:
       "Machine Learning Operations platform with flexible deployment options",
@@ -185,6 +194,7 @@ export const cardData: CardData[] = [
     id: 10,
     projectName: "Sales Portfolio",
     companyName: "@iot83",
+    projectType: 'Product-Based Project',
     type: "Monolithic Frontend Architecture",
     description: "Stakeholder and governance risk management system",
     url: "https://res.cloudinary.com/dhvkeskni/image/upload/v1767546435/sales-portfolio-login_whdnxn.png",
@@ -203,6 +213,7 @@ export const cardData: CardData[] = [
     id: 11,
     projectName: "ARM-DLM-WEB",
     companyName: "@iot83",
+    projectType: 'Client-Based Project',
     type: "Monolithic Frontend Architecture",
     url: "/arm-dlm/dlm-login.png",
     description: "Stakeholder and governance risk management system",
@@ -215,8 +226,7 @@ export const cardData: CardData[] = [
       "Scss",
       "HighCharts",
       "Brightlayer UI",
-    ],
-
+    ], 
     designStatus: "Dashboard",
   },
 ];

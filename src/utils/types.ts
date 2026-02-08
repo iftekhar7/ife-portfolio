@@ -31,6 +31,7 @@ export interface ProfessionalSkills {
 export interface CardData {
   id: number;
   projectName: string;
+  projectType?:string;
   companyName: string;
   description: string;
   url: string;
