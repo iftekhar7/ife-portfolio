@@ -26,7 +26,8 @@ function Projects({ data, setIsOpenModal }: any) {
               onClick={() => handleDetails(item?.projectName)}
               title="click here to see what I did on this project"
             >
-              <div className="card-body py-0">
+              <div className="card-body py-0 position-relative">
+                 <span className="badge badge-purple">{item?.type}</span>
                 <div className="img-wrapper">
                   <img src={item.url} alt={item.projectName} loading="lazy" />
                 </div>

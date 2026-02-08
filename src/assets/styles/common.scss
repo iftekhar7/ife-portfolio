@@ -62,6 +62,9 @@
   cursor: not-allowed;
 }
 
+.position-relative{
+  position: relative !important;
+}
 // button group
 .button-groups {
   @include flex-row;
