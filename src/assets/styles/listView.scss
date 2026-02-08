@@ -2,8 +2,8 @@
 
 .list-view {
   list-style: none;
-  background-color: rgba(var(--surface), 1); 
-  border-radius: 8px; 
+  background-color: rgba(var(--surface), 1);
+  border-radius: 8px;
 
   .list-view-item {
     @include flex-between;
@@ -62,7 +62,7 @@
     0px 2px 1px -1px #00000033;
   .list-header {
     @include flex-between;
-    padding:   spacing(4);
+    padding: spacing(4);
     border-bottom: 1px solid rgba(var(--neutral-300), 1);
     background: rgb(var(--neutral-200), 1);
     border-radius: 6px 6px 0px 0px;
@@ -75,8 +75,6 @@
       text-transform: uppercase;
     }
   }
-
-  
 }
 
 .list-pagination {
@@ -258,8 +256,7 @@
       .profile-info {
         p,
         h6 {
-          width: 310px !important;
-          // @include truncate;
+          width: 308px !important; 
         }
       }
     }
@@ -352,4 +349,18 @@
       width: 100%;
     }
   }
+}
+
+@media (max-width: 412px) and (min-width: 360px) {
+  .list-wrapper {
+    .list-view-item {
+      padding: spacing(3);
+      .profile-info {
+        p,
+        h6 {
+          width: 265px !important; 
+        }
+      }
+    }
+  } 
 }

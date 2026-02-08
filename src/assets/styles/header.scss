@@ -49,7 +49,7 @@
       .header-action {
         background: none;
         border: none;
-        color: color("neutral-500");
+        color: rgba(var(--neutral-500), 1);
         font-size: font-size("lg");
         cursor: pointer;
         padding: spacing("2");
@@ -58,7 +58,7 @@
         @include flex-center;
 
         &:hover {
-          color: color("neutral-900"); 
+          color: rgba(var(--neutral-900), 1); 
         }
 
         &:focus {
