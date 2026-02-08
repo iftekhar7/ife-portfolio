@@ -397,3 +397,8 @@
     flex-direction: column;
   }
 }
+
+.footer{
+  border-top: 1px solid rgba(var(--neutral-200), 1);
+  background-color: rgba(var(--neutral-50), 1);
+}

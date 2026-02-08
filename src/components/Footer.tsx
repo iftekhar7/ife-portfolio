@@ -1,6 +1,6 @@
 function Footer() {
   return (
-    <footer className={`py-12 px-6 border-top`}>
+    <footer className={`py-12 px-6  footer`}>
       <div className="max-w-7xl mx-auto text-center">
         <p>Let's create something amazing together</p>
         <p className={`text-sm my-3`}>
