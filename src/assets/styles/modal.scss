@@ -48,8 +48,7 @@
       width: 100%;
       border-radius: 12px;
 
-      .modal-header {
-        // @include flex-between;
+      .modal-header { 
         padding: 16px 24px;
         border-radius: 12px 12px 0px 0px;
         border-bottom: 1px solid rgba(var(--neutral-300), 1);
@@ -69,7 +68,7 @@
       }
 
       .modal-scrollable {
-        max-height: calc(100vh - 190px);
+        max-height: calc(100vh - 300px);
         overflow-y: auto;
         overflow-x: hidden;
         min-height: 230px;
