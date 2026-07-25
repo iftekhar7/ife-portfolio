@@ -96,7 +96,7 @@
         img {
           height: 100%;
           width: 100%;
-          filter: blur(0.4px);
+          // filter: blur(0.4px);
         }
       }
     }
@@ -244,5 +244,11 @@
         object-fit: contain;
       }
     }
+  }
+}
+
+.own-project{
+  img{
+    filter: none !important;
   }
 }

@@ -40,6 +40,8 @@ export interface CardData {
   designStatus: string;
   startDate?: string;
   endDate?: string;
+  liveUrl?:string;
+  github?:string;
 }
 export interface ProjectDetailsData {
   id: number;

@@ -15,6 +15,13 @@ function Projects({ data, setIsOpenModal }: any) {
     setIsOpenModal({ isOpen: true, details: filterData, name });
   };
 
+  const handleRedirect = (url: string, e: React.MouseEvent) => {
+    e.stopPropagation();
+    if (url) {
+      window.open(url, "_blank");
+    }
+  };
+
   return (
     <>
       {visibleData?.length ? (
@@ -27,20 +34,39 @@ function Projects({ data, setIsOpenModal }: any) {
               title="click here to see what I did on this project"
             >
               <div className="card-body py-0 position-relative">
-                <span className="badge badge-purple badge-right">{item?.projectType??'--'}</span>
-                <div className="img-wrapper">
+                <div className="badge-right flex-start">
+                  <span className="badge badge-purple ">
+                    {item?.projectType ?? "--"}
+                  </span>
+                </div>
+                <div
+                  className={`img-wrapper ${item.projectName === "ISS - Student Management System" && "custom-image"}`}
+                >
                   <img src={item.url} alt={item.projectName} loading="lazy" />
                 </div>
 
                 <div className="p-5">
                   <h3 className="text-heading mb-0">
-                    {item.projectName ?? "N/A"},(NDA)
+                    {item.projectName ?? "N/A"}{" "}
+                    {item.projectName !== "ISS - Student Management System" &&
+                      ",(NDA)"}
                   </h3>
                   <div className="flex-start mb-3 mt-1">
                     <h6 className="text-sub-heading mb-0">
                       {item.companyName ?? "--"}
                     </h6>
-                    <span className="badge badge-primary truncate ml-3">{item?.type}</span>
+                    <span className="badge badge-primary truncate ml-3">
+                      {item?.type}
+                    </span>
+                    {item.projectName === "ISS - Student Management System" && (
+                      <span
+                        className=" url-link"
+                        onClick={(e) => handleRedirect(item?.liveUrl, e)}
+                      >
+                        <i className="fa-solid fa-arrow-up-right-from-square mr-2"></i>{" "}
+                        Live Demo
+                      </span>
+                    )}
                   </div>
 
                   <p className="text-sm">{item.description ?? "--"}</p>
