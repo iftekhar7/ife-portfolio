@@ -2,7 +2,7 @@
 
 .badge {
   border-radius: 30px;
-  padding: 2px 12px; 
+  padding: 2px 12px;
   font-weight: font-weight(medium);
   font-size: font-size(xs);
   margin-right: 12px;
@@ -45,22 +45,30 @@
   padding: spacing(2) spacing(4);
   margin-bottom: spacing(6);
   border-radius: 30px;
-  background-image: linear-gradient(
-    135deg,
-    #1a1a1a,
-    #1b4c96
-  ); 
+  background-image: linear-gradient(135deg,
+      #1a1a1a,
+      #1b4c96);
   font-size: 0.875rem;
 
   .status-dot {
     width: 0.5rem;
     height: 0.5rem;
-    background-color: rgba(var(--success),1);
+    background-color: rgba(var(--success), 1);
     border-radius: 9999px;
     animation: pulse 2s infinite;
   }
 
   .status-text {
     color: rgba(var(--neutral-500), 1);
+  }
+}
+
+.url-link {  
+  @include text-sm;
+  color: rgba(var(--primary));
+  font-weight: 500;
+  cursor: pointer;
+  &:hover{
+    color: rgba(var(--purple));
   }
 }

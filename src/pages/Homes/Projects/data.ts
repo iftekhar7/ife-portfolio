@@ -2,6 +2,38 @@ import type { CardData, ProjectDetailsData } from "../../../utils/types";
 
 export const cardData: CardData[] = [
   {
+  id: 12,
+  projectName: "ISS - Student Management System",
+  companyName: "@ISS",
+  projectType: "Live Demo Available",
+  type: "Full Stack (React + Node.js)",
+  description: 
+  "A full-stack Student Management System with secure authentication, role-based access control, interactive dashboards, and comprehensive academic management.",
+  url: "https://res.cloudinary.com/dhvkeskni/image/upload/v1784779319/Screenshot_2026-07-23_093124_zwqdmr.png",
+  languages: [
+    "React",
+    "JavaScript",
+    "Redux Toolkit",
+    "RTK Query",
+    "Material UI",
+    "HTML5",
+    "SCSS",
+    "Node.js",
+    "Express.js",
+    "Prisma",
+    "PostgreSQL",
+    "JWT",
+    "Swagger",
+    "Apache ECharts",
+    "Vite"
+  ],
+  designStatus: "Dashboard",
+  startDate: "Jun 2026",
+  endDate: "Present",
+  liveUrl: "https://student-management-ui-one.vercel.app/login",
+  github: "Private Repository"
+},
+  {
     id: 1,
     projectName: "Flex83 - AIoT Platform - Latest Version",
     companyName: "@iot83",
@@ -12,13 +44,14 @@ export const cardData: CardData[] = [
     url: "https://res.cloudinary.com/dhvkeskni/image/upload/v1766334685/Screenshot_2025-12-21_220019_mzentr.png",
     languages: [
       "React",
-      "TypeScript",
+      "JavaScript",
       "Redux",
       "RTK Query",
+      "Node.js",
       "HTML5",
+      "ApacheEchart",
       "CSS",
       "Scss",
-      "ApacheEchart",
     ],
     designStatus: "Dashboard",
     startDate: "Dec 2024",
@@ -367,9 +400,47 @@ export const projectDetailsData: ProjectDetailsData[] = [
     name: "IAP – Integrated Automation Platform (SIEMENS)",
     url: "https://res.cloudinary.com/dhvkeskni/image/upload/v1768061614/seimens5_sqjywq.png",
   },
+  {
+    id: 24,
+    name: "ISS - Student Management System",
+    url: "https://res.cloudinary.com/dhvkeskni/image/upload/v1784780031/Screenshot_2026-07-23_094325_rjpoig.png",
+  },
+   {
+    id: 25,
+    name: "ISS - Student Management System",
+    url: "https://res.cloudinary.com/dhvkeskni/image/upload/v1785007235/Screenshot_2026-07-26_005008_pepibf.png",
+  },
+  {
+    id: 26,
+    name: "ISS - Student Management System",
+    url: "https://res.cloudinary.com/dhvkeskni/image/upload/v1785007475/Screenshot_2026-07-26_005415_kafzal.png",
+  },
+    {
+    id: 27,
+    name: "ISS - Student Management System",
+    url: "https://res.cloudinary.com/dhvkeskni/image/upload/v1785008341/Screenshot_2026-07-26_010843_bc0eko.png",
+  },
 ];
 
 export const projectDescription = [
+  {
+  name: "ISS - Student Management System",
+  subTitle:
+    "Developed a full-stack Student Management System to streamline academic administration with secure authentication, role-based access control, and comprehensive management modules.",
+
+  description: [
+    "Designed and developed a full-stack web application using React, Node.js, Express.js, Prisma ORM, and PostgreSQL.",
+    "Built responsive and reusable UI components with React, TypeScript, Material UI, HTML5, and SCSS following a scalable component-based architecture.",
+    "Implemented secure JWT authentication with Refresh Token support and Role-Based Access Control (Super Admin, Admin, Teacher, Student, and Parent).",
+    "Developed RESTful APIs for Student, Teacher, Parent, Attendance, Examination, Marks, Fees, Library, Transport, Hostel, Timetable, Academic Year, Semester, Notifications, Reports, and User Management.",
+    "Integrated Redux Toolkit and RTK Query for efficient state management, API caching, optimistic updates, and automatic data synchronization.",
+    "Created interactive dashboards and analytics using Apache ECharts to visualize attendance trends, academic performance, student growth, and institutional KPIs.",
+    "Implemented server-side pagination, searching, filtering, sorting, and reusable CRUD components for improved user experience and performance.",
+    "Integrated Swagger (OpenAPI) documentation for backend APIs, enabling easy testing and developer collaboration.",
+    "Configured Prisma migrations, database seeding, and PostgreSQL schema management to support production-ready deployments.",
+    "Successfully deployed the frontend on Vercel, backend on Render, and PostgreSQL database on Neon with environment-based configuration."
+  ],
+},
    {
     name: "Flex83 - AIoT Platform - Latest Version",
     subTitle:

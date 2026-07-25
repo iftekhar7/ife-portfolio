@@ -15,6 +15,7 @@ interface ProjectInfo {
   name: string;
   subTitle?: string;
   description?: string[];
+  liveUrl?:string;
 }
 
 interface ModalProps {
@@ -27,17 +28,23 @@ interface ModalProps {
 }
 
 function ProjectDetailsModal(props: ModalProps) {
-  const { isOpenModal, cancelModalHandler } = props;
-  
+  const { isOpenModal, cancelModalHandler } = props; 
+
   // Filter returns array, get first item or use empty object as fallback
-  const infoData: ProjectInfo = projectDescription?.find(
-    (item: ProjectInfo) => item?.name === isOpenModal.name
-  ) ?? {} as ProjectInfo;
+  const infoData: ProjectInfo =
+    projectDescription?.find(
+      (item: ProjectInfo) => item?.name === isOpenModal.name,
+    ) ?? ({} as ProjectInfo);
+
+  const handleRedirect = ( e: React.MouseEvent) => {
+    e.stopPropagation();
+    window.open("https://student-management-ui-one.vercel.app/login", "_blank"); 
+  };
 
   return (
     <Modal
       modalHeading={isOpenModal?.name}
-      subheading={`${infoData?.subTitle ?? 'A few representative screens highlighting core functionality.'}`}
+      subheading={`${infoData?.subTitle ?? "A few representative screens highlighting core functionality."}`}
       modalType={"edit"}
       customBodyClass={"p-0"}
       modalWidth={"modal-lg"}
@@ -49,20 +56,35 @@ function ProjectDetailsModal(props: ModalProps) {
           <div className="assets-wrapper">
             <div className="flex-60">
               <div className="asset-card">
-                <div className="card-header">
-                  <h6>Some Project Screenshots</h6>
+                <div className="card-header flex-between">
+                  <h6>Some Project Screenshots </h6>
+                  {isOpenModal.name === "ISS - Student Management System" && (
+                    <span
+                      className="url-link"
+                      onClick={(e) => handleRedirect(e)}
+                    >
+                      <i className="fa-solid fa-arrow-up-right-from-square mr-2"></i>{" "}
+                      Live Demo
+                    </span>
+                  )}
                 </div>
                 <div className="card-body">
-                  <Carousel
-                    autoPlay
-                    infiniteLoop
-                    swipeable
-                    emulateTouch
-                  >
+                  <Carousel autoPlay infiniteLoop swipeable emulateTouch>
                     {isOpenModal?.details?.map((item: ProjectDetail) => {
                       return (
-                        <div key={item.id}>
-                          <img src={item?.url} alt={item?.name}loading="lazy" />
+                        <div
+                          key={item.id}
+                          className={
+                            item?.name === "ISS - Student Management System"
+                              ? "own-project"
+                              : ""
+                          }
+                        >
+                          <img
+                            src={item?.url}
+                            alt={item?.name}
+                            loading="lazy"
+                          />
                         </div>
                       );
                     })}
@@ -77,13 +99,13 @@ function ProjectDetailsModal(props: ModalProps) {
                   <h6>My Work on This Project</h6>
                 </div>
                 <div className="card-body pl-8">
-                  {infoData?.description?.map(
-                    (item: string, index: number) => (
-                      <ul key={index} className="info-row">
-                        <li><p>{item}</p></li>
-                      </ul>
-                    )
-                  )}
+                  {infoData?.description?.map((item: string, index: number) => (
+                    <ul key={index} className="info-row">
+                      <li>
+                        <p>{item}</p>
+                      </li>
+                    </ul>
+                  ))}
                 </div>
               </div>
             </div>

@@ -251,6 +251,11 @@
     border-radius: border-radius(lg) border-radius(lg) 0 0;
     filter: blur(0.5px);
   }
+  &.custom-image{
+    img{
+      filter: none;
+    }
+  }
 }
 
 // Timeline Section SCSS
