@@ -15,10 +15,7 @@ function Projects({ data, setIsOpenModal }: any) {
     setIsOpenModal({ isOpen: true, details: filterData, name });
   };
 
-  const handleRedirect = (
-    url: string,
-    e: React.MouseEvent<HTMLButtonElement | HTMLAnchorElement>,
-  ) => {
+  const handleRedirect = (url: string, e: React.MouseEvent) => {
     e.preventDefault();
     e.stopPropagation();
 

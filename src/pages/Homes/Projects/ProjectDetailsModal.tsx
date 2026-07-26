@@ -37,7 +37,7 @@ function ProjectDetailsModal(props: ModalProps) {
     ) ?? ({} as ProjectInfo);
 
   const handleRedirect = (
-    e: React.MouseEvent<HTMLButtonElement | HTMLAnchorElement>,
+   e: React.MouseEvent
   ) => {
     e.preventDefault();
     e.stopPropagation();
