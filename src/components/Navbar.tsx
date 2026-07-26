@@ -1,10 +1,15 @@
 import { useEffect, useState } from "react";
 
-function Navbar(props: any) {
-  const { setIsOpen } = props;
+interface NavbarProps {
+  setIsOpen?: (isOpen: boolean) => void;
+}
+
+function Navbar({ setIsOpen }: NavbarProps) {
   const [activeSection, setActiveSection] = useState("home");
 
-  const scrollToSection = (id: string) => {
+  const scrollToSection = (id: string) => { 
+    setActiveSection(id);
+    
     const element = document.getElementById(id);
     if (element) {
       element.scrollIntoView({
@@ -12,7 +17,10 @@ function Navbar(props: any) {
         block: "start",
       });
     }
-    setIsOpen(false);
+     
+    if (setIsOpen && typeof setIsOpen === 'function') {
+      setIsOpen(false);
+    }
   };
 
   useEffect(() => {
@@ -28,8 +36,8 @@ function Navbar(props: any) {
       },
       {
         root: null,
-        rootMargin: "-80px 0px -60% 0px", 
-        threshold: 0.1, 
+        rootMargin: "-80px 0px -60% 0px",
+        threshold: 0.1,
       }
     );
 
@@ -49,7 +57,6 @@ function Navbar(props: any) {
             Home
           </p>
         </li>
-
         <li>
           <p
             className={activeSection === "about" ? "active" : ""}
@@ -74,16 +81,14 @@ function Navbar(props: any) {
             Professional Journey
           </p>
         </li>
-
         <li>
           <p
             className={activeSection === "projects" ? "active" : ""}
             onClick={() => scrollToSection("projects")}
           >
-          Professional Experience
+            Professional Experience
           </p>
         </li>
-
         <li>
           <p
             className={activeSection === "contact" ? "active" : ""}
