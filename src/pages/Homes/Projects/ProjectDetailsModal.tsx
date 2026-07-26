@@ -15,7 +15,7 @@ interface ProjectInfo {
   name: string;
   subTitle?: string;
   description?: string[];
-  liveUrl?:string;
+  liveUrl?: string;
 }
 
 interface ModalProps {
@@ -28,7 +28,7 @@ interface ModalProps {
 }
 
 function ProjectDetailsModal(props: ModalProps) {
-  const { isOpenModal, cancelModalHandler } = props; 
+  const { isOpenModal, cancelModalHandler } = props;
 
   // Filter returns array, get first item or use empty object as fallback
   const infoData: ProjectInfo =
@@ -36,9 +36,17 @@ function ProjectDetailsModal(props: ModalProps) {
       (item: ProjectInfo) => item?.name === isOpenModal.name,
     ) ?? ({} as ProjectInfo);
 
-  const handleRedirect = ( e: React.MouseEvent) => {
+  const handleRedirect = (
+   e: React.MouseEvent
+  ) => {
+    e.preventDefault();
     e.stopPropagation();
-    window.open("https://student-management-ui-one.vercel.app/login", "_blank"); 
+
+    window.open(
+      "https://student-management-ui-one.vercel.app/login",
+      "_blank",
+      "noopener,noreferrer",
+    );
   };
 
   return (

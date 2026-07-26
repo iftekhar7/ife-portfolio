@@ -16,10 +16,12 @@ function Projects({ data, setIsOpenModal }: any) {
   };
 
   const handleRedirect = (url: string, e: React.MouseEvent) => {
+    e.preventDefault();
     e.stopPropagation();
-    if (url) {
-      window.open(url, "_blank");
-    }
+
+    if (!url) return;
+
+    window.open(url, "_blank", "noopener,noreferrer");
   };
 
   return (
