@@ -248,7 +248,7 @@ export const cardData: CardData[] = [
     companyName: "@iot83",
     projectType: 'Client-Based Project',
     type: "Monolithic Frontend Architecture",
-    url: "/arm-dlm/dlm-login.png",
+    url: "https://res.cloudinary.com/dhvkeskni/image/upload/v1766331792/dlm-login_no6oyc.png",
     description: "Stakeholder and governance risk management system",
     languages: [
       "React",

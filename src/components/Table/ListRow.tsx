@@ -18,7 +18,7 @@ const RunRow = ({ item, setIsOpenModal }: any) => {
         </div>
         <div className="profile-info">
           <h6>{item?.projectName ?? "-"}</h6> 
-          <p className="truncate pr-2" style={{width:'381px'}}>{item?.description ?? "--"}</p>
+          <p className="truncate pr-2" style={{width:'381px'}} title={item?.description}>{item?.description ?? "--"}</p>
         </div>
       </div>
       <div className="flex-15">

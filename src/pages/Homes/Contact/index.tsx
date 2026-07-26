@@ -126,7 +126,7 @@ function Contact() {
                           ? "fas fa-check text-success"
                           : "fa-regular fa-copy"
                       }`}
-                      onClick={() => handleCopyClick("phone", "762-688-3755")}
+                      onClick={() => handleCopyClick("phone", "7626883755")}
                       data-tooltip-id={`copy`}
                       data-tooltip-content={isCopying.isTrue?'Copied':'Copy'}
                     />{" "}
