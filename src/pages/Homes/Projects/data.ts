@@ -2,42 +2,42 @@ import type { CardData, ProjectDetailsData } from "../../../utils/types";
 
 export const cardData: CardData[] = [
   {
-  id: 12,
-  projectName: "ISS - Student Management System",
-  companyName: "@ISS",
-  projectType: "Live Demo Available",
-  type: "Full Stack (React + Node.js)",
-  description: 
-  "A full-stack Student Management System with secure authentication, role-based access control, interactive dashboards, and comprehensive academic management.",
-  url: "https://res.cloudinary.com/dhvkeskni/image/upload/v1784779319/Screenshot_2026-07-23_093124_zwqdmr.png",
-  languages: [
-    "React",
-    "JavaScript",
-    "Redux Toolkit",
-    "RTK Query",
-    "Material UI",
-    "HTML5",
-    "SCSS",
-    "Node.js",
-    "Express.js",
-    "Prisma",
-    "PostgreSQL",
-    "JWT",
-    "Swagger",
-    "Apache ECharts",
-    "Vite"
-  ],
-  designStatus: "Dashboard",
-  startDate: "Jun 2026",
-  endDate: "Present",
-  liveUrl: "https://student-management-ui-one.vercel.app/login",
-  github: "Private Repository"
-},
+    id: 12,
+    projectName: "ISS - Student Management System",
+    companyName: "@ISS",
+    projectType: "Live Demo Available",
+    type: "Full Stack (React + Node.js)",
+    description:
+      "A full-stack Student Management System with secure authentication, role-based access control, interactive dashboards, and comprehensive academic management.",
+    url: "https://res.cloudinary.com/dhvkeskni/image/upload/v1784779319/Screenshot_2026-07-23_093124_zwqdmr.png",
+    languages: [
+      "React",
+      "JavaScript",
+      "Redux Toolkit",
+      "RTK Query",
+      "Material UI",
+      "HTML5",
+      "SCSS",
+      "Node.js",
+      "Express.js",
+      "Prisma",
+      "PostgreSQL",
+      "JWT",
+      "Swagger",
+      "Apache ECharts",
+      "Vite",
+    ],
+    designStatus: "Dashboard",
+    startDate: "Jun 2026",
+    endDate: "Present",
+    liveUrl: "https://student-management-ui-one.vercel.app/login",
+    github: "Private Repository",
+  },
   {
     id: 1,
     projectName: "Flex83 - AIoT Platform - Latest Version",
     companyName: "@iot83",
-    projectType: 'Product-Based Project',
+    projectType: "Product-Based Project",
     type: "Micro-Frontend (React + Module Federation)",
     description:
       "The Flex83 AIoT Platform serves as a unified interface that connects, manages, and monitors all core components across your data and analytics ecosystem.",
@@ -61,8 +61,8 @@ export const cardData: CardData[] = [
     id: 2,
     projectName: "MAH (Multi Asset Handler) - Version 6",
     companyName: "@iot83",
-     projectType: 'Product-Based Project',
-     type: "Monolithic Frontend Architecture",
+    projectType: "Product-Based Project",
+    type: "Monolithic Frontend Architecture",
     description:
       "Built an IoT device management system that enables seamless device lifecycle management and firmware updates for large-scale IoT deployments",
     url: "https://res.cloudinary.com/dhvkeskni/image/upload/v1768294267/Screenshot_2026-01-13_141542_ycdkmq.png",
@@ -84,7 +84,7 @@ export const cardData: CardData[] = [
     id: 3,
     projectName: "OEDC (Data Studio Application)",
     companyName: "@iot83",
-     projectType: 'Product-Based Project',
+    projectType: "Product-Based Project",
     type: "Monolithic Frontend Architecture",
     startDate: "Nov 2023",
     endDate: "Dec 2024",
@@ -107,7 +107,7 @@ export const cardData: CardData[] = [
     id: 4,
     projectName: "SGRM (Smart Generator Remote Monitoring)",
     companyName: "@iot83",
-     projectType: 'Product-Based Project',
+    projectType: "Product-Based Project",
     type: "Monolithic Frontend Architecture",
     description:
       "Built an IoT device management platform to monitor generator status in real time, helping teams perform timely maintenance and reduce downtime.",
@@ -129,7 +129,7 @@ export const cardData: CardData[] = [
     id: 5,
     projectName: "IAP – Integrated Automation Platform (SIEMENS)",
     companyName: "@iot83",
-   projectType: 'Client-Based Project',
+    projectType: "Client-Based Project",
     type: "Monolithic Frontend Architecture",
     description:
       "Create a unified platform that integrates diverse facility management systems into a single scalable web application",
@@ -152,7 +152,7 @@ export const cardData: CardData[] = [
     id: 6,
     projectName: "Eaton",
     companyName: "@iot83",
-    projectType: 'Client-Based Project',
+    projectType: "Client-Based Project",
     type: "Monolithic Frontend Architecture",
     url: "https://res.cloudinary.com/dhvkeskni/image/upload/v1766331792/dlm-login_no6oyc.png",
     description: "Stakeholder and governance risk management system",
@@ -165,7 +165,7 @@ export const cardData: CardData[] = [
     id: 7,
     projectName: "Shorting Hat (True Feature)",
     companyName: "@iot83",
-    projectType: 'Client-Based Project',
+    projectType: "Client-Based Project",
     type: "Monolithic Frontend Architecture",
     description:
       "Interactive dashboard with real-time data visualization and sorting capabilities",
@@ -186,7 +186,7 @@ export const cardData: CardData[] = [
     id: 8,
     projectName: "Application Enablement platform - Version -5",
     companyName: "@iot83",
-    projectType: 'Product-Based Project',
+    projectType: "Product-Based Project",
     type: "Monolithic Frontend Architecture",
     description:
       "Comprehensive platform for rapid application development and deployment",
@@ -199,18 +199,18 @@ export const cardData: CardData[] = [
       "BootStrap",
       "Scss",
       "AmCharts",
-    ], 
+    ],
     designStatus: "Dashboard",
   },
   {
     id: 9,
     projectName: "Face Recognition Application",
     companyName: "@iot83",
-    projectType: 'Product-Based Project',
+    projectType: "Product-Based Project",
     type: "Monolithic Frontend Architecture",
     description:
       "Machine Learning Operations platform with flexible deployment options",
-    url: "/flexv6login.png",
+    url: "https://res.cloudinary.com/dhvkeskni/image/upload/v1785169659/image_7_wvj2x8.png",
     languages: [
       "React",
       "TypeScript",
@@ -227,7 +227,7 @@ export const cardData: CardData[] = [
     id: 10,
     projectName: "Sales Portfolio",
     companyName: "@iot83",
-    projectType: 'Product-Based Project',
+    projectType: "Product-Based Project",
     type: "Monolithic Frontend Architecture",
     description: "Stakeholder and governance risk management system",
     url: "https://res.cloudinary.com/dhvkeskni/image/upload/v1767546435/sales-portfolio-login_whdnxn.png",
@@ -246,7 +246,7 @@ export const cardData: CardData[] = [
     id: 11,
     projectName: "ARM-DLM-WEB",
     companyName: "@iot83",
-    projectType: 'Client-Based Project',
+    projectType: "Client-Based Project",
     type: "Monolithic Frontend Architecture",
     url: "https://res.cloudinary.com/dhvkeskni/image/upload/v1766331792/dlm-login_no6oyc.png",
     description: "Stakeholder and governance risk management system",
@@ -259,7 +259,7 @@ export const cardData: CardData[] = [
       "Scss",
       "HighCharts",
       "Brightlayer UI",
-    ], 
+    ],
     designStatus: "Dashboard",
   },
 ];
@@ -405,7 +405,7 @@ export const projectDetailsData: ProjectDetailsData[] = [
     name: "ISS - Student Management System",
     url: "https://res.cloudinary.com/dhvkeskni/image/upload/v1784780031/Screenshot_2026-07-23_094325_rjpoig.png",
   },
-   {
+  {
     id: 25,
     name: "ISS - Student Management System",
     url: "https://res.cloudinary.com/dhvkeskni/image/upload/v1785007235/Screenshot_2026-07-26_005008_pepibf.png",
@@ -415,33 +415,38 @@ export const projectDetailsData: ProjectDetailsData[] = [
     name: "ISS - Student Management System",
     url: "https://res.cloudinary.com/dhvkeskni/image/upload/v1785007475/Screenshot_2026-07-26_005415_kafzal.png",
   },
-    {
+  {
     id: 27,
     name: "ISS - Student Management System",
     url: "https://res.cloudinary.com/dhvkeskni/image/upload/v1785008341/Screenshot_2026-07-26_010843_bc0eko.png",
+  },
+  {
+    id: 28,
+    name: "Face Recognition Application",
+    url: "https://res.cloudinary.com/dhvkeskni/image/upload/v1785169659/image_7_wvj2x8.png",
   },
 ];
 
 export const projectDescription = [
   {
-  name: "ISS - Student Management System",
-  subTitle:
-    "Developed a full-stack Student Management System to streamline academic administration with secure authentication, role-based access control, and comprehensive management modules.",
+    name: "ISS - Student Management System",
+    subTitle:
+      "Developed a full-stack Student Management System to streamline academic administration with secure authentication, role-based access control, and comprehensive management modules.",
 
-  description: [
-    "Designed and developed a full-stack web application using React, Node.js, Express.js, Prisma ORM, and PostgreSQL.",
-    "Built responsive and reusable UI components with React, TypeScript, Material UI, HTML5, and SCSS following a scalable component-based architecture.",
-    "Implemented secure JWT authentication with Refresh Token support and Role-Based Access Control (Super Admin, Admin, Teacher, Student, and Parent).",
-    "Developed RESTful APIs for Student, Teacher, Parent, Attendance, Examination, Marks, Fees, Library, Transport, Hostel, Timetable, Academic Year, Semester, Notifications, Reports, and User Management.",
-    "Integrated Redux Toolkit and RTK Query for efficient state management, API caching, optimistic updates, and automatic data synchronization.",
-    "Created interactive dashboards and analytics using Apache ECharts to visualize attendance trends, academic performance, student growth, and institutional KPIs.",
-    "Implemented server-side pagination, searching, filtering, sorting, and reusable CRUD components for improved user experience and performance.",
-    "Integrated Swagger (OpenAPI) documentation for backend APIs, enabling easy testing and developer collaboration.",
-    "Configured Prisma migrations, database seeding, and PostgreSQL schema management to support production-ready deployments.",
-    "Successfully deployed the frontend on Vercel, backend on Render, and PostgreSQL database on Neon with environment-based configuration."
-  ],
-},
-   {
+    description: [
+      "Designed and developed a full-stack web application using React, Node.js, Express.js, Prisma ORM, and PostgreSQL.",
+      "Built responsive and reusable UI components with React, TypeScript, Material UI, HTML5, and SCSS following a scalable component-based architecture.",
+      "Implemented secure JWT authentication with Refresh Token support and Role-Based Access Control (Super Admin, Admin, Teacher, Student, and Parent).",
+      "Developed RESTful APIs for Student, Teacher, Parent, Attendance, Examination, Marks, Fees, Library, Transport, Hostel, Timetable, Academic Year, Semester, Notifications, Reports, and User Management.",
+      "Integrated Redux Toolkit and RTK Query for efficient state management, API caching, optimistic updates, and automatic data synchronization.",
+      "Created interactive dashboards and analytics using Apache ECharts to visualize attendance trends, academic performance, student growth, and institutional KPIs.",
+      "Implemented server-side pagination, searching, filtering, sorting, and reusable CRUD components for improved user experience and performance.",
+      "Integrated Swagger (OpenAPI) documentation for backend APIs, enabling easy testing and developer collaboration.",
+      "Configured Prisma migrations, database seeding, and PostgreSQL schema management to support production-ready deployments.",
+      "Successfully deployed the frontend on Vercel, backend on Render, and PostgreSQL database on Neon with environment-based configuration.",
+    ],
+  },
+  {
     name: "Flex83 - AIoT Platform - Latest Version",
     subTitle:
       "Built an IoT device management system that enables seamless device lifecycle management and firmware updates for large-scale IoT deployments.",
@@ -511,5 +516,18 @@ export const projectDescription = [
     subTitle:
       "Built an IoT device management system that enables seamless device lifecycle management and firmware updates for large-scale IoT deployments.",
     description: ["In Progress"],
+  },
+  {
+    name: "Face Recognition Application",
+    subTitle:
+      "Developed a Face Recognition-based employee attendance and workforce management platform.",
+    description: [
+      "Developed responsive, pixel-perfect UI components using React, TypeScript, HTML, SASS, and Material UI.",
+      "Built employee attendance dashboards with calendar, graph, and activity views for real-time attendance tracking.",
+      "Integrated REST APIs to display employee profiles, check-in/check-out records, attendance history, and productivity reports.",
+      "Implemented attendance analytics with On-Time, Late, Absent, and Remote status visualization.",
+      "Created reusable, scalable React components with Redux Toolkit/RTK Query for efficient state and API management.",
+      "Optimized application performance through code-splitting, lazy loading, and component-level rendering optimizations.",
+    ],
   },
 ];

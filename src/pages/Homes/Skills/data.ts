@@ -10,7 +10,7 @@ export const technicalSkills:ProfessionalSkills[] = [
 export const professionalSkills:ProfessionalSkills[] = [
   { name: "Communication", percentage: 85 },
   { name: "Teamwork", percentage: 85 },
-  { name: "Problem Solving", percentage: 75 },
+  { name: "Problem Solving", percentage: 90 },
   { name: "Creativity", percentage: 80 },
 ];
 
